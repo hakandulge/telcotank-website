@@ -1,4 +1,5 @@
 import { genPageMetadata } from 'app/seo'
+import ContactForm from '@/components/ContactForm'
 
 export const metadata = genPageMetadata({
   title: 'Contact Telcotank — Request a Strategy Discussion',
@@ -85,96 +86,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right Column - Contact Form */}
-            <div className="rounded-lg border border-gray-200 bg-white p-8 shadow-sm lg:p-10">
-              <h2 className="text-xl font-semibold text-[#0A2540]">Request a Strategy Discussion</h2>
-              <p className="mt-2 text-sm text-gray-600">
-                Fill in the form below and our team will respond within 24 hours.
-              </p>
-              <form className="mt-8 space-y-6">
-                <div className="grid gap-6 md:grid-cols-2">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#2563EB] focus:ring-[#2563EB]"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
-                      Last Name
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#2563EB] focus:ring-[#2563EB]"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#2563EB] focus:ring-[#2563EB]"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#2563EB] focus:ring-[#2563EB]"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="topic" className="block text-sm font-medium text-gray-700">
-                    Topic of Interest
-                  </label>
-                  <select
-                    id="topic"
-                    name="topic"
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#2563EB] focus:ring-[#2563EB]"
-                  >
-                    <option value="">Select a topic</option>
-                    <option>Transformation Strategy</option>
-                    <option>Growth Acceleration</option>
-                    <option>AI Transformation & Governance</option>
-                    <option>Market Entry & Expansion</option>
-                    <option>Investment & M&A Advisory</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#2563EB] focus:ring-[#2563EB]"
-                    placeholder="Tell us about your challenge..."
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full rounded-md bg-[#2563EB] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#1D4ED8]"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
+            <ContactForm />
           </div>
         </div>
       </section>
