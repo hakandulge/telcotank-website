@@ -89,6 +89,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className="scroll-smooth"
       suppressHydrationWarning
     >
+      <head>
+        {/* Google Analytics 4 */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-N1GSLNGVD5" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-N1GSLNGVD5', {
+                page_title: document.title,
+                send_page_view: true
+              });
+            `,
+          }}
+        />
+      </head>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link

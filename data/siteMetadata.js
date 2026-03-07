@@ -16,8 +16,8 @@ const siteMetadata = {
   locale: 'en-US',
   stickyNav: true,
   analytics: {
-    umamiAnalytics: {
-      umamiWebsiteId: process.env.NEXT_UMAMI_ID,
+    googleAnalytics: {
+      googleAnalyticsId: 'G-N1GSLNGVD5',
     },
   },
   newsletter: {
