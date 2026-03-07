@@ -1,9 +1,15 @@
 {
-  "ai": 3,
-  "strategy": 1,
-  "enterprise": 1,
-  "semiconductors": 1,
-  "technology": 1,
+  "ai-strategy": 1,
+  "digital-transformation": 1,
+  "enterprise-ai": 1,
+  "competitive-advantage": 1,
+  "sovereign-ai": 1,
+  "ai-regulation": 1,
   "geopolitics": 1,
-  "policy": 1
+  "data-governance": 1,
+  "market-entry": 1,
+  "semiconductors": 1,
+  "ai-infrastructure": 1,
+  "supply-chain-strategy": 1,
+  "technology-investment": 1
 }
