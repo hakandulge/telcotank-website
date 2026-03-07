@@ -21,13 +21,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'case-studies',
     'about',
     'contact',
+    'articles',
+    'strategicintelligence',
+    'projects',
     'blog',
     'tags',
   ].map((route) => ({
     url: `${siteUrl}/${route}`,
     lastModified: new Date().toISOString().split('T')[0],
     changeFrequency: route === '' ? 'weekly' as const : 'monthly' as const,
-    priority: route === '' ? 1.0 : route === 'contact' ? 0.9 : 0.8,
+    priority: route === '' ? 1.0 : ['capabilities', 'industries', 'strategicintelligence'].includes(route) ? 0.9 : route === 'contact' ? 0.9 : 0.8,
   }))
 
   return [...routes, ...blogRoutes]

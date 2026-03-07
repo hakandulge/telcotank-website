@@ -2,7 +2,12 @@ import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
 import { genPageMetadata } from 'app/seo'
 
-export const metadata = genPageMetadata({ title: 'Projects' })
+export const metadata = genPageMetadata({
+  title: 'Projects — Telcotank Transformation Engagements',
+  description: 'Selected transformation projects and strategic engagements delivered by Telcotank across telecom, AI, digital infrastructure and financial services sectors.',
+  keywords: ['consulting projects', 'transformation engagements', 'telecom projects', 'digital transformation projects'],
+  canonical: 'https://telcotank.com/projects',
+})
 
 export default function Projects() {
   return (

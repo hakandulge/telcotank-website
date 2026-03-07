@@ -4,6 +4,8 @@ import Link from '@/components/Link'
 export const metadata = genPageMetadata({
   title: 'Industries — Telecommunications, Financial Services, AI & Digital Infrastructure',
   description: 'Telcotank serves telecom operators, financial institutions, technology & AI companies, digital infrastructure investors, and high-growth startups with deep industry-specific transformation consulting.',
+  keywords: ['telecom consulting', 'financial services consulting', 'AI industry consulting', 'digital infrastructure investment', 'technology company advisory', 'startup scaling consulting'],
+  canonical: 'https://telcotank.com/industries',
 })
 
 const industries = [

@@ -4,6 +4,8 @@ import Link from '@/components/Link'
 export const metadata = genPageMetadata({
   title: 'Capabilities — Transformation Strategy, AI Consulting & Growth Acceleration',
   description: 'Telcotank consulting capabilities: digital transformation strategy, AI transformation & governance, growth acceleration, market entry & expansion, and investment & M&A advisory for telecom and technology companies.',
+  keywords: ['digital transformation consulting', 'AI consulting', 'growth acceleration', 'market entry strategy', 'M&A advisory', 'telecom consulting capabilities', 'enterprise AI governance'],
+  canonical: 'https://telcotank.com/capabilities',
 })
 
 const capabilities = [

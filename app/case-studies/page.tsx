@@ -4,6 +4,8 @@ import Link from '@/components/Link'
 export const metadata = genPageMetadata({
   title: 'Case Studies — Transformation Success Stories Across Industries',
   description: 'Explore Telcotank transformation case studies spanning telecom growth acceleration, digital transformation, sales channel optimization, organizational restructuring, M&A advisory, greenfield launches, and startup scaling across 20+ countries.',
+  keywords: ['consulting case studies', 'telecom transformation case study', 'digital transformation success stories', 'M&A advisory case studies', 'growth acceleration results'],
+  canonical: 'https://telcotank.com/case-studies',
 })
 
 const caseStudies = [

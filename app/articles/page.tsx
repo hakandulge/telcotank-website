@@ -1,12 +1,15 @@
 import { Metadata } from 'next'
 import Link from '@/components/Link'
 import { articles } from '@/data/articles'
+import { genPageMetadata } from 'app/seo'
 
-export const metadata: Metadata = {
-  title: 'Articles — Telcotank',
+export const metadata = genPageMetadata({
+  title: 'Articles — Strategic Insights on AI, Telecom & Digital Economy',
   description:
     'Strategic insights and analysis on AI, quantum computing, telecom transformation, and the future of digital infrastructure by Telcotank.',
-}
+  keywords: ['AI articles', 'telecom strategy insights', 'quantum computing analysis', 'digital infrastructure articles', 'technology strategy blog'],
+  canonical: 'https://telcotank.com/articles',
+})
 
 function ThemeTag({ theme }: { theme: string }) {
   const colors: Record<string, string> = {

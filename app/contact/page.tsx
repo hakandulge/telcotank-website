@@ -4,6 +4,8 @@ import ContactForm from '@/components/ContactForm'
 export const metadata = genPageMetadata({
   title: 'Contact Telcotank — Request a Strategy Discussion',
   description: 'Get in touch with Telcotank to discuss your digital transformation, AI strategy, or market expansion challenge. We work with telecom operators, financial institutions and technology companies globally.',
+  keywords: ['contact Telcotank', 'strategy discussion', 'consulting inquiry', 'digital transformation consultation', 'telecom consulting contact'],
+  canonical: 'https://telcotank.com/contact',
 })
 
 export default function ContactPage() {
