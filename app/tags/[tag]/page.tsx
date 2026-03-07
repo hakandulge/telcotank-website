@@ -15,10 +15,12 @@ export async function generateMetadata(props: {
   const params = await props.params
   const tag = decodeURI(params.tag)
   return genPageMetadata({
-    title: tag,
-    description: `${siteMetadata.title} ${tag} tagged content`,
+    title: `${tag.charAt(0).toUpperCase() + tag.slice(1)} — Strategic Insights by Telcotank`,
+    description: `Browse Telcotank strategic insights and analysis tagged with "${tag}". Expert perspectives on transformation strategy, AI, telecom, and the digital economy.`,
+    keywords: [tag, 'Telcotank insights', 'strategic analysis', 'consulting perspectives'],
+    canonical: `https://telcotank.com/tags/${slug(tag)}`,
     alternates: {
-      canonical: './',
+      canonical: `https://telcotank.com/tags/${slug(tag)}`,
       types: {
         'application/rss+xml': `${siteMetadata.siteUrl}/tags/${tag}/feed.xml`,
       },

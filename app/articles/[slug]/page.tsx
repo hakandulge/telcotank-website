@@ -20,6 +20,24 @@ export async function generateMetadata({
   return {
     title: `${article.title} — Telcotank`,
     description: article.summary,
+    keywords: [article.theme, 'Telcotank', 'strategic analysis', 'consulting insights'].filter(Boolean),
+    openGraph: {
+      title: `${article.title} — Telcotank`,
+      description: article.summary,
+      url: `https://telcotank.com/articles/${slug}`,
+      siteName: 'Telcotank',
+      locale: 'en_US',
+      type: 'article',
+      ...(article.image && { images: [article.image] }),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${article.title} — Telcotank`,
+      description: article.summary,
+    },
+    alternates: {
+      canonical: `https://telcotank.com/articles/${slug}`,
+    },
   }
 }
 
