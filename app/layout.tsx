@@ -41,6 +41,9 @@ export const metadata: Metadata = {
     ],
   },
   manifest: '/static/favicons/site.webmanifest',
+  verification: {
+    google: 'eqGCTg0YbBKp4lD-EfLp_Fl-51sqZwTb6PziVTsptqE',
+  },
   other: {
     'msapplication-TileColor': '#0A2540',
   },
