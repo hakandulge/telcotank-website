@@ -28,7 +28,7 @@ export async function generateMetadata({
       siteName: 'Telcotank',
       locale: 'en_US',
       type: 'article',
-      ...(article.image && { images: [article.image] }),
+      ...(article.images?.[0] && { images: [article.images[0]] }),
     },
     twitter: {
       card: 'summary_large_image',
