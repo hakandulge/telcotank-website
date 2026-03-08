@@ -25,30 +25,6 @@ export default function ContactPage() {
               </p>
               <div className="mt-12 space-y-8">
                 <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">Office</h3>
-                  <p className="mt-2 text-base text-gray-900">6800 Jericho Turnpike, Suite 120W, Syosset, NY 11791</p>
-                </div>
-                <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">Phone</h3>
-                  <p className="mt-2 text-base text-gray-900">
-                    <a href="tel:+13475147470" className="text-gray-900 hover:text-[#2563EB]">
-                      +1 (347) 514-7470
-                    </a>
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">Fax</h3>
-                  <p className="mt-2 text-base text-gray-900">+1 (347) 514-7471</p>
-                </div>
-                <div>
-                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">Email</h3>
-                  <p className="mt-2 text-base text-gray-900">
-                    <a href="mailto:info@telcotank.com" className="text-gray-900 hover:text-[#2563EB]">
-                      info@telcotank.com
-                    </a>
-                  </p>
-                </div>
-                <div>
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">
                     Schedule & Meet
                   </h3>
@@ -80,6 +56,30 @@ export default function ContactPage() {
                       Join Google Meet
                     </a>
                   </div>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">Office</h3>
+                  <p className="mt-2 text-base text-gray-900">6800 Jericho Turnpike, Suite 120W, Syosset, NY 11791</p>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">Phone</h3>
+                  <p className="mt-2 text-base text-gray-900">
+                    <a href="tel:+13475147470" className="text-gray-900 hover:text-[#2563EB]">
+                      +1 (347) 514-7470
+                    </a>
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">Fax</h3>
+                  <p className="mt-2 text-base text-gray-900">+1 (347) 514-7471</p>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">Email</h3>
+                  <p className="mt-2 text-base text-gray-900">
+                    <a href="mailto:info@telcotank.com" className="text-gray-900 hover:text-[#2563EB]">
+                      info@telcotank.com
+                    </a>
+                  </p>
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">LinkedIn</h3>
