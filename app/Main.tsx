@@ -837,12 +837,37 @@ export default function Home({ posts }: { posts: any[] }) {
             Whether you are navigating digital transformation, exploring new markets, or seeking
             strategic clarity on AI adoption, we are ready to help.
           </p>
-          <Link
-            href="/contact"
-            className="mt-12 inline-block rounded-md bg-[#2563EB] px-10 py-5 text-base font-semibold text-white transition-colors hover:bg-[#1D4ED8]"
-          >
-            Schedule Strategy Discussion
-          </Link>
+          <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a
+              href="https://calendar.app.google/9h45a7VnNFDGYVzG8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-md bg-[#2563EB] px-10 py-5 text-base font-semibold text-white transition-colors hover:bg-[#1D4ED8]"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+              Schedule Strategy Discussion
+            </a>
+            <a
+              href="https://calendar.app.google/9h45a7VnNFDGYVzG8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-md border border-white/30 px-10 py-5 text-base font-semibold text-white transition-colors hover:border-white/60 hover:bg-white/10"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M12 16c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" fill="#00AC47" />
+                <path d="M15.5 8.5L19 5l-7-3-7 3 3.5 3.5" stroke="#0066DA" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M8.5 15.5L5 19l7 3 7-3-3.5-3.5" stroke="#EA4335" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M15.5 15.5L19 19" stroke="#FBBC04" strokeWidth="1.5" strokeLinecap="round" />
+                <path d="M8.5 8.5L5 5" stroke="#4285F4" strokeWidth="1.5" strokeLinecap="round" />
+              </svg>
+              Meet Now
+            </a>
+          </div>
         </div>
       </section>
     </>
