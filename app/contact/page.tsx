@@ -50,20 +50,36 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">
-                    Meeting Link
+                    Schedule & Meet
                   </h3>
-                  <a
-                    href="https://meet.google.com/ntt-vpge-shj"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-2 inline-flex items-center gap-2 rounded-md bg-[#0A2540] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#1a3a5c]"
-                  >
-                    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none">
-                      <path d="M15.5 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53L15.5 13.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <rect x="2" y="6" width="13.5" height="12" rx="2" stroke="currentColor" strokeWidth="1.5"/>
-                    </svg>
-                    Join Google Meet
-                  </a>
+                  <div className="mt-2 flex flex-col gap-3 sm:flex-row">
+                    <a
+                      href="https://calendar.app.google/9h45a7VnNFDGYVzG8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 rounded-md bg-[#2563EB] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#1D4ED8]"
+                    >
+                      <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                        <line x1="16" y1="2" x2="16" y2="6" />
+                        <line x1="8" y1="2" x2="8" y2="6" />
+                        <line x1="3" y1="10" x2="21" y2="10" />
+                      </svg>
+                      Schedule a Meeting
+                    </a>
+                    <a
+                      href="https://meet.google.com/ntt-vpge-shj"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 rounded-md bg-[#0A2540] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#1a3a5c]"
+                    >
+                      <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none">
+                        <path d="M15.5 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53L15.5 13.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <rect x="2" y="6" width="13.5" height="12" rx="2" stroke="currentColor" strokeWidth="1.5"/>
+                      </svg>
+                      Join Google Meet
+                    </a>
+                  </div>
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">LinkedIn</h3>
