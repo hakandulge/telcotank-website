@@ -724,6 +724,106 @@ export default function Home({ posts }: { posts: any[] }) {
         </div>
       </section>
 
+      {/* ═══ AIRBRIDGE ANNOUNCEMENT ═══ */}
+      <section className="bg-white py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#0A2540] to-[#1a3a5c] p-10 md:p-16">
+            {/* Decorative elements */}
+            <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-[#2563EB]/10 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-[#2563EB]/10 blur-3xl" />
+
+            <div className="relative grid items-center gap-10 lg:grid-cols-[1fr_auto]">
+              <div>
+                <span className="inline-block rounded-full bg-[#2563EB]/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#60a5fa]">
+                  New from Telcotank
+                </span>
+                <h2 className="mt-5 font-serif text-3xl font-semibold text-white md:text-4xl lg:text-5xl">
+                  AirBridge
+                </h2>
+                <p className="mt-2 text-lg font-medium text-[#60a5fa]">
+                  Aviation Disruption Intelligence Platform
+                </p>
+                <p className="mt-5 max-w-2xl text-base leading-relaxed text-gray-300 md:text-lg">
+                  Real-time monitoring of flight disruptions across 30+ airports in the Middle East,
+                  Europe, and global hubs. AirBridge combines live flight data with weather intelligence
+                  to provide actionable situational awareness for travelers, airlines, and logistics teams.
+                </p>
+                <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+                  <div className="rounded-lg bg-white/10 p-4 backdrop-blur-sm">
+                    <div className="text-2xl font-bold text-white">30+</div>
+                    <div className="mt-1 text-xs text-gray-400">Airports Monitored</div>
+                  </div>
+                  <div className="rounded-lg bg-white/10 p-4 backdrop-blur-sm">
+                    <div className="text-2xl font-bold text-white">8</div>
+                    <div className="mt-1 text-xs text-gray-400">Regions Covered</div>
+                  </div>
+                  <div className="rounded-lg bg-white/10 p-4 backdrop-blur-sm">
+                    <div className="text-2xl font-bold text-white">Live</div>
+                    <div className="mt-1 text-xs text-gray-400">Flight Scraping</div>
+                  </div>
+                  <div className="rounded-lg bg-white/10 p-4 backdrop-blur-sm">
+                    <div className="text-2xl font-bold text-white">Free</div>
+                    <div className="mt-1 text-xs text-gray-400">Open Access</div>
+                  </div>
+                </div>
+                <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                  <a
+                    href="https://airbridge.telcotank.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-md bg-[#2563EB] px-8 py-3.5 text-center text-sm font-semibold text-white transition-colors hover:bg-[#1D4ED8]"
+                  >
+                    Launch AirBridge &rarr;
+                  </a>
+                  <a
+                    href="https://airbridge.telcotank.com/airports"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-md border border-white/30 px-8 py-3.5 text-center text-sm font-semibold text-white transition-colors hover:border-white/60 hover:bg-white/10"
+                  >
+                    View Airport Dashboard
+                  </a>
+                </div>
+              </div>
+
+              {/* Decorative plane/radar icon */}
+              <div className="hidden lg:flex lg:flex-col lg:items-center lg:justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 120 120"
+                  className="h-40 w-40 text-[#2563EB]/30"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                >
+                  <circle cx="60" cy="60" r="55" strokeDasharray="4 4" />
+                  <circle cx="60" cy="60" r="38" strokeDasharray="4 4" />
+                  <circle cx="60" cy="60" r="20" />
+                  <line x1="60" y1="5" x2="60" y2="115" opacity="0.3" />
+                  <line x1="5" y1="60" x2="115" y2="60" opacity="0.3" />
+                  {/* Plane */}
+                  <g transform="translate(70, 35) rotate(45)">
+                    <path
+                      d="M0 0 L-4 12 L0 10 L4 12 Z"
+                      fill="currentColor"
+                      stroke="none"
+                      className="text-[#60a5fa]"
+                    />
+                    <path
+                      d="M-10 8 L0 5 L10 8"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      className="text-[#60a5fa]"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ═══ FINAL CTA ═══ */}
       <section className="relative overflow-hidden bg-[#0A2540] py-28 md:py-36">
         <div className="pointer-events-none absolute inset-0">
