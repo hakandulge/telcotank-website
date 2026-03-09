@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogRoutes = allBlogs
     .filter((post) => !post.draft)
     .map((post) => ({
-      url: `${siteUrl}/${post.path}`,
+      url: `${siteUrl}/${post.path}/`,
       lastModified: post.lastmod || post.date,
     }))
 
@@ -27,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'blog',
     'tags',
   ].map((route) => ({
-    url: `${siteUrl}/${route}`,
+    url: route === '' ? `${siteUrl}/` : `${siteUrl}/${route}/`,
     lastModified: new Date().toISOString().split('T')[0],
     changeFrequency: route === '' ? 'weekly' as const : 'monthly' as const,
     priority: route === '' ? 1.0 : ['capabilities', 'industries', 'strategicintelligence'].includes(route) ? 0.9 : route === 'contact' ? 0.9 : 0.8,

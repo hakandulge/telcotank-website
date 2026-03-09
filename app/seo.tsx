@@ -12,6 +12,11 @@ interface PageSEOProps {
 }
 
 export function genPageMetadata({ title, description, image, keywords, canonical, ...rest }: PageSEOProps): Metadata {
+  // Ensure canonical URLs have trailing slashes to match trailingSlash: true in next.config
+  const canonicalUrl = canonical
+    ? canonical.endsWith('/') ? canonical : `${canonical}/`
+    : undefined;
+
   return {
     title,
     description: description || siteMetadata.description,
@@ -19,7 +24,7 @@ export function genPageMetadata({ title, description, image, keywords, canonical
     openGraph: {
       title: `${title} | ${siteMetadata.title}`,
       description: description || siteMetadata.description,
-      url: canonical || './',
+      url: canonicalUrl || './',
       siteName: siteMetadata.title,
       images: image ? [image] : [siteMetadata.socialBanner],
       locale: 'en_US',
@@ -31,9 +36,9 @@ export function genPageMetadata({ title, description, image, keywords, canonical
       images: image ? [image] : [siteMetadata.socialBanner],
       description: description || siteMetadata.description,
     },
-    ...(canonical && {
+    ...(canonicalUrl && {
       alternates: {
-        canonical,
+        canonical: canonicalUrl,
       },
     }),
     ...rest,
