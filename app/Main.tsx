@@ -4,6 +4,7 @@ import GlobalMap from '@/components/visuals/GlobalMap'
 import AIModel from '@/components/visuals/AIModel'
 import StrategyFramework from '@/components/visuals/StrategyFramework'
 import NetworkMesh from '@/components/visuals/NetworkMesh'
+import NewsletterSignup from '@/components/NewsletterSignup'
 
 /* ─── Client Logos ─── */
 const clientLogos = [
@@ -823,6 +824,9 @@ export default function Home({ posts }: { posts: any[] }) {
           </div>
         </div>
       </section>
+
+      {/* ═══ NEWSLETTER SIGNUP ═══ */}
+      <NewsletterSignup />
 
       {/* ═══ FINAL CTA ═══ */}
       <section className="relative overflow-hidden bg-[#0A2540] py-28 md:py-36">
