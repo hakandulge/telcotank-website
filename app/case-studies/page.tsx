@@ -241,6 +241,16 @@ export default function CaseStudiesPage() {
             </p>
           </div>
         </div>
+        {/* Full-width image under hero text */}
+        <div className="mx-auto max-w-7xl px-6 pb-16 lg:px-8">
+          <div className="overflow-hidden rounded-2xl shadow-xl shadow-black/20">
+            <img
+              src="/static/images/visuals/industries-sector-showcase.png"
+              alt="Telcotank case studies — transformation results across industries"
+              className="h-72 w-full object-cover md:h-96"
+            />
+          </div>
+        </div>
       </section>
 
       {caseStudies.map((cs, idx) => (
