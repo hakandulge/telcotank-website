@@ -223,13 +223,24 @@ const caseStudies = [
 export default function CaseStudiesPage() {
   return (
     <>
-      <section className="bg-white py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl">
-            <h1 className="font-serif text-4xl font-semibold text-[#0A2540] md:text-5xl lg:text-6xl">
+      {/* Hero — cinematic photo */}
+      <section className="relative min-h-[60vh] overflow-hidden bg-[#0A1628]">
+        <img
+          src="/static/images/visuals/casestudies-hero-client-success.png"
+          alt="Telcotank client success stories and transformation results"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0A1628]/90 via-[#0A1628]/60 to-transparent" />
+        <div className="relative mx-auto flex min-h-[60vh] max-w-7xl items-center px-6 lg:px-8">
+          <div className="max-w-2xl py-24">
+            <div className="mb-6 h-0.5 w-12 bg-[#60A5FA]" />
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#60A5FA]">
+              Proven Results
+            </p>
+            <h1 className="font-serif text-4xl font-bold leading-[1.1] text-white md:text-5xl lg:text-6xl">
               Case Studies
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-gray-600 md:text-xl">
+            <p className="mt-6 text-lg leading-relaxed text-gray-300 md:text-xl">
               Real-world transformation results across telecom, financial services, technology, and emerging markets — spanning 20+ countries and two decades of execution.
             </p>
           </div>
@@ -289,8 +300,15 @@ export default function CaseStudiesPage() {
         </section>
       ))}
 
-      <section className="bg-[#0A2540] py-20 md:py-24">
-        <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
+      {/* CTA — photo background */}
+      <section className="relative overflow-hidden bg-[#0A2540] py-20 md:py-24">
+        <img
+          src="/static/images/visuals/casestudies-impact-results-banner.png"
+          alt="Telcotank transformation impact and results"
+          className="absolute inset-0 h-full w-full object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540] via-[#0A2540]/80 to-[#0A2540]/60" />
+        <div className="relative mx-auto max-w-7xl px-6 text-center lg:px-8">
           <h2 className="font-serif text-3xl font-semibold text-white md:text-4xl">
             What Could We Achieve Together?
           </h2>
@@ -299,7 +317,7 @@ export default function CaseStudiesPage() {
           </p>
           <Link
             href="/contact"
-            className="mt-8 inline-block rounded-md bg-[#2563EB] px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-[#1D4ED8]"
+            className="mt-8 inline-block rounded-full bg-[#2563EB] px-8 py-4 text-sm font-semibold text-white transition-colors hover:bg-[#1D4ED8]"
           >
             Request Strategy Discussion
           </Link>
