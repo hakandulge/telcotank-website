@@ -334,16 +334,12 @@ export default function Home({ posts }: { posts: any[] }) {
         </div>
       </section>
 
-      {/* ═══ IMPACT METRICS — photo background ═══ */}
+      {/* ═══ IMPACT METRICS ═══ */}
       <section className="relative overflow-hidden bg-[#0A1628] py-28 md:py-32">
-        <img
-          src={`${V}/industries-global-team-presence.png`}
-          alt="Telcotank global presence across 40 countries"
-          className="absolute inset-0 h-full w-full object-cover opacity-25"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0A1628]/70 via-[#0A1628]/50 to-[#0A1628]/70" />
         {/* Decorative grid pattern */}
         <div className="pointer-events-none absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
+        <div className="pointer-events-none absolute -left-32 top-1/4 h-96 w-96 rounded-full bg-[#2563EB]/10 blur-[100px]" />
+        <div className="pointer-events-none absolute -right-32 bottom-1/4 h-80 w-80 rounded-full bg-[#60A5FA]/8 blur-[80px]" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mb-16 text-center">
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-[#60A5FA]">
@@ -365,41 +361,42 @@ export default function Home({ posts }: { posts: any[] }) {
         </div>
       </section>
 
-      {/* ═══ WHO WE HELP — photo panel ═══ */}
+      {/* ═══ WHO WE HELP — image top, text below ═══ */}
       <section className="bg-white py-28 md:py-36">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid items-center gap-16 lg:grid-cols-2">
-            <div className="group relative overflow-hidden rounded-2xl shadow-2xl shadow-[#0A2540]/10">
-              <img
-                src={`${V}/home-who-we-help-people.png`}
-                alt="Enterprise leaders collaborating on transformation strategy"
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
+          {/* Image at top — full width */}
+          <div className="group relative mb-12 overflow-hidden rounded-2xl shadow-2xl shadow-[#0A2540]/10">
+            <img
+              src={`${V}/home-who-we-help-people.png`}
+              alt="Enterprise leaders collaborating on transformation strategy"
+              className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-105 md:h-96"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
+          </div>
+          {/* Title */}
+          <div className="mb-10">
+            <div className="mb-6 flex items-center gap-3">
+              <div className="h-0.5 w-12 bg-gradient-to-r from-[#2563EB] to-[#60A5FA]" />
+              <div className="h-0.5 w-4 bg-[#2563EB]/20" />
             </div>
-            <div>
-              <div className="mb-6 flex items-center gap-3">
-                <div className="h-0.5 w-12 bg-gradient-to-r from-[#2563EB] to-[#60A5FA]" />
-                <div className="h-0.5 w-4 bg-[#2563EB]/20" />
+            <h2 className="font-serif text-3xl font-semibold text-[#0A2540] md:text-4xl">
+              Who We Help
+            </h2>
+            <p className="mt-4 max-w-3xl text-lg text-gray-600">
+              We work with organizations navigating complex transformation challenges across technology-intensive industries.
+            </p>
+          </div>
+          {/* Audience cards — horizontal grid */}
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+            {audiences.map((item) => (
+              <div
+                key={item.title}
+                className="card-lift gradient-border group/item rounded-xl border border-gray-200 bg-white p-6"
+              >
+                <h3 className="text-lg font-semibold text-[#0A2540] transition-colors group-hover/item:text-[#2563EB]">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-gray-600">{item.description}</p>
               </div>
-              <h2 className="font-serif text-3xl font-semibold text-[#0A2540] md:text-4xl">
-                Who We Help
-              </h2>
-              <p className="mt-4 text-lg text-gray-600">
-                We work with organizations navigating complex transformation challenges across technology-intensive industries.
-              </p>
-              <div className="mt-10 space-y-5">
-                {audiences.map((item) => (
-                  <div
-                    key={item.title}
-                    className="group/item rounded-lg border-l-2 border-[#2563EB]/20 py-3 pl-6 transition-all hover:border-[#2563EB] hover:bg-[#F5F7FA]/60 hover:pl-8"
-                  >
-                    <h3 className="text-lg font-semibold text-[#0A2540] transition-colors group-hover/item:text-[#2563EB]">{item.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-gray-600">{item.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -525,8 +522,9 @@ export default function Home({ posts }: { posts: any[] }) {
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {caseStudies.slice(1).map((item) => (
-              <div
+              <Link
                 key={item.title}
+                href="/case-studies"
                 className="card-lift gradient-border group rounded-xl border border-gray-200 p-8"
               >
                 <span className="inline-block rounded-full bg-[#2563EB]/8 px-3 py-1 text-xs font-semibold text-[#2563EB]">
@@ -538,7 +536,7 @@ export default function Home({ posts }: { posts: any[] }) {
                 <span className="mt-6 inline-block text-sm font-medium text-[#2563EB] transition-all group-hover:translate-x-1">
                   Read case study &rarr;
                 </span>
-              </div>
+              </Link>
             ))}
           </div>
           <div className="mt-8 text-center md:hidden">
@@ -966,14 +964,8 @@ export default function Home({ posts }: { posts: any[] }) {
       {/* ═══ NEWSLETTER SIGNUP ═══ */}
       <NewsletterSignup />
 
-      {/* ═══ FINAL CTA — cinematic photo background ═══ */}
+      {/* ═══ FINAL CTA ═══ */}
       <section className="relative overflow-hidden bg-[#0A2540] py-32 md:py-40">
-        <img
-          src={`${V}/shared-cta-lets-talk.png`}
-          alt="Start a conversation with Telcotank about your transformation challenge"
-          className="absolute inset-0 h-full w-full object-cover opacity-30"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540] via-[#0A2540]/80 to-[#0A2540]/60" />
         {/* Decorative orbs */}
         <div className="pointer-events-none absolute left-1/4 top-1/3 h-64 w-64 rounded-full bg-[#2563EB]/10 blur-[100px] animate-pulse-soft" />
         <div className="pointer-events-none absolute right-1/4 bottom-1/3 h-64 w-64 rounded-full bg-[#60A5FA]/8 blur-[80px] animate-pulse-soft delay-200" />

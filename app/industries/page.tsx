@@ -79,15 +79,11 @@ const industries = [
 export default function IndustriesPage() {
   return (
     <>
-      {/* Hero — cinematic photo */}
-      <section className="relative min-h-[60vh] overflow-hidden bg-[#0A1628]">
-        <img
-          src="/static/images/visuals/industries-hero-global-reach.png"
-          alt="Telcotank global industry expertise across telecom, finance, and technology"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0A1628]/90 via-[#0A1628]/60 to-transparent" />
-        <div className="relative mx-auto flex min-h-[60vh] max-w-7xl items-center px-6 lg:px-8">
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-[#0A1628]">
+        <div className="pointer-events-none absolute -left-32 top-1/4 h-96 w-96 rounded-full bg-[#2563EB]/10 blur-[100px]" />
+        <div className="pointer-events-none absolute -right-32 bottom-1/4 h-80 w-80 rounded-full bg-[#60A5FA]/8 blur-[80px]" />
+        <div className="relative mx-auto flex min-h-[50vh] max-w-7xl items-center px-6 lg:px-8">
           <div className="max-w-2xl py-24">
             <div className="mb-6 h-0.5 w-12 bg-[#60A5FA]" />
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#60A5FA]">
@@ -139,15 +135,9 @@ export default function IndustriesPage() {
         </section>
       ))}
 
-      {/* CTA — photo background */}
-      <section className="relative overflow-hidden bg-[#0A2540] py-20 md:py-24">
-        <img
-          src="/static/images/visuals/shared-cta-lets-talk.png"
-          alt="Discuss your industry challenge with Telcotank"
-          className="absolute inset-0 h-full w-full object-cover opacity-30"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540] via-[#0A2540]/80 to-[#0A2540]/60" />
-        <div className="relative mx-auto max-w-7xl px-6 text-center lg:px-8">
+      {/* CTA */}
+      <section className="bg-[#0A2540] py-20 md:py-24">
+        <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
           <h2 className="font-serif text-3xl font-semibold text-white md:text-4xl">
             Discuss Your Industry Challenge
           </h2>

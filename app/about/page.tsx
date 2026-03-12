@@ -80,12 +80,8 @@ export default function AboutPage() {
                 <div className="mt-1 text-sm text-gray-600">Founded</div>
               </div>
               <div className="rounded-lg bg-white p-6 shadow-sm">
-                <div className="text-3xl font-bold text-[#0A2540]">20+</div>
+                <div className="text-3xl font-bold text-[#0A2540]">40</div>
                 <div className="mt-1 text-sm text-gray-600">Countries</div>
-              </div>
-              <div className="rounded-lg bg-white p-6 shadow-sm">
-                <div className="text-3xl font-bold text-[#0A2540]">25</div>
-                <div className="mt-1 text-sm text-gray-600">Enterprise Clients</div>
               </div>
               <div className="rounded-lg bg-white p-6 shadow-sm">
                 <div className="text-3xl font-bold text-[#0A2540]">$500M+</div>
