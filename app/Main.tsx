@@ -637,7 +637,7 @@ export default function Home({ posts }: { posts: any[] }) {
           {/* Image — full width horizontal under text */}
           <div className="group mb-12 overflow-hidden rounded-2xl shadow-lg shadow-[#0A2540]/10">
             <img
-              src={`${V}/industries-sector-showcase.png`}
+              src={`${V}/industries-hero-global-reach.png`}
               alt="Telcotank industry sectors — telecom, financial services, technology, infrastructure"
               className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-105 md:h-96"
             />
