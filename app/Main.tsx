@@ -407,46 +407,46 @@ export default function Home({ posts }: { posts: any[] }) {
         <div className="pointer-events-none absolute -right-40 top-20 h-80 w-80 rounded-full bg-[#2563EB]/8 blur-[100px]" />
         <div className="pointer-events-none absolute -left-40 bottom-20 h-80 w-80 rounded-full bg-[#60A5FA]/5 blur-[100px]" />
         <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid items-center gap-16 lg:grid-cols-2">
-            <div>
-              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#60A5FA]">
-                Our Approach
-              </p>
-              <h2 className="font-serif text-3xl font-semibold text-white md:text-4xl lg:text-5xl">
-                AI-First Consulting
-              </h2>
-              <p className="mt-6 text-lg leading-relaxed text-gray-300/90">
-                Telcotank applies AI across research, modeling, and analysis to accelerate strategic
-                insights and transformation delivery. This enables faster decision cycles and
-                measurably better outcomes for clients.
-              </p>
-              <p className="mt-4 text-lg leading-relaxed text-gray-300/90">
-                From market sizing to competitive analysis to transformation roadmaps, AI amplifies
-                every phase of our consulting process — without replacing the human judgment that
-                drives strategic decisions.
-              </p>
-              <div className="mt-10 grid grid-cols-2 gap-4">
-                {[
-                  { val: '3x', label: 'Faster strategic analysis' },
-                  { val: '10x', label: 'More data points processed' },
-                  { val: '50%', label: 'Faster time to insight' },
-                  { val: 'AI+Human', label: 'Strategic judgment preserved' },
-                ].map((stat) => (
-                  <div key={stat.val} className="group rounded-xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm transition-all hover:border-[#2563EB]/30 hover:bg-white/10">
-                    <div className="text-2xl font-bold text-gradient-blue">{stat.val}</div>
-                    <div className="mt-1 text-sm text-gray-400">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            {/* AI + Human visual */}
-            <div className="group relative overflow-hidden rounded-2xl shadow-2xl shadow-black/20">
-              <img
-                src={`${V}/capabilities-ai-first-human-tech.png`}
-                alt="AI-first consulting methodology combining human expertise with technology"
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/30 to-transparent" />
+          <div className="max-w-3xl">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#60A5FA]">
+              Our Approach
+            </p>
+            <h2 className="font-serif text-3xl font-semibold text-white md:text-4xl lg:text-5xl">
+              AI-First Consulting
+            </h2>
+            <p className="mt-6 text-lg leading-relaxed text-gray-300/90">
+              Telcotank applies AI across research, modeling, and analysis to accelerate strategic
+              insights and transformation delivery. This enables faster decision cycles and
+              measurably better outcomes for clients.
+            </p>
+          </div>
+          {/* Image between paragraphs */}
+          <div className="group relative my-10 overflow-hidden rounded-2xl shadow-2xl shadow-black/20">
+            <img
+              src={`${V}/capabilities-ai-first-human-tech.png`}
+              alt="AI-first consulting methodology combining human expertise with technology"
+              className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-105 md:h-96"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/30 to-transparent" />
+          </div>
+          <div className="max-w-3xl">
+            <p className="text-lg leading-relaxed text-gray-300/90">
+              From market sizing to competitive analysis to transformation roadmaps, AI amplifies
+              every phase of our consulting process — without replacing the human judgment that
+              drives strategic decisions.
+            </p>
+            <div className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
+              {[
+                { val: '3x', label: 'Faster strategic analysis' },
+                { val: '10x', label: 'More data points processed' },
+                { val: '50%', label: 'Faster time to insight' },
+                { val: 'AI+Human', label: 'Strategic judgment preserved' },
+              ].map((stat) => (
+                <div key={stat.val} className="group rounded-xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm transition-all hover:border-[#2563EB]/30 hover:bg-white/10">
+                  <div className="text-2xl font-bold text-gradient-blue">{stat.val}</div>
+                  <div className="mt-1 text-sm text-gray-400">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -498,28 +498,14 @@ export default function Home({ posts }: { posts: any[] }) {
               View all cases &rarr;
             </Link>
           </div>
-          {/* Featured hero case */}
-          <div className="mb-8 overflow-hidden rounded-2xl shadow-xl shadow-[#0A2540]/10">
-            <Link href="/case-studies" className="group relative block">
-              <img
-                src={`${V}/casestudies-featured-stories.png`}
-                alt="Telcotank transformation case studies and client success stories"
-                className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-105 md:h-96"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540] via-[#0A2540]/50 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-8 md:p-12">
-                <span className="inline-block rounded-full bg-[#2563EB] px-3 py-1 text-xs font-semibold text-white shadow-lg shadow-[#2563EB]/30">
-                  Featured
-                </span>
-                <h3 className="mt-3 font-serif text-2xl font-semibold text-white md:text-3xl">
-                  Telecom Digital Transformation — $500M+ Market Opportunity
-                </h3>
-                <p className="mt-2 max-w-2xl text-sm text-gray-300 md:text-base">
-                  End-to-end digital transformation for a major telecom operator, unlocking new revenue streams and enterprise growth.
-                </p>
-              </div>
-            </Link>
-          </div>
+          {/* Featured case study image — links to case studies */}
+          <Link href="/case-studies" className="group mb-8 block overflow-hidden rounded-2xl shadow-xl shadow-[#0A2540]/10">
+            <img
+              src={`${V}/casestudies-featured-stories.png`}
+              alt="Telcotank transformation case studies and client success stories"
+              className="w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+            />
+          </Link>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {caseStudies.slice(1).map((item) => (
               <Link
@@ -550,40 +536,39 @@ export default function Home({ posts }: { posts: any[] }) {
         </div>
       </section>
 
-      {/* ═══ HOW WE WORK — with photo strip ═══ */}
+      {/* ═══ HOW WE WORK — heading, image, grid ═══ */}
       <section className="bg-[#F5F7FA] py-28 md:py-36">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid items-center gap-16 lg:grid-cols-5">
-            <div className="lg:col-span-2">
-              <div className="mb-4 flex items-center gap-3">
-                <div className="h-0.5 w-12 bg-gradient-to-r from-[#2563EB] to-[#60A5FA]" />
-                <div className="h-0.5 w-4 bg-[#2563EB]/20" />
-              </div>
-              <h2 className="font-serif text-3xl font-semibold text-[#0A2540] md:text-4xl">
-                How We Work
-              </h2>
-              <p className="mt-4 text-lg text-gray-600">
-                A proven methodology honed across 40 countries and two decades of transformation delivery.
-              </p>
-              <div className="mt-8 group overflow-hidden rounded-2xl shadow-lg shadow-[#0A2540]/10">
-                <img
-                  src={`${V}/home-our-process-human.png`}
-                  alt="Telcotank consulting process — diagnose, design, execute, scale"
-                  className="h-64 w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
+          {/* Heading + text */}
+          <div className="mb-10 max-w-2xl">
+            <div className="mb-4 flex items-center gap-3">
+              <div className="h-0.5 w-12 bg-gradient-to-r from-[#2563EB] to-[#60A5FA]" />
+              <div className="h-0.5 w-4 bg-[#2563EB]/20" />
             </div>
-            <div className="lg:col-span-3">
-              <div className="grid gap-6 sm:grid-cols-2">
-                {processSteps.map((item) => (
-                  <div key={item.title} className="card-lift group rounded-xl bg-white p-8 shadow-sm">
-                    <div className="mb-4 text-4xl font-bold text-gradient-blue opacity-40 transition-opacity group-hover:opacity-100">{item.step}</div>
-                    <h3 className="text-xl font-semibold text-[#0A2540]">{item.title}</h3>
-                    <p className="mt-3 text-sm leading-relaxed text-gray-600">{item.description}</p>
-                  </div>
-                ))}
+            <h2 className="font-serif text-3xl font-semibold text-[#0A2540] md:text-4xl">
+              How We Work
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              A proven methodology honed across 40 countries and two decades of transformation delivery.
+            </p>
+          </div>
+          {/* Image — full width horizontal */}
+          <div className="group mb-12 overflow-hidden rounded-2xl shadow-lg shadow-[#0A2540]/10">
+            <img
+              src={`${V}/home-our-process-human.png`}
+              alt="Telcotank consulting process — diagnose, design, execute, scale"
+              className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-105 md:h-96"
+            />
+          </div>
+          {/* 4-box grid */}
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {processSteps.map((item) => (
+              <div key={item.title} className="card-lift group rounded-xl bg-white p-8 shadow-sm">
+                <div className="mb-4 text-4xl font-bold text-gradient-blue opacity-40 transition-opacity group-hover:opacity-100">{item.step}</div>
+                <h3 className="text-xl font-semibold text-[#0A2540]">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-gray-600">{item.description}</p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
