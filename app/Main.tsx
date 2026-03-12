@@ -573,52 +573,47 @@ export default function Home({ posts }: { posts: any[] }) {
         </div>
       </section>
 
-      {/* ═══ CAPABILITIES — photo accent ═══ */}
+      {/* ═══ CAPABILITIES ═══ */}
       <section className="bg-white py-28 md:py-36">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid items-start gap-16 lg:grid-cols-3">
-            <div className="lg:col-span-2">
-              <div className="mb-12 max-w-2xl">
-                <div className="mb-4 flex items-center gap-3">
-                  <div className="h-0.5 w-12 bg-gradient-to-r from-[#2563EB] to-[#60A5FA]" />
-                  <div className="h-0.5 w-4 bg-[#2563EB]/20" />
-                </div>
-                <h2 className="font-serif text-3xl font-semibold text-[#0A2540] md:text-4xl">
-                  Capabilities
-                </h2>
-                <p className="mt-4 text-lg text-gray-600">
-                  Deep expertise across the full transformation lifecycle, from strategy through execution.
-                </p>
-              </div>
-              <div className="grid gap-6 md:grid-cols-2">
-                {capabilities.map((item) => (
-                  <Link
-                    key={item.title}
-                    href={item.href}
-                    className="card-lift gradient-border group rounded-xl border border-gray-200 p-8"
-                  >
-                    <h3 className="text-lg font-semibold text-[#0A2540] transition-colors group-hover:text-[#2563EB]">
-                      {item.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-gray-600">{item.description}</p>
-                    <span className="mt-6 inline-block text-sm font-medium text-[#2563EB] transition-transform group-hover:translate-x-1">
-                      Learn more &rarr;
-                    </span>
-                  </Link>
-                ))}
-              </div>
+          {/* Heading + text */}
+          <div className="mb-10 max-w-2xl">
+            <div className="mb-4 flex items-center gap-3">
+              <div className="h-0.5 w-12 bg-gradient-to-r from-[#2563EB] to-[#60A5FA]" />
+              <div className="h-0.5 w-4 bg-[#2563EB]/20" />
             </div>
-            {/* Strategy visual */}
-            <div className="hidden lg:block">
-              <div className="sticky top-24 group overflow-hidden rounded-2xl shadow-xl shadow-[#0A2540]/10">
-                <img
-                  src={`${V}/capabilities-services-with-people.png`}
-                  alt="Telcotank consulting team delivering transformation services"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
-              </div>
-            </div>
+            <h2 className="font-serif text-3xl font-semibold text-[#0A2540] md:text-4xl">
+              Capabilities
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Deep expertise across the full transformation lifecycle, from strategy through execution.
+            </p>
+          </div>
+          {/* Image — full width under text */}
+          <div className="group mb-12 overflow-hidden rounded-2xl shadow-xl shadow-[#0A2540]/10">
+            <img
+              src={`${V}/capabilities-services-with-people.png`}
+              alt="Telcotank consulting team delivering transformation services"
+              className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-105 md:h-96"
+            />
+          </div>
+          {/* Capability cards */}
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {capabilities.map((item) => (
+              <Link
+                key={item.title}
+                href={item.href}
+                className="card-lift gradient-border group rounded-xl border border-gray-200 p-8"
+              >
+                <h3 className="text-lg font-semibold text-[#0A2540] transition-colors group-hover:text-[#2563EB]">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-gray-600">{item.description}</p>
+                <span className="mt-6 inline-block text-sm font-medium text-[#2563EB] transition-transform group-hover:translate-x-1">
+                  Learn more &rarr;
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -626,7 +621,8 @@ export default function Home({ posts }: { posts: any[] }) {
       {/* ═══ INDUSTRIES ═══ */}
       <section className="bg-[#F5F7FA] py-28 md:py-36">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mb-16 max-w-2xl">
+          {/* Heading + text */}
+          <div className="mb-10 max-w-2xl">
             <div className="mb-4 flex items-center gap-3">
               <div className="h-0.5 w-12 bg-gradient-to-r from-[#2563EB] to-[#60A5FA]" />
               <div className="h-0.5 w-4 bg-[#2563EB]/20" />
@@ -638,6 +634,15 @@ export default function Home({ posts }: { posts: any[] }) {
               Focused expertise in technology-intensive industries undergoing fundamental transformation.
             </p>
           </div>
+          {/* Image — full width horizontal under text */}
+          <div className="group mb-12 overflow-hidden rounded-2xl shadow-lg shadow-[#0A2540]/10">
+            <img
+              src={`${V}/industries-sector-showcase.png`}
+              alt="Telcotank industry sectors — telecom, financial services, technology, infrastructure"
+              className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-105 md:h-96"
+            />
+          </div>
+          {/* Industry cards */}
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {industries.map((item) => (
               <Link
