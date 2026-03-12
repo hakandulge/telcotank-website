@@ -160,133 +160,165 @@ export default function StrategicIntelligencePage() {
   const allPubs = publications
 
   return (
-    <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
-      {/* Header */}
-      <div className="mb-16 max-w-3xl">
-        <h1 className="font-serif text-4xl font-bold tracking-tight text-[#0A2540] md:text-5xl">
-          Strategic Intelligence
-        </h1>
-        <p className="mt-6 text-lg leading-relaxed text-gray-600">
-          McKinsey-style strategic research frameworks used by telecom operators, infrastructure
-          investors, sovereign wealth funds, and corporate strategy teams. Each framework delivers
-          capital-allocation-grade analysis with institutional data sources and actionable
-          positioning recommendations.
-        </p>
-        <div className="mt-4 flex flex-wrap gap-3 text-sm text-gray-500">
-          <span className="rounded-full bg-gray-100 px-3 py-1">17 Frameworks</span>
-          <span className="rounded-full bg-gray-100 px-3 py-1">$12,000 each</span>
-          <span className="rounded-full bg-gray-100 px-3 py-1">2025–2030 Horizon</span>
+    <>
+      {/* Hero — dark cinematic */}
+      <section className="relative overflow-hidden bg-[#0A1628] py-28 md:py-36">
+        <div className="pointer-events-none absolute -left-32 top-1/4 h-96 w-96 rounded-full bg-[#2563EB]/10 blur-[100px]" />
+        <div className="pointer-events-none absolute -right-32 bottom-1/4 h-80 w-80 rounded-full bg-[#60A5FA]/8 blur-[80px]" />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <div className="mb-6 flex items-center gap-3">
+              <div className="h-0.5 w-12 bg-gradient-to-r from-[#60A5FA] to-[#2563EB]" />
+              <div className="h-0.5 w-4 bg-[#60A5FA]/40" />
+            </div>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-[#60A5FA]">
+              Research & Frameworks
+            </p>
+            <h1 className="font-serif text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
+              Strategic Intelligence
+            </h1>
+            <p className="mt-6 text-lg leading-relaxed text-gray-300/90 md:text-xl">
+              McKinsey-style strategic research frameworks used by telecom operators, infrastructure
+              investors, sovereign wealth funds, and corporate strategy teams. Each framework delivers
+              capital-allocation-grade analysis with institutional data sources and actionable
+              positioning recommendations.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3 text-sm">
+              <span className="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-gray-300 backdrop-blur-sm">17 Frameworks</span>
+              <span className="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-gray-300 backdrop-blur-sm">$12,000 each</span>
+              <span className="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-gray-300 backdrop-blur-sm">2025–2030 Horizon</span>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* Featured Publications */}
-      <div className="mb-20">
-        <h2 className="mb-8 text-sm font-semibold uppercase tracking-widest text-gray-400">
-          Proven Bestsellers
-        </h2>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {featuredPubs.map((pub) => (
-            <a
-              key={pub.slug}
-              href={`${STORE_URL}/products/${pub.slug}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group rounded-xl border border-gray-200 bg-white p-6 transition-all hover:border-[#2563EB]/30 hover:shadow-lg"
-            >
-              <div className="mb-3 flex flex-wrap gap-2">
-                {pub.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-medium text-[#2563EB]"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <h3 className="mb-2 text-lg font-bold text-[#0A2540] group-hover:text-[#2563EB]">
-                {pub.title}
-              </h3>
-              <p className="mb-3 text-xs font-medium text-gray-400">
-                {pub.format} · {pub.coverage}
-              </p>
-              <p className="mb-4 text-sm leading-relaxed text-gray-600">{pub.description}</p>
-              <span className="inline-flex items-center text-sm font-semibold text-[#2563EB] group-hover:underline">
-                View framework →
-              </span>
-            </a>
-          ))}
-        </div>
-      </div>
-
-      {/* All Publications */}
-      <div className="mb-16">
-        <h2 className="mb-8 text-sm font-semibold uppercase tracking-widest text-gray-400">
-          All Strategic Frameworks
-        </h2>
-        <div className="divide-y divide-gray-100">
-          {allPubs.map((pub) => (
-            <a
-              key={pub.slug}
-              href={`${STORE_URL}/products/${pub.slug}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex flex-col gap-4 py-6 transition-colors hover:bg-gray-50 sm:flex-row sm:items-start sm:gap-8 rounded-lg px-4 -mx-4"
-            >
-              <div className="flex-1">
-                <h3 className="text-lg font-bold text-[#0A2540] group-hover:text-[#2563EB]">
-                  {pub.title}
-                </h3>
-                <p className="mt-1 text-xs font-medium text-gray-400">
-                  {pub.format} · {pub.coverage}
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-gray-600">{pub.description}</p>
-              </div>
-              <div className="flex shrink-0 items-center gap-2">
-                <div className="flex flex-wrap gap-1.5">
-                  {pub.tags.slice(0, 2).map((tag) => (
+      <section className="bg-[#F5F7FA] py-28 md:py-36">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mb-12">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#60A5FA]">
+              Proven Bestsellers
+            </p>
+            <h2 className="font-serif text-3xl font-semibold text-[#0A2540] md:text-4xl">
+              Featured Frameworks
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {featuredPubs.map((pub) => (
+              <a
+                key={pub.slug}
+                href={`${STORE_URL}/products/${pub.slug}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-lift gradient-border group rounded-xl border border-gray-200 bg-white p-7"
+              >
+                <div className="mb-3 flex flex-wrap gap-2">
+                  {pub.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-500"
+                      className="rounded-full bg-[#2563EB]/8 px-2.5 py-0.5 text-xs font-semibold text-[#2563EB]"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <span className="ml-2 text-sm font-semibold text-[#2563EB] opacity-0 transition-opacity group-hover:opacity-100">
-                  View →
+                <h3 className="mb-2 text-lg font-bold text-[#0A2540] transition-colors group-hover:text-[#2563EB]">
+                  {pub.title}
+                </h3>
+                <p className="mb-3 text-xs font-medium text-[#2563EB]/60">
+                  {pub.format} · {pub.coverage}
+                </p>
+                <p className="mb-4 text-sm leading-relaxed text-gray-600">{pub.description}</p>
+                <span className="inline-flex items-center text-sm font-semibold text-[#2563EB] transition-transform group-hover:translate-x-1">
+                  View framework &rarr;
                 </span>
-              </div>
-            </a>
-          ))}
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* All Publications */}
+      <section className="bg-white py-28 md:py-36">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mb-12">
+            <div className="mb-4 flex items-center gap-3">
+              <div className="h-0.5 w-12 bg-gradient-to-r from-[#2563EB] to-[#60A5FA]" />
+              <div className="h-0.5 w-4 bg-[#2563EB]/20" />
+            </div>
+            <h2 className="font-serif text-3xl font-semibold text-[#0A2540] md:text-4xl">
+              All Strategic Frameworks
+            </h2>
+          </div>
+          <div className="divide-y divide-gray-100">
+            {allPubs.map((pub) => (
+              <a
+                key={pub.slug}
+                href={`${STORE_URL}/products/${pub.slug}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col gap-4 rounded-lg px-4 py-6 -mx-4 transition-colors hover:bg-[#F5F7FA]/60 sm:flex-row sm:items-start sm:gap-8"
+              >
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-[#0A2540] transition-colors group-hover:text-[#2563EB]">
+                    {pub.title}
+                  </h3>
+                  <p className="mt-1 text-xs font-medium text-[#2563EB]/60">
+                    {pub.format} · {pub.coverage}
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-gray-600">{pub.description}</p>
+                </div>
+                <div className="flex shrink-0 items-center gap-2">
+                  <div className="flex flex-wrap gap-1.5">
+                    {pub.tags.slice(0, 2).map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full bg-[#2563EB]/8 px-2 py-0.5 text-xs font-medium text-[#2563EB]/70"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <span className="ml-2 text-sm font-semibold text-[#2563EB] opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-100">
+                    View &rarr;
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
-      <div className="rounded-2xl bg-[#0A2540] px-8 py-12 text-center">
-        <h2 className="font-serif text-2xl font-bold text-white md:text-3xl">
-          Need a Custom Strategic Briefing?
-        </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-gray-300">
-          Request an executive walkthrough of any framework for your leadership team, or commission
-          a custom research framework tailored to your strategic priorities.
-        </p>
-        <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a
-            href={STORE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-md bg-[#2563EB] px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#1D4ED8]"
-          >
-            Browse All Frameworks
-          </a>
-          <Link
-            href="/contact"
-            className="rounded-md border border-gray-500 px-8 py-3 text-sm font-semibold text-white transition-colors hover:border-white"
-          >
-            Request Executive Briefing
-          </Link>
+      <section className="relative overflow-hidden bg-[#0A2540] py-28 md:py-36">
+        <div className="pointer-events-none absolute left-1/4 top-1/3 h-64 w-64 rounded-full bg-[#2563EB]/10 blur-[100px]" />
+        <div className="pointer-events-none absolute right-1/4 bottom-1/3 h-64 w-64 rounded-full bg-[#60A5FA]/8 blur-[80px]" />
+        <div className="relative mx-auto max-w-7xl px-6 text-center lg:px-8">
+          <h2 className="font-serif text-3xl font-bold text-white md:text-4xl">
+            Need a Custom Strategic Briefing?
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-gray-300/90">
+            Request an executive walkthrough of any framework for your leadership team, or commission
+            a custom research framework tailored to your strategic priorities.
+          </p>
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a
+              href={STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-[#2563EB] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#2563EB]/25 transition-all hover:bg-[#1D4ED8] hover:shadow-xl hover:shadow-[#2563EB]/30"
+            >
+              Browse All Frameworks
+            </a>
+            <Link
+              href="/contact"
+              className="rounded-full border border-white/20 px-8 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/10"
+            >
+              Request Executive Briefing
+            </Link>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   )
 }

@@ -97,7 +97,7 @@ export default function ContactPage() {
                     Global Presence
                   </h3>
                   <p className="mt-2 text-base text-gray-700">
-                    Projects delivered across 20+ countries in Americas, Europe, Middle East, Africa, and Asia.
+                    Projects delivered across 40 countries in Americas, Europe, Middle East, Africa, and Asia.
                   </p>
                 </div>
               </div>

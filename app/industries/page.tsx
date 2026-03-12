@@ -59,7 +59,7 @@ const industries = [
       'Regulatory and licensing framework navigation',
       'Value creation for investors',
     ],
-    stats: { clients: '20+', label: 'Countries Covered' },
+    stats: { clients: '40', label: 'Countries Covered' },
   },
   {
     id: 'startups-scaleups',

@@ -338,7 +338,7 @@ export default function Home({ posts }: { posts: any[] }) {
       <section className="relative overflow-hidden bg-[#0A1628] py-28 md:py-32">
         <img
           src={`${V}/industries-global-team-presence.png`}
-          alt="Telcotank global presence across 20+ countries"
+          alt="Telcotank global presence across 40 countries"
           className="absolute inset-0 h-full w-full object-cover opacity-25"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A1628]/70 via-[#0A1628]/50 to-[#0A1628]/70" />

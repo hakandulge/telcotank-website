@@ -5,7 +5,7 @@ import Main from './Main'
 
 export const metadata = genPageMetadata({
   title: 'Telcotank | Transformation Strategy & Consulting for Telecom, AI & Digital Economy',
-  description: 'Telcotank is a transformation strategy and management consulting firm. Since 2004, we help telecom operators, financial institutions, technology companies and investors with digital transformation, AI strategy, growth acceleration and market entry across 20+ countries.',
+  description: 'Telcotank is a transformation strategy and management consulting firm. Since 2004, we help telecom operators, financial institutions, technology companies and investors with digital transformation, AI strategy, growth acceleration and market entry across 40 countries.',
   keywords: [
     'transformation consulting',
     'telecom consulting firm',

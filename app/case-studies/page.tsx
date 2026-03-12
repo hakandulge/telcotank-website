@@ -3,7 +3,7 @@ import Link from '@/components/Link'
 
 export const metadata = genPageMetadata({
   title: 'Case Studies — Transformation Success Stories Across Industries',
-  description: 'Explore Telcotank transformation case studies spanning telecom growth acceleration, digital transformation, sales channel optimization, organizational restructuring, M&A advisory, greenfield launches, and startup scaling across 20+ countries.',
+  description: 'Explore Telcotank transformation case studies spanning telecom growth acceleration, digital transformation, sales channel optimization, organizational restructuring, M&A advisory, greenfield launches, and startup scaling across 40 countries.',
   keywords: ['consulting case studies', 'telecom transformation case study', 'digital transformation success stories', 'M&A advisory case studies', 'growth acceleration results'],
   canonical: 'https://telcotank.com/case-studies',
 })
@@ -209,7 +209,7 @@ const caseStudies = [
     metricLabel: 'Worth of business cases',
     industry: 'Cross-Industry',
     capability: 'Opportunity Creation',
-    challenge: 'Investors in the services industry required expert advisory for acquisitions in markets with limited information, complex regulatory environments, and diverse cultural dynamics across 20+ countries.',
+    challenge: 'Investors in the services industry required expert advisory for acquisitions in markets with limited information, complex regulatory environments, and diverse cultural dynamics across 40 countries.',
     approach: 'We served as strategic counsel to investors since 2005 — advocating eligible business plans, preparing market entrance strategies, supporting full due diligence, and executing operations in transition and post-merger periods. Our valuation models incorporated local market dynamics, industrial trends, competition environment, regulations, customer behavior, brand perception, operational efficiency, and sociocultural features. Our agile field intelligence team gathered and deployed information rapidly throughout the due diligence process.',
     results: [
       '$2.5B worth of business cases evaluated and advised',
@@ -241,7 +241,7 @@ export default function CaseStudiesPage() {
               Case Studies
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-gray-300 md:text-xl">
-              Real-world transformation results across telecom, financial services, technology, and emerging markets — spanning 20+ countries and two decades of execution.
+              Real-world transformation results across telecom, financial services, technology, and emerging markets — spanning 40 countries and two decades of execution.
             </p>
           </div>
         </div>

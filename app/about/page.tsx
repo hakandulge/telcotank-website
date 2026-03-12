@@ -3,7 +3,7 @@ import Link from '@/components/Link'
 
 export const metadata = genPageMetadata({
   title: 'About Telcotank — Transformation Consulting Since 2004',
-  description: 'Founded in 2004, Telcotank is an AI-first transformation consulting firm operating across 20+ countries. We combine deep telecom and technology expertise with proprietary strategic intelligence frameworks.',
+  description: 'Founded in 2004, Telcotank is an AI-first transformation consulting firm operating across 40 countries. We combine deep telecom and technology expertise with proprietary strategic intelligence frameworks.',
   keywords: ['about Telcotank', 'transformation consulting firm', 'telecom consulting company', 'management consulting since 2004', 'AI-first consulting'],
   canonical: 'https://telcotank.com/about',
 })
@@ -32,7 +32,7 @@ const values = [
   },
   {
     title: 'Global Perspective',
-    description: 'Projects across 20+ countries give us the ability to bring global best practices to local challenges.',
+    description: 'Projects across 40 countries give us the ability to bring global best practices to local challenges.',
   },
 ]
 
@@ -69,7 +69,7 @@ export default function AboutPage() {
                 telecom, financial services, technology, and digital infrastructure.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-gray-600">
-                With projects delivered across 20+ countries and 25 enterprise clients, we bring
+                With projects delivered across 40 countries we bring
                 a unique combination of global perspective and deep sector expertise to every
                 engagement.
               </p>
