@@ -369,7 +369,7 @@ export default function Home({ posts }: { posts: any[] }) {
             <img
               src={`${V}/home-who-we-help-people.png`}
               alt="Enterprise leaders collaborating on transformation strategy"
-              className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-105 md:h-96"
+              className="aspect-video w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/20 to-transparent" />
           </div>
@@ -425,7 +425,7 @@ export default function Home({ posts }: { posts: any[] }) {
             <img
               src={`${V}/capabilities-ai-first-human-tech.png`}
               alt="AI-first consulting methodology combining human expertise with technology"
-              className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-105 md:h-96"
+              className="aspect-video w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A2540]/30 to-transparent" />
           </div>
@@ -557,7 +557,7 @@ export default function Home({ posts }: { posts: any[] }) {
             <img
               src={`${V}/home-our-process-human.png`}
               alt="Telcotank consulting process — diagnose, design, execute, scale"
-              className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-105 md:h-96"
+              className="aspect-video w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
           </div>
           {/* 4-box grid */}
@@ -594,7 +594,7 @@ export default function Home({ posts }: { posts: any[] }) {
             <img
               src={`${V}/capabilities-services-with-people.png`}
               alt="Telcotank consulting team delivering transformation services"
-              className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-105 md:h-96"
+              className="aspect-video w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
           </div>
           {/* Capability cards */}
@@ -639,7 +639,7 @@ export default function Home({ posts }: { posts: any[] }) {
             <img
               src={`${V}/industries-hero-global-reach.png`}
               alt="Telcotank industry sectors — telecom, financial services, technology, infrastructure"
-              className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-105 md:h-96"
+              className="aspect-video w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
           </div>
           {/* Industry cards */}
