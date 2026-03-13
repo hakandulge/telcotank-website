@@ -849,78 +849,63 @@ export default function Home({ posts }: { posts: any[] }) {
         </div>
       </section>
 
-      {/* ═══ AIRBRIDGE ANNOUNCEMENT — photo-driven ═══ */}
-      <section className="bg-white py-28 md:py-36">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Hero image — full width, cinematic airport scene */}
-          <div className="relative overflow-hidden rounded-2xl">
-            <img
-              src={`${V}/airbridge-hero-flight-monitoring.png`}
-              alt="AirBridge — real-time flight disruption monitoring across global airports"
-              className="w-full"
-            />
-          </div>
+      {/* ═══ AIRBRIDGE ANNOUNCEMENT ═══ */}
+      <section className="relative overflow-hidden bg-[#0A1628] py-28 md:py-36">
+        <div className="pointer-events-none absolute -left-32 top-1/4 h-96 w-96 rounded-full bg-[#2563EB]/10 blur-[100px]" />
+        <div className="pointer-events-none absolute right-0 bottom-0 h-80 w-80 rounded-full bg-[#60A5FA]/8 blur-[80px]" />
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            <div>
+              <span className="inline-block rounded-full bg-[#2563EB]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#60A5FA]">
+                New from Telcotank
+              </span>
+              <h2 className="mt-5 font-serif text-3xl font-semibold text-white md:text-4xl lg:text-5xl">
+                AirBridge
+              </h2>
+              <p className="mt-2 text-lg font-medium text-[#60A5FA]">
+                Aviation Disruption Intelligence Platform
+              </p>
+              <p className="mt-5 text-base leading-relaxed text-gray-300 md:text-lg">
+                Real-time monitoring of flight disruptions across 30+ airports in the Middle East,
+                Europe, and global hubs. AirBridge combines live flight data with weather intelligence
+                to provide actionable situational awareness for travelers, airlines, and logistics teams.
+              </p>
 
-          {/* Content below image */}
-          <div className="mt-10 max-w-3xl">
-            <span className="inline-block rounded-full bg-[#2563EB]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-[#2563EB]">
-              New from Telcotank
-            </span>
-            <h2 className="mt-5 font-serif text-3xl font-semibold text-[#0A2540] md:text-4xl lg:text-5xl">
-              AirBridge
-            </h2>
-            <p className="mt-2 text-lg font-medium text-[#2563EB]">
-              Aviation Disruption Intelligence Platform
-            </p>
-            <p className="mt-5 text-base leading-relaxed text-gray-600 md:text-lg">
-              Real-time monitoring of flight disruptions across 30+ airports in the Middle East,
-              Europe, and global hubs. AirBridge combines live flight data with weather intelligence
-              to provide actionable situational awareness for travelers, airlines, and logistics teams.
-            </p>
-          </div>
-
-          {/* Stats row */}
-          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:max-w-3xl">
-            {[
-              { val: '30+', label: 'Airports Monitored' },
-              { val: '8', label: 'Regions Covered' },
-              { val: 'Live', label: 'Flight Scraping' },
-              { val: 'Free', label: 'Open Access' },
-            ].map((stat) => (
-              <div key={stat.val} className="rounded-xl border border-gray-200 bg-[#F5F7FA] p-4">
-                <div className="text-2xl font-bold text-gradient-blue">{stat.val}</div>
-                <div className="mt-1 text-xs text-gray-500">{stat.label}</div>
+              {/* CTA buttons */}
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                <a
+                  href="https://airbridge.telcotank.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full bg-[#2563EB] px-8 py-3.5 text-center text-sm font-semibold text-white shadow-lg shadow-[#2563EB]/25 transition-all hover:bg-[#1D4ED8] hover:shadow-xl hover:shadow-[#2563EB]/30"
+                >
+                  Launch AirBridge &rarr;
+                </a>
+                <a
+                  href="https://airbridge.telcotank.com/airports"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-white/20 px-8 py-3.5 text-center text-sm font-semibold text-white transition-colors hover:border-white/40 hover:bg-white/5"
+                >
+                  View Airport Dashboard
+                </a>
               </div>
-            ))}
-          </div>
+            </div>
 
-          {/* CTA buttons */}
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="https://airbridge.telcotank.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-[#2563EB] px-8 py-3.5 text-center text-sm font-semibold text-white shadow-lg shadow-[#2563EB]/25 transition-all hover:bg-[#1D4ED8] hover:shadow-xl hover:shadow-[#2563EB]/30"
-            >
-              Launch AirBridge &rarr;
-            </a>
-            <a
-              href="https://airbridge.telcotank.com/airports"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full border border-gray-300 px-8 py-3.5 text-center text-sm font-semibold text-[#0A2540] transition-colors hover:border-gray-400 hover:bg-gray-50"
-            >
-              View Airport Dashboard
-            </a>
-          </div>
-
-          {/* CTA image — airport runway scene */}
-          <div className="mt-12 overflow-hidden rounded-2xl">
-            <img
-              src={`${V}/airbridge-cta-launch.png`}
-              alt="AirBridge — monitor flight disruptions in real time"
-              className="w-full"
-            />
+            {/* Stats grid */}
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { val: '30+', label: 'Airports Monitored' },
+                { val: '8', label: 'Regions Covered' },
+                { val: 'Live', label: 'Flight Scraping' },
+                { val: 'Free', label: 'Open Access' },
+              ].map((stat) => (
+                <div key={stat.val} className="rounded-xl border border-white/10 bg-white/5 p-6">
+                  <div className="text-3xl font-bold text-white">{stat.val}</div>
+                  <div className="mt-1 text-sm text-gray-400">{stat.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
