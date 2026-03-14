@@ -205,9 +205,9 @@ export default function MainLocalized({ lang }: { lang: Language }) {
       {/* ═══ HERO ═══ */}
       <section className="relative min-h-[60vh] md:min-h-[85vh] overflow-hidden bg-[#0A1628]">
         <picture>
-          <source media="(max-width: 768px)" srcSet={`${V}/home-hero-transformation-team_small.png`} />
+          <source media="(max-width: 768px)" srcSet={`${V}/home-hero-transformation-team${langSuffix}_small.png`} />
           <img
-            src={`${V}/home-hero-transformation-team.png`}
+            src={`${V}/home-hero-transformation-team${langSuffix}.png`}
             alt="Telcotank consulting team collaborating on transformation strategy"
             className="absolute inset-0 h-full w-full object-cover object-center"
             loading="eager"
@@ -335,9 +335,9 @@ export default function MainLocalized({ lang }: { lang: Language }) {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mb-12 overflow-hidden rounded-2xl shadow-2xl shadow-[#0A2540]/10">
             <picture>
-              <source media="(max-width: 768px)" srcSet={`${V}/home-who-we-help-people_small.png`} />
+              <source media="(max-width: 768px)" srcSet={`${V}/home-who-we-help-people${langSuffix}_small.png`} />
               <img
-                src={`${V}/home-who-we-help-people.png`}
+                src={`${V}/home-who-we-help-people${langSuffix}.png`}
                 alt="Enterprise leaders collaborating on transformation strategy"
                 className="w-full"
                 loading="lazy"
@@ -522,9 +522,9 @@ export default function MainLocalized({ lang }: { lang: Language }) {
           </div>
           <div className="mb-12 overflow-hidden rounded-2xl shadow-lg shadow-[#0A2540]/10">
             <picture>
-              <source media="(max-width: 768px)" srcSet={`${V}/home-our-process-human_small.png`} />
+              <source media="(max-width: 768px)" srcSet={`${V}/home-our-process-human${langSuffix}_small.png`} />
               <img
-                src={`${V}/home-our-process-human.png`}
+                src={`${V}/home-our-process-human${langSuffix}.png`}
                 alt="Telcotank consulting process — diagnose, design, execute, scale"
                 className="w-full"
                 loading="lazy"
@@ -606,9 +606,9 @@ export default function MainLocalized({ lang }: { lang: Language }) {
           </div>
           <div className="mb-12 overflow-hidden rounded-2xl shadow-lg shadow-[#0A2540]/10">
             <picture>
-              <source media="(max-width: 768px)" srcSet={`${V}/industries-hero-global-reach_small.png`} />
+              <source media="(max-width: 768px)" srcSet={`${V}/industries-hero-global-reach${langSuffix}_small.png`} />
               <img
-                src={`${V}/industries-hero-global-reach.png`}
+                src={`${V}/industries-hero-global-reach${langSuffix}.png`}
                 alt="Telcotank industry sectors — telecom, financial services, technology, infrastructure"
                 className="w-full"
                 loading="lazy"
