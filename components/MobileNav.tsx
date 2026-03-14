@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
@@ -17,7 +17,6 @@ const languages = [
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
-  const navRef = useRef<HTMLDivElement>(null)
   const router = useRouter()
   const pathname = usePathname()
 
@@ -43,36 +42,38 @@ const MobileNav = () => {
     const newPath = getNewPath(lang)
     setLangOpen(false)
     setNavShow(false)
+    document.body.style.overflow = ''
     router.push(newPath)
   }
 
-  const onToggleNav = () => {
-    setNavShow((s) => !s)
+  const openNav = () => {
+    setNavShow(true)
     setLangOpen(false)
+    document.body.style.overflow = 'hidden'
   }
 
-  // Prevent body scroll when menu is open
+  const closeNav = () => {
+    setNavShow(false)
+    setLangOpen(false)
+    document.body.style.overflow = ''
+  }
+
   useEffect(() => {
-    if (navShow) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
-    }
     return () => {
       document.body.style.overflow = ''
     }
-  }, [navShow])
+  }, [])
 
   const currentLang = getCurrentLang()
-  const currentLanguage = languages.find((l) => l.code === currentLang)
 
   return (
     <>
-      {/* Hamburger button — visible on mobile/tablet */}
+      {/* Hamburger button — visible below lg breakpoint */}
       <button
+        type="button"
         aria-label="Toggle Menu"
-        onClick={onToggleNav}
-        className="lg:hidden relative z-[80] flex h-10 w-10 items-center justify-center"
+        onClick={openNav}
+        className="lg:hidden flex h-10 w-10 items-center justify-center"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -80,153 +81,147 @@ const MobileNav = () => {
           fill="none"
           stroke="currentColor"
           strokeWidth={2}
+          strokeLinecap="round"
           className="h-6 w-6 text-gray-900 dark:text-gray-100"
         >
-          <path strokeLinecap="round" d="M4 6h16M4 12h16M4 18h16" />
+          <line x1="4" y1="6" x2="20" y2="6" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="18" x2="20" y2="18" />
         </svg>
       </button>
 
       {/* Full-screen overlay menu */}
-      <div
-        className={`fixed inset-0 z-[90] transition-all duration-300 ${
-          navShow ? 'visible opacity-100' : 'invisible opacity-0 pointer-events-none'
-        }`}
-      >
-        {/* Dark blue background like Slalom */}
+      {navShow && (
         <div
-          className={`absolute inset-0 bg-[#0A2540] transition-transform duration-400 ease-out ${
-            navShow ? 'translate-y-0' : '-translate-y-full'
-          }`}
-        />
-
-        {/* Header row: logo + globe + close */}
-        <div className="relative z-10 flex items-center justify-between px-6 py-5">
-          <Link href="/" onClick={onToggleNav}>
-            <img
-              src="/static/images/telcotank-logo-white.png"
-              alt="Telcotank"
-              className="h-7 w-auto"
-              onError={(e) => {
-                // Fallback if white logo doesn't exist
-                (e.target as HTMLImageElement).src = '/static/images/telcotank-logo.png'
-                ;(e.target as HTMLImageElement).className = 'h-7 w-auto brightness-0 invert'
-              }}
-            />
-          </Link>
-
-          <div className="flex items-center gap-3">
-            {/* Globe icon for language */}
-            <button
-              aria-label="Change Language"
-              onClick={() => setLangOpen(!langOpen)}
-              className="flex h-10 w-10 items-center justify-center rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-colors"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={1.5}
-                className="h-6 w-6"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <path d="M2 12h20" />
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-              </svg>
-            </button>
-
-            {/* Vertical divider */}
-            <div className="h-6 w-px bg-white/20" />
-
-            {/* Close button */}
-            <button
-              aria-label="Close Menu"
-              onClick={onToggleNav}
-              className="flex h-10 w-10 items-center justify-center rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-colors"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                className="h-6 w-6"
-              >
-                <path strokeLinecap="round" d="M18 6L6 18M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        {/* Navigation content */}
-        <div
-          ref={navRef}
-          className="relative z-10 flex h-[calc(100vh-72px)] flex-col overflow-y-auto px-6"
+          style={{ position: 'fixed', inset: 0, zIndex: 9999 }}
+          className="bg-[#0A2540]"
         >
-          {/* Language selector panel — slides down when globe is clicked */}
-          <div
-            className={`overflow-hidden transition-all duration-300 ease-out ${
-              langOpen ? 'max-h-[400px] opacity-100 mb-6' : 'max-h-0 opacity-0'
-            }`}
-          >
-            <div className="grid grid-cols-2 gap-2 pt-2">
-              {languages.map((lang) => (
-                <button
-                  key={lang.code}
-                  onClick={() => handleLanguageChange(lang.code)}
-                  className={`flex items-center gap-3 rounded-xl px-4 py-3.5 text-left transition-colors ${
-                    currentLang === lang.code
-                      ? 'bg-[#2563EB] text-white'
-                      : 'bg-white/5 text-white/80 hover:bg-white/10 hover:text-white'
-                  }`}
+          {/* Header row: logo + globe + close */}
+          <div className="flex items-center justify-between px-6 h-[72px]">
+            <Link href="/" onClick={closeNav}>
+              <img
+                src="/static/images/telcotank-logo.png"
+                alt="Telcotank"
+                className="h-7 w-auto brightness-0 invert"
+              />
+            </Link>
+
+            <div className="flex items-center gap-2">
+              {/* Globe icon for language */}
+              <button
+                type="button"
+                aria-label="Change Language"
+                onClick={() => setLangOpen(!langOpen)}
+                className="flex h-10 w-10 items-center justify-center rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={1.5}
+                  className="h-5 w-5"
                 >
-                  <span className="text-lg">{lang.flag}</span>
-                  <span className="text-sm font-medium">{lang.name}</span>
-                </button>
-              ))}
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M2 12h20" />
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
+              </button>
+
+              {/* Vertical divider */}
+              <div className="h-5 w-px bg-white/20" />
+
+              {/* Close button (X) */}
+              <button
+                type="button"
+                aria-label="Close Menu"
+                onClick={closeNav}
+                className="flex h-10 w-10 items-center justify-center rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  className="h-6 w-6"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </button>
             </div>
-            <div className="mt-4 h-px bg-white/10" />
           </div>
 
-          {/* Nav links — Slalom style: large, bold, with dividers */}
-          <nav className="flex-1">
-            {headerNavLinks.map((link, idx) => (
-              <div key={link.title}>
-                <Link
-                  href={link.href}
-                  className="group flex items-center justify-between py-5 text-xl font-semibold text-white transition-colors hover:text-[#60A5FA]"
-                  onClick={onToggleNav}
-                >
-                  <span>{link.title}</span>
-                  <svg
-                    className="h-5 w-5 text-white/30 transition-all group-hover:text-[#60A5FA] group-hover:translate-x-1"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2}
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-                {idx < headerNavLinks.length - 1 && (
-                  <div className="h-px bg-white/10" />
-                )}
+          {/* Scrollable content area */}
+          <div
+            className="overflow-y-auto px-6"
+            style={{ height: 'calc(100vh - 72px)' }}
+          >
+            {/* Language selector panel — shows when globe is clicked */}
+            {langOpen && (
+              <div className="mb-6 pb-6 border-b border-white/10">
+                <div className="grid grid-cols-2 gap-2">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      type="button"
+                      onClick={() => handleLanguageChange(lang.code)}
+                      className={`flex items-center gap-3 rounded-xl px-4 py-3.5 text-left transition-colors ${
+                        currentLang === lang.code
+                          ? 'bg-[#2563EB] text-white'
+                          : 'bg-white/5 text-white/80 hover:bg-white/10 hover:text-white'
+                      }`}
+                    >
+                      <span className="text-lg">{lang.flag}</span>
+                      <span className="text-sm font-medium">{lang.name}</span>
+                    </button>
+                  ))}
+                </div>
               </div>
-            ))}
-          </nav>
+            )}
 
-          {/* CTA button at bottom */}
-          <div className="pb-10 pt-6">
-            <Link
-              href="/contact"
-              onClick={onToggleNav}
-              className="block w-full rounded-full border-2 border-white/30 py-4 text-center text-sm font-semibold text-white transition-all hover:border-white/60 hover:bg-white/5"
-            >
-              Request Strategy Discussion
-            </Link>
+            {/* Nav links — Slalom style: large, bold, with dividers */}
+            <nav>
+              {headerNavLinks.map((link, idx) => (
+                <div key={link.title}>
+                  <Link
+                    href={link.href}
+                    className="flex items-center justify-between py-5 text-xl font-semibold text-white"
+                    onClick={closeNav}
+                  >
+                    <span>{link.title}</span>
+                    <svg
+                      className="h-5 w-5 text-white/30"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                  {idx < headerNavLinks.length - 1 && (
+                    <div className="h-px bg-white/10" />
+                  )}
+                </div>
+              ))}
+            </nav>
+
+            {/* CTA button at bottom */}
+            <div className="pb-10 pt-8">
+              <Link
+                href="/contact"
+                onClick={closeNav}
+                className="block w-full rounded-full border-2 border-white/30 py-4 text-center text-sm font-semibold text-white"
+              >
+                Request Strategy Discussion
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </>
   )
 }
