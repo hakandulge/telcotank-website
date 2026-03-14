@@ -98,9 +98,33 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
+
+              // --- Multi-Language & Content Section Detection ---
+              (function() {
+                var path = window.location.pathname;
+                var langs = ['tr','ar','es','pt','ru','de','fr'];
+                var detectedLang = 'en';
+                var pathSegments = path.split('/').filter(Boolean);
+                if (pathSegments.length > 0 && langs.indexOf(pathSegments[0]) !== -1) {
+                  detectedLang = pathSegments[0];
+                }
+                var sections = ['strategicintelligence','articles','casestudies','capabilities','about','contact'];
+                var detectedSection = 'home';
+                for (var i = 0; i < pathSegments.length; i++) {
+                  if (sections.indexOf(pathSegments[i]) !== -1) {
+                    detectedSection = pathSegments[i];
+                    break;
+                  }
+                }
+                window._siteLang = detectedLang;
+                window._contentSection = detectedSection;
+              })();
+
               gtag('config', 'G-N1GSLNGVD5', {
                 page_title: document.title,
-                send_page_view: true
+                send_page_view: true,
+                site_language: window._siteLang,
+                content_section: window._contentSection
               });
 
               // --- Enhanced Engagement Tracking ---
@@ -121,7 +145,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         event_category: 'Engagement',
                         event_label: mark + '%',
                         value: mark,
-                        page_path: window.location.pathname
+                        page_path: window.location.pathname,
+                        site_language: window._siteLang,
+                        content_section: window._contentSection
                       });
                     }
                   });
@@ -139,7 +165,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         event_category: 'Engagement',
                         event_label: seconds + 's',
                         value: seconds,
-                        page_path: window.location.pathname
+                        page_path: window.location.pathname,
+                        site_language: window._siteLang,
+                        content_section: window._contentSection
                       });
                     }
                   }, seconds * 1000);
@@ -159,7 +187,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     event_category: 'Conversion',
                     event_label: text,
                     link_url: href,
-                    page_path: window.location.pathname
+                    page_path: window.location.pathname,
+                    site_language: window._siteLang,
+                    content_section: window._contentSection
                   });
                 }
 
@@ -169,7 +199,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     event_category: 'Navigation',
                     event_label: text,
                     link_url: href,
-                    page_path: window.location.pathname
+                    page_path: window.location.pathname,
+                    site_language: window._siteLang,
+                    content_section: window._contentSection
                   });
                 }
 
@@ -178,7 +210,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   gtag('event', 'external_link_click', {
                     event_category: 'Outbound',
                     event_label: href,
-                    page_path: window.location.pathname
+                    page_path: window.location.pathname,
+                    site_language: window._siteLang,
+                    content_section: window._contentSection
                   });
                 }
               });
@@ -193,7 +227,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         gtag('event', 'section_view', {
                           event_category: 'Content',
                           event_label: section,
-                          page_path: window.location.pathname
+                          page_path: window.location.pathname,
+                          site_language: window._siteLang,
+                          content_section: window._contentSection
                         });
                         observer.unobserve(entry.target);
                       }
@@ -215,7 +251,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   gtag('event', 'exit_intent', {
                     event_category: 'Engagement',
                     event_label: window.location.pathname,
-                    value: timeSpent
+                    value: timeSpent,
+                    site_language: window._siteLang,
+                    content_section: window._contentSection
                   });
                 }
               });
