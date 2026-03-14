@@ -2,8 +2,9 @@ import { Metadata } from 'next'
 import StrategicIntelligenceLocalized from '../../StrategicIntelligenceLocalized'
 
 export const metadata: Metadata = {
-  title: 'Telcotank — Strategische Intelligenz',
-  description: 'Strategische Forschungsrahmen zu KI-Transformation, Rechenzentrumanforderungen, Halbleiterdynamik und digitaler Infrastruktur.',
+  title: 'Telcotank — Strategische Intelligenz: KI-, Telekommunikations- und Digitalwirtschafts-Frameworks',
+  description: 'Strategische Forschungsrahmen im McKinsey-Stil zu KI-Transformation, Rechenzentrumsnachfrage, Halbleiterdynamik, souveräner KI-Strategie und digitaler Infrastruktur für Unternehmensführer und Investoren.',
+  keywords: ['strategische Intelligenz', 'KI-Strategie-Framework', 'Rechenzentrum-Marktanalyse', 'Halbleiterstrategie', 'souveräne KI', 'digitale Infrastrukturforschung', 'Telekommunikationsbranchenforschung', 'KI-Infrastruktur-Investition', 'Unternehmens-KI-Beratung'],
   alternates: {
     canonical: 'https://telcotank.com/de/strategicintelligence/',
     languages: {
@@ -19,7 +20,19 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    title: 'Telcotank — Strategische Intelligenz: KI-, Telekommunikations- und Digitalwirtschafts-Frameworks',
+    description: 'Strategische Forschungsrahmen im McKinsey-Stil zu KI-Transformation, Rechenzentrumsnachfrage, Halbleiterdynamik und digitaler Infrastruktur.',
+    url: 'https://telcotank.com/de/strategicintelligence/',
+    siteName: 'Telcotank',
+    images: ['/static/images/social-banner.png'],
     locale: 'de_DE',
+    type: 'website',
+  },
+  twitter: {
+    title: 'Telcotank — Strategische Intelligenz',
+    card: 'summary_large_image',
+    images: ['/static/images/social-banner.png'],
+    description: 'Strategische Forschungsrahmen zu KI-Transformation, Rechenzentren und digitaler Infrastruktur.',
   },
 }
 

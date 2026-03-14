@@ -4,7 +4,7 @@ import Link from '@/components/Link'
 export const metadata = genPageMetadata({
   title: 'Strategic Intelligence — AI, Telecom & Digital Economy Frameworks',
   description: 'Telcotank Strategic Intelligence: McKinsey-style research frameworks on AI transformation, data center demand, semiconductor dynamics, sovereign AI strategy, and digital infrastructure for enterprise leaders and investors.',
-  keywords: ['strategic intelligence', 'AI strategy framework', 'data center market analysis', 'semiconductor strategy', 'sovereign AI', 'digital infrastructure research', 'telecom industry research'],
+  keywords: ['strategic intelligence', 'AI strategy framework', 'data center market analysis', 'semiconductor strategy', 'sovereign AI', 'digital infrastructure research', 'telecom industry research', 'AI infrastructure investment', 'enterprise AI consulting', 'technology strategy frameworks'],
   canonical: 'https://telcotank.com/strategicintelligence',
   alternates: {
     canonical: 'https://telcotank.com/strategicintelligence/',

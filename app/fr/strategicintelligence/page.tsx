@@ -2,8 +2,9 @@ import { Metadata } from 'next'
 import StrategicIntelligenceLocalized from '../../StrategicIntelligenceLocalized'
 
 export const metadata: Metadata = {
-  title: 'Telcotank — Intelligence stratégique',
-  description: 'Cadres de recherche stratégique sur la transformation de l\'IA, la demande en centres de données, la dynamique des semi-conducteurs et l\'infrastructure numérique.',
+  title: 'Telcotank — Intelligence Stratégique : Cadres IA, Télécommunications et Économie Numérique',
+  description: 'Cadres de recherche stratégique style McKinsey sur la transformation de l\'IA, la demande de centres de données, la dynamique des semi-conducteurs, la stratégie d\'IA souveraine et l\'infrastructure numérique pour les dirigeants et investisseurs.',
+  keywords: ['intelligence stratégique', 'cadre stratégique IA', 'analyse du marché des centres de données', 'stratégie des semi-conducteurs', 'IA souveraine', 'recherche infrastructure numérique', 'recherche industrie des télécommunications', 'investissement infrastructure IA', 'conseil IA entreprise'],
   alternates: {
     canonical: 'https://telcotank.com/fr/strategicintelligence/',
     languages: {
@@ -19,7 +20,19 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    title: 'Telcotank — Intelligence Stratégique : Cadres IA, Télécommunications et Économie Numérique',
+    description: 'Cadres de recherche stratégique style McKinsey sur la transformation de l\'IA, la demande de centres de données, la dynamique des semi-conducteurs et l\'infrastructure numérique.',
+    url: 'https://telcotank.com/fr/strategicintelligence/',
+    siteName: 'Telcotank',
+    images: ['/static/images/social-banner.png'],
     locale: 'fr_FR',
+    type: 'website',
+  },
+  twitter: {
+    title: 'Telcotank — Intelligence Stratégique',
+    card: 'summary_large_image',
+    images: ['/static/images/social-banner.png'],
+    description: 'Cadres de recherche stratégique sur la transformation de l\'IA, les centres de données et l\'infrastructure numérique.',
   },
 }
 
