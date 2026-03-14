@@ -6,6 +6,18 @@ export const metadata = genPageMetadata({
   description: 'Get in touch with Telcotank to discuss your digital transformation, AI strategy, or market expansion challenge. We work with telecom operators, financial institutions and technology companies globally.',
   keywords: ['contact Telcotank', 'strategy discussion', 'consulting inquiry', 'digital transformation consultation', 'telecom consulting contact'],
   canonical: 'https://telcotank.com/contact',
+  alternates: {
+    canonical: 'https://telcotank.com/contact/',
+    languages: {
+        'en': 'https://telcotank.com/contact/',
+        'tr': 'https://telcotank.com/tr/contact/',
+        'ar': 'https://telcotank.com/ar/contact/',
+        'es': 'https://telcotank.com/es/contact/',
+        'pt': 'https://telcotank.com/pt/contact/',
+        'ru': 'https://telcotank.com/ru/contact/',
+        'x-default': 'https://telcotank.com/contact/',
+      },
+  },
 })
 
 export default function ContactPage() {

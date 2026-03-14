@@ -6,6 +6,18 @@ export const metadata = genPageMetadata({
   description: 'Explore Telcotank transformation case studies spanning telecom growth acceleration, digital transformation, sales channel optimization, organizational restructuring, M&A advisory, greenfield launches, and startup scaling across 40 countries.',
   keywords: ['consulting case studies', 'telecom transformation case study', 'digital transformation success stories', 'M&A advisory case studies', 'growth acceleration results'],
   canonical: 'https://telcotank.com/case-studies',
+  alternates: {
+    canonical: 'https://telcotank.com/case-studies/',
+    languages: {
+        'en': 'https://telcotank.com/case-studies/',
+        'tr': 'https://telcotank.com/tr/case-studies/',
+        'ar': 'https://telcotank.com/ar/case-studies/',
+        'es': 'https://telcotank.com/es/case-studies/',
+        'pt': 'https://telcotank.com/pt/case-studies/',
+        'ru': 'https://telcotank.com/ru/case-studies/',
+        'x-default': 'https://telcotank.com/case-studies/',
+      },
+  },
 })
 
 const caseStudies = [

@@ -19,6 +19,18 @@ export const metadata = genPageMetadata({
     'Telcotank',
   ],
   canonical: 'https://telcotank.com',
+  alternates: {
+    canonical: 'https://telcotank.com/',
+    languages: {
+        'en': 'https://telcotank.com/',
+        'tr': 'https://telcotank.com/tr/',
+        'ar': 'https://telcotank.com/ar/',
+        'es': 'https://telcotank.com/es/',
+        'pt': 'https://telcotank.com/pt/',
+        'ru': 'https://telcotank.com/ru/',
+        'x-default': 'https://telcotank.com/',
+      },
+  },
 })
 
 export default async function Page() {

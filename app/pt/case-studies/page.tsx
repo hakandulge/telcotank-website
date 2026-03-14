@@ -4,6 +4,21 @@ import CaseStudiesLocalized from '../../CaseStudiesLocalized'
 export const metadata: Metadata = {
   title: 'Telcotank — Casos de Sucesso',
   description: 'Telcotank oferece casos de estudo de transformação bem-sucedida e resultados comprovados.',
+  alternates: {
+    canonical: 'https://telcotank.com/pt/case-studies/',
+    languages: {
+      'en': 'https://telcotank.com/case-studies/',
+      'tr': 'https://telcotank.com/tr/case-studies/',
+      'ar': 'https://telcotank.com/ar/case-studies/',
+      'es': 'https://telcotank.com/es/case-studies/',
+      'pt': 'https://telcotank.com/pt/case-studies/',
+      'ru': 'https://telcotank.com/ru/case-studies/',
+      'x-default': 'https://telcotank.com/case-studies/',
+    },
+  },
+  openGraph: {
+    locale: 'pt_BR',
+  },
 }
 
 export default function Page() {

@@ -4,6 +4,21 @@ import IndustriesLocalized from '../../IndustriesLocalized'
 export const metadata: Metadata = {
   title: 'Telcotank — القطاعات',
   description: 'يقدم تيلكوتانك خدمات استشارات التحول في قطاعات الاتصالات والخدمات المالية والتكنولوجيا والبنية التحتية الرقمية.',
+  alternates: {
+    canonical: 'https://telcotank.com/ar/industries/',
+    languages: {
+      'en': 'https://telcotank.com/industries/',
+      'tr': 'https://telcotank.com/tr/industries/',
+      'ar': 'https://telcotank.com/ar/industries/',
+      'es': 'https://telcotank.com/es/industries/',
+      'pt': 'https://telcotank.com/pt/industries/',
+      'ru': 'https://telcotank.com/ru/industries/',
+      'x-default': 'https://telcotank.com/industries/',
+    },
+  },
+  openGraph: {
+    locale: 'ar_SA',
+  },
 }
 
 export default function Page() {

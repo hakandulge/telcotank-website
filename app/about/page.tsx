@@ -6,6 +6,18 @@ export const metadata = genPageMetadata({
   description: 'Founded in 2004, Telcotank is an AI-first transformation consulting firm operating across 40 countries. We combine deep telecom and technology expertise with proprietary strategic intelligence frameworks.',
   keywords: ['about Telcotank', 'transformation consulting firm', 'telecom consulting company', 'management consulting since 2004', 'AI-first consulting'],
   canonical: 'https://telcotank.com/about',
+  alternates: {
+    canonical: 'https://telcotank.com/about/',
+    languages: {
+        'en': 'https://telcotank.com/about/',
+        'tr': 'https://telcotank.com/tr/about/',
+        'ar': 'https://telcotank.com/ar/about/',
+        'es': 'https://telcotank.com/es/about/',
+        'pt': 'https://telcotank.com/pt/about/',
+        'ru': 'https://telcotank.com/ru/about/',
+        'x-default': 'https://telcotank.com/about/',
+      },
+  },
 })
 
 const milestones = [

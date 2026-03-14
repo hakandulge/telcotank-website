@@ -26,7 +26,6 @@ export async function generateMetadata({
       description: article.summary,
       url: `https://telcotank.com/articles/${slug}`,
       siteName: 'Telcotank',
-      locale: 'en_US',
       type: 'article',
       ...(article.images?.[0] && { images: [article.images[0]] }),
     },

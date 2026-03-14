@@ -6,6 +6,18 @@ export const metadata = genPageMetadata({
   description: 'Telcotank consulting capabilities: digital transformation strategy, AI transformation & governance, growth acceleration, market entry & expansion, and investment & M&A advisory for telecom and technology companies.',
   keywords: ['digital transformation consulting', 'AI consulting', 'growth acceleration', 'market entry strategy', 'M&A advisory', 'telecom consulting capabilities', 'enterprise AI governance'],
   canonical: 'https://telcotank.com/capabilities',
+  alternates: {
+    canonical: 'https://telcotank.com/capabilities/',
+    languages: {
+        'en': 'https://telcotank.com/capabilities/',
+        'tr': 'https://telcotank.com/tr/capabilities/',
+        'ar': 'https://telcotank.com/ar/capabilities/',
+        'es': 'https://telcotank.com/es/capabilities/',
+        'pt': 'https://telcotank.com/pt/capabilities/',
+        'ru': 'https://telcotank.com/ru/capabilities/',
+        'x-default': 'https://telcotank.com/capabilities/',
+      },
+  },
 })
 
 const capabilities = [

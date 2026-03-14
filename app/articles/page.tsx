@@ -9,6 +9,18 @@ export const metadata = genPageMetadata({
     'Strategic insights and analysis on AI, quantum computing, telecom transformation, and the future of digital infrastructure by Telcotank.',
   keywords: ['AI articles', 'telecom strategy insights', 'quantum computing analysis', 'digital infrastructure articles', 'technology strategy blog'],
   canonical: 'https://telcotank.com/articles',
+  alternates: {
+    canonical: 'https://telcotank.com/articles/',
+    languages: {
+        'en': 'https://telcotank.com/articles/',
+        'tr': 'https://telcotank.com/tr/articles/',
+        'ar': 'https://telcotank.com/ar/articles/',
+        'es': 'https://telcotank.com/es/articles/',
+        'pt': 'https://telcotank.com/pt/articles/',
+        'ru': 'https://telcotank.com/ru/articles/',
+        'x-default': 'https://telcotank.com/articles/',
+      },
+  },
 })
 
 function ThemeTag({ theme }: { theme: string }) {

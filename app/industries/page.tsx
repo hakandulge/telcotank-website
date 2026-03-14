@@ -6,6 +6,18 @@ export const metadata = genPageMetadata({
   description: 'Telcotank serves telecom operators, financial institutions, technology & AI companies, digital infrastructure investors, and high-growth startups with deep industry-specific transformation consulting.',
   keywords: ['telecom consulting', 'financial services consulting', 'AI industry consulting', 'digital infrastructure investment', 'technology company advisory', 'startup scaling consulting'],
   canonical: 'https://telcotank.com/industries',
+  alternates: {
+    canonical: 'https://telcotank.com/industries/',
+    languages: {
+        'en': 'https://telcotank.com/industries/',
+        'tr': 'https://telcotank.com/tr/industries/',
+        'ar': 'https://telcotank.com/ar/industries/',
+        'es': 'https://telcotank.com/es/industries/',
+        'pt': 'https://telcotank.com/pt/industries/',
+        'ru': 'https://telcotank.com/ru/industries/',
+        'x-default': 'https://telcotank.com/industries/',
+      },
+  },
 })
 
 const industries = [

@@ -6,6 +6,18 @@ export const metadata = genPageMetadata({
   description: 'Telcotank Strategic Intelligence: McKinsey-style research frameworks on AI transformation, data center demand, semiconductor dynamics, sovereign AI strategy, and digital infrastructure for enterprise leaders and investors.',
   keywords: ['strategic intelligence', 'AI strategy framework', 'data center market analysis', 'semiconductor strategy', 'sovereign AI', 'digital infrastructure research', 'telecom industry research'],
   canonical: 'https://telcotank.com/strategicintelligence',
+  alternates: {
+    canonical: 'https://telcotank.com/strategicintelligence/',
+    languages: {
+        'en': 'https://telcotank.com/strategicintelligence/',
+        'tr': 'https://telcotank.com/tr/strategicintelligence/',
+        'ar': 'https://telcotank.com/ar/strategicintelligence/',
+        'es': 'https://telcotank.com/es/strategicintelligence/',
+        'pt': 'https://telcotank.com/pt/strategicintelligence/',
+        'ru': 'https://telcotank.com/ru/strategicintelligence/',
+        'x-default': 'https://telcotank.com/strategicintelligence/',
+      },
+  },
 })
 
 const STORE_URL = 'https://strategic-frameworks.telcotank.com'

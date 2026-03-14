@@ -4,6 +4,21 @@ import StrategicIntelligenceLocalized from '../../StrategicIntelligenceLocalized
 export const metadata: Metadata = {
   title: 'Telcotank — Inteligência Estratégica',
   description: 'Frameworks de pesquisa estratégica sobre transformação de IA, demanda de data centers, dinâmica de semicondutores e infraestrutura digital.',
+  alternates: {
+    canonical: 'https://telcotank.com/pt/strategicintelligence/',
+    languages: {
+      'en': 'https://telcotank.com/strategicintelligence/',
+      'tr': 'https://telcotank.com/tr/strategicintelligence/',
+      'ar': 'https://telcotank.com/ar/strategicintelligence/',
+      'es': 'https://telcotank.com/es/strategicintelligence/',
+      'pt': 'https://telcotank.com/pt/strategicintelligence/',
+      'ru': 'https://telcotank.com/ru/strategicintelligence/',
+      'x-default': 'https://telcotank.com/strategicintelligence/',
+    },
+  },
+  openGraph: {
+    locale: 'pt_BR',
+  },
 }
 
 export default function Page() {
