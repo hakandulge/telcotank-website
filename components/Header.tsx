@@ -7,7 +7,7 @@ import Link from './Link'
 import MobileNav from './MobileNav'
 import { translations } from '@/data/translations'
 
-type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru'
+type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru' | 'de' | 'fr'
 
 const languages = [
   { code: 'en', name: 'English', flag: '🇬🇧' },
@@ -16,11 +16,13 @@ const languages = [
   { code: 'es', name: 'Español', flag: '🇪🇸' },
   { code: 'pt', name: 'Português', flag: '🇧🇷' },
   { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+  { code: 'fr', name: 'Français', flag: '🇫🇷' },
 ]
 
 function getLang(pathname: string): Lang {
   const p = pathname.split('/')[1]
-  if (['tr', 'ar', 'es', 'pt', 'ru'].includes(p)) return p as Lang
+  if (['tr', 'ar', 'es', 'pt', 'ru', 'de', 'fr'].includes(p)) return p as Lang
   return 'en'
 }
 

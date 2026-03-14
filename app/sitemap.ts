@@ -5,7 +5,7 @@ import siteMetadata from '@/data/siteMetadata'
 
 export const dynamic = 'force-static'
 
-const LANGUAGES = ['tr', 'ar', 'es', 'pt', 'ru'] as const
+const LANGUAGES = ['tr', 'ar', 'es', 'pt', 'ru', 'de', 'fr'] as const
 const SITE = siteMetadata.siteUrl
 const TODAY = new Date().toISOString().split('T')[0]
 

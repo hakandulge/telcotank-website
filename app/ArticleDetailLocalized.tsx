@@ -4,9 +4,10 @@ import Link from '@/components/Link'
 import { articles } from '@/data/articles'
 import { articlesTR, articlesAR, articlesES } from '@/data/articlesTranslated'
 import { articlesPT, articlesRU } from '@/data/articlesTranslatedPtRu'
+import { articlesDE, articlesFR } from '@/data/articlesTranslatedDeFr'
 import { translations } from '@/data/translations'
 
-type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru'
+type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru' | 'de' | 'fr'
 
 const translatedArticles: Record<string, typeof articles> = {
   tr: articlesTR,
@@ -14,6 +15,8 @@ const translatedArticles: Record<string, typeof articles> = {
   es: articlesES,
   pt: articlesPT,
   ru: articlesRU,
+  de: articlesDE,
+  fr: articlesFR,
 }
 
 function getArticles(lang: Lang) {
@@ -57,24 +60,40 @@ export default function ArticleDetailLocalized({ lang, slug }: { lang: Lang; slu
   }
 
   // UI labels
-  const byLabel = lang === 'en' ? 'By' : lang === 'tr' ? 'Yazan' : lang === 'ar' ? 'بقلم' : lang === 'es' ? 'Por' : lang === 'pt' ? 'Por' : 'Автор'
-  const keyTakeaway = lang === 'en' ? 'Key Takeaway' : lang === 'tr' ? 'Önemli Çıkarım' : lang === 'ar' ? 'النقطة الرئيسية' : lang === 'es' ? 'Conclusión Clave' : lang === 'pt' ? 'Conclusão Principal' : 'Ключевой Вывод'
-  const authorBio = lang === 'en' ? 'Founder & Managing Director, Telcotank. 20+ years in telecom transformation, AI strategy, and digital infrastructure advisory.'
-    : lang === 'tr' ? 'Kurucu & Genel Müdür, Telcotank. Telekomünikasyon dönüşümü, AI stratejisi ve dijital altyapı danışmanlığında 20+ yıl deneyim.'
-    : lang === 'ar' ? 'المؤسس والمدير العام، Telcotank. أكثر من 20 عاماً في تحول الاتصالات واستراتيجية الذكاء الاصطناعي واستشارات البنية التحتية الرقمية.'
-    : lang === 'es' ? 'Fundador y Director General, Telcotank. Más de 20 años en transformación de telecomunicaciones, estrategia de IA y asesoría de infraestructura digital.'
-    : lang === 'pt' ? 'Fundador e Diretor Geral, Telcotank. Mais de 20 anos em transformação de telecomunicações, estratégia de IA e assessoria de infraestrutura digital.'
-    : 'Основатель и управляющий директор, Telcotank. Более 20 лет в трансформации телекоммуникаций, стратегии ИИ и консультировании цифровой инфраструктуры.'
-  const prevLabel = lang === 'en' ? '← Previous' : lang === 'tr' ? '← Önceki' : lang === 'ar' ? '→ السابق' : lang === 'es' ? '← Anterior' : lang === 'pt' ? '← Anterior' : '← Предыдущая'
-  const nextLabel = lang === 'en' ? 'Next →' : lang === 'tr' ? 'Sonraki →' : lang === 'ar' ? 'التالي ←' : lang === 'es' ? 'Siguiente →' : lang === 'pt' ? 'Próximo →' : 'Следующая →'
-  const backToArticles = lang === 'en' ? '← Back to all articles' : lang === 'tr' ? '← Tüm makalelere dön' : lang === 'ar' ? '→ العودة إلى جميع المقالات' : lang === 'es' ? '← Volver a todos los artículos' : lang === 'pt' ? '← Voltar a todos os artigos' : '← Назад ко всем статьям'
-  const exploreFrameworks = lang === 'en' ? 'Explore Our Strategic Frameworks' : lang === 'tr' ? 'Stratejik Çerçevelerimizi Keşfedin' : lang === 'ar' ? 'استكشف أطرنا الاستراتيجية' : lang === 'es' ? 'Explore Nuestros Marcos Estratégicos' : lang === 'pt' ? 'Explore Nossos Frameworks Estratégicos' : 'Изучите Наши Стратегические Фреймворки'
-  const goDeeper = lang === 'en' ? 'Go deeper with comprehensive strategy publications spanning 50 to 100 pages of original research, market data, and actionable frameworks.'
-    : lang === 'tr' ? '50 ila 100 sayfalık özgün araştırma, pazar verileri ve uygulanabilir çerçevelerden oluşan kapsamlı strateji yayınlarımızla daha derine inin.'
-    : lang === 'ar' ? 'تعمق أكثر مع منشورات استراتيجية شاملة تمتد من 50 إلى 100 صفحة من البحث الأصيل وبيانات السوق والأطر العملية.'
-    : lang === 'es' ? 'Profundice con publicaciones de estrategia integral de 50 a 100 páginas de investigación original, datos de mercado y marcos prácticos.'
-    : lang === 'pt' ? 'Aprofunde-se com publicações de estratégia abrangentes de 50 a 100 páginas de pesquisa original, dados de mercado e frameworks práticos.'
-    : 'Углубитесь с комплексными стратегическими публикациями от 50 до 100 страниц оригинальных исследований, рыночных данных и практических фреймворков.'
+  const byLabelMap: Record<string, string> = { en: 'By', tr: 'Yazan', ar: 'بقلم', es: 'Por', pt: 'Por', ru: 'Автор', de: 'Von', fr: 'Par' }
+  const byLabel = byLabelMap[lang] || 'By'
+  const keyTakeawayMap: Record<string, string> = { en: 'Key Takeaway', tr: 'Önemli Çıkarım', ar: 'النقطة الرئيسية', es: 'Conclusión Clave', pt: 'Conclusão Principal', ru: 'Ключевой Вывод', de: 'Kernaussage', fr: 'Point Clé' }
+  const keyTakeaway = keyTakeawayMap[lang] || 'Key Takeaway'
+  const authorBioMap: Record<string, string> = {
+    en: 'Founder & Managing Director, Telcotank. 20+ years in telecom transformation, AI strategy, and digital infrastructure advisory.',
+    tr: 'Kurucu & Genel Müdür, Telcotank. Telekomünikasyon dönüşümü, AI stratejisi ve dijital altyapı danışmanlığında 20+ yıl deneyim.',
+    ar: 'المؤسس والمدير العام، Telcotank. أكثر من 20 عاماً في تحول الاتصالات واستراتيجية الذكاء الاصطناعي واستشارات البنية التحتية الرقمية.',
+    es: 'Fundador y Director General, Telcotank. Más de 20 años en transformación de telecomunicaciones, estrategia de IA y asesoría de infraestructura digital.',
+    pt: 'Fundador e Diretor Geral, Telcotank. Mais de 20 anos em transformação de telecomunicações, estratégia de IA e assessoria de infraestrutura digital.',
+    ru: 'Основатель и управляющий директор, Telcotank. Более 20 лет в трансформации телекоммуникаций, стратегии ИИ и консультировании цифровой инфраструктуры.',
+    de: 'Gründer & Geschäftsführer, Telcotank. Über 20 Jahre Erfahrung in Telekommunikationstransformation, KI-Strategie und Beratung für digitale Infrastruktur.',
+    fr: 'Fondateur & Directeur Général, Telcotank. Plus de 20 ans dans la transformation des télécommunications, la stratégie IA et le conseil en infrastructure numérique.',
+  }
+  const authorBio = authorBioMap[lang] || authorBioMap.en
+  const prevLabelMap: Record<string, string> = { en: '← Previous', tr: '← Önceki', ar: '→ السابق', es: '← Anterior', pt: '← Anterior', ru: '← Предыдущая', de: '← Zurück', fr: '← Précédent' }
+  const prevLabel = prevLabelMap[lang] || '← Previous'
+  const nextLabelMap: Record<string, string> = { en: 'Next →', tr: 'Sonraki →', ar: 'التالي ←', es: 'Siguiente →', pt: 'Próximo →', ru: 'Следующая →', de: 'Weiter →', fr: 'Suivant →' }
+  const nextLabel = nextLabelMap[lang] || 'Next →'
+  const backToArticlesMap: Record<string, string> = { en: '← Back to all articles', tr: '← Tüm makalelere dön', ar: '→ العودة إلى جميع المقالات', es: '← Volver a todos los artículos', pt: '← Voltar a todos os artigos', ru: '← Назад ко всем статьям', de: '← Zurück zu allen Artikeln', fr: '← Retour à tous les articles' }
+  const backToArticles = backToArticlesMap[lang] || '← Back to all articles'
+  const exploreFrameworksMap: Record<string, string> = { en: 'Explore Our Strategic Frameworks', tr: 'Stratejik Çerçevelerimizi Keşfedin', ar: 'استكشف أطرنا الاستراتيجية', es: 'Explore Nuestros Marcos Estratégicos', pt: 'Explore Nossos Frameworks Estratégicos', ru: 'Изучите Наши Стратегические Фреймворки', de: 'Entdecken Sie unsere strategischen Frameworks', fr: 'Découvrez nos cadres stratégiques' }
+  const exploreFrameworks = exploreFrameworksMap[lang] || 'Explore Our Strategic Frameworks'
+  const goDeeperMap: Record<string, string> = {
+    en: 'Go deeper with comprehensive strategy publications spanning 50 to 100 pages of original research, market data, and actionable frameworks.',
+    tr: '50 ila 100 sayfalık özgün araştırma, pazar verileri ve uygulanabilir çerçevelerden oluşan kapsamlı strateji yayınlarımızla daha derine inin.',
+    ar: 'تعمق أكثر مع منشورات استراتيجية شاملة تمتد من 50 إلى 100 صفحة من البحث الأصيل وبيانات السوق والأطر العملية.',
+    es: 'Profundice con publicaciones de estrategia integral de 50 a 100 páginas de investigación original, datos de mercado y marcos prácticos.',
+    pt: 'Aprofunde-se com publicações de estratégia abrangentes de 50 a 100 páginas de pesquisa original, dados de mercado e frameworks práticos.',
+    ru: 'Углубитесь с комплексными стратегическими публикациями от 50 до 100 страниц оригинальных исследований, рыночных данных и практических фреймворков.',
+    de: 'Vertiefen Sie sich mit umfassenden Strategiepublikationen von 50 bis 100 Seiten originaler Forschung, Marktdaten und umsetzbaren Frameworks.',
+    fr: 'Approfondissez avec des publications stratégiques complètes de 50 à 100 pages de recherche originale, données de marché et cadres d\'action.',
+  }
+  const goDeeper = goDeeperMap[lang] || goDeeperMap.en
 
   return (
     <div className="bg-white dark:bg-gray-950" dir={isRTL ? 'rtl' : 'ltr'}>

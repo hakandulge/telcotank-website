@@ -6,7 +6,7 @@ import { useRouter, usePathname } from 'next/navigation'
 import Link from './Link'
 import { translations } from '@/data/translations'
 
-type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru'
+type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru' | 'de' | 'fr'
 
 const languages = [
   { code: 'en', name: 'English', short: 'EN', flag: '🇬🇧' },
@@ -15,6 +15,8 @@ const languages = [
   { code: 'es', name: 'Español', short: 'ES', flag: '🇪🇸' },
   { code: 'pt', name: 'Português', short: 'PT', flag: '🇧🇷' },
   { code: 'ru', name: 'Русский', short: 'RU', flag: '🇷🇺' },
+  { code: 'de', name: 'Deutsch', short: 'DE', flag: '🇩🇪' },
+  { code: 'fr', name: 'Français', short: 'FR', flag: '🇫🇷' },
 ]
 
 const MobileNav = () => {
@@ -31,7 +33,7 @@ const MobileNav = () => {
 
   const getCurrentLang = (): Lang => {
     const secondPart = pathname.split('/')[1]
-    if (['tr', 'ar', 'es', 'pt', 'ru'].includes(secondPart)) return secondPart as Lang
+    if (['tr', 'ar', 'es', 'pt', 'ru', 'de', 'fr'].includes(secondPart)) return secondPart as Lang
     return 'en'
   }
 

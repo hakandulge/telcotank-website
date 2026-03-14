@@ -3,7 +3,7 @@
 import Link from '@/components/Link'
 import { translations } from '@/data/translations'
 
-type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru'
+type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru' | 'de' | 'fr'
 
 interface CapabilitiesLocalizedProps {
   lang: Lang

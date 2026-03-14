@@ -1750,4 +1750,648 @@ export const translations = {
       caseStudiesSubtitle: 'Результаты трансформации в реальном мире в телекоммуникациях, финансовых услугах, технологиях и развивающихся рынках—охватывающих 40 стран и два десятилетия реализации.',
     },
   },
+
+  de: {
+    // Navigation
+    nav: {
+      home: 'Startseite',
+      about: 'Über uns',
+      industries: 'Branchen',
+      capabilities: 'Kompetenzen',
+      caseStudies: 'Fallstudien',
+      articles: 'Artikel',
+      contact: 'Kontakt',
+      strategicIntelligence: 'Strategische Intelligenz',
+      getInTouch: 'Kontakt aufnehmen',
+      requestStrategyDiscussion: 'Strategiediskussion anfordern',
+    },
+
+    // Hero
+    hero: {
+      tagline: 'Transformationsstrategie & Umsetzung',
+      title: 'Wo Strategie auf menschlich geführte Transformation trifft',
+      description: 'Wir unterstützen Unternehmensleiter bei der Erschließung von Wachstum durch KI-gestützte Beratung – mit Menschen im Fokus.',
+      exploreOurWork: 'Unsere Arbeit erkunden →',
+      letsTalkStrategy: 'Lassen Sie uns über Strategie sprechen',
+    },
+
+    // Client Logos
+    clientLogos: {
+      tagline: 'Vertraut von führenden globalen Technologie- und Telekommunikationsunternehmen',
+    },
+
+    // Countries
+    countries: {
+      tagline: 'Länder, in denen Telcotank und das Team tätig waren',
+    },
+
+    // Impact Metrics
+    metrics: {
+      reach: 'Unsere Reichweite',
+      globalImpact: 'Globale Auswirkungen',
+      countries: 'Länder',
+      marketOpportunitiesCreated: 'Geschaffene Marktchancen',
+      enterpriseGrowthPotential: 'Unternehmensisches Wachstumspotential',
+      aiFirstConsultingMethodology: 'KI-First Beratungsmethodik',
+    },
+
+    // Who We Help
+    whoWeHelp: {
+      title: 'Wem wir helfen',
+      description: 'Wir arbeiten mit Organisationen zusammen, die komplexe Transformationsherausforderungen in technologieintensiven Branchen bewältigen.',
+      telecomOperators: 'Telekommunikationsbetreiber',
+      telecomDescription: 'Umsatzwachstum, digitale Transformation und KI-gestützte operationelle Exzellenz für Mobil- und Festnetzanbieter.',
+      financialInstitutions: 'Finanzinstitutionen',
+      financialDescription: 'Digitale Banktransformation, Fintech-Strategie und technologiegestütztes Wachstum für Banken und Versicherer.',
+      technologyAICompanies: 'Technologie- & KI-Unternehmen',
+      techDescription: 'Go-to-Market-Strategie, Beschleunigung des Unternehmenswachstums und Marktexpansion für Technologiefirmen.',
+      infrastructureInvestors: 'Infrastrukturinvestoren',
+      investorsDescription: 'Due Diligence, Marktbewertung und Wertschöpfungsstrategien für digitale Infrastrukturinvestitionen.',
+      consultingFirms: 'Beratungsunternehmen',
+      consultingDescription: 'Spezialisierte Telekommunikations- und Technologiekompetenz zur Ergänzung von Strategie- und Transformationsprojekten.',
+    },
+
+    // AI-First Consulting
+    aiFirstConsulting: {
+      approach: 'Unser Ansatz',
+      title: 'KI-First Beratung',
+      description1: 'Telcotank setzt KI bei Forschung, Modellierung und Analyse ein, um strategische Erkenntnisse und Transformationsleistungen zu beschleunigen. Dies ermöglicht schnellere Entscheidungszyklen und nachweislich bessere Ergebnisse für unsere Clients.',
+      description2: 'Von der Marktdimensionierung über Wettbewerbsanalysen bis zu Transformations-Roadmaps verstärkt KI jede Phase unseres Beratungsprozesses – ohne das menschliche Urteilsvermögen zu ersetzen, das strategische Entscheidungen antreibt.',
+      fasterAnalysis: 'Schnellere strategische Analysen',
+      moreDataPoints: 'Mehr verarbeitete Datenpunkte',
+      fasterInsight: 'Schnellere Gewinnung von Erkenntnissen',
+      aiPlusHuman: 'Strategisches Urteilsvermögen bewahrt',
+    },
+
+    // Challenges
+    challenges: {
+      title: 'Herausforderungen, die wir lösen',
+      revenueGrowth: 'Stagnation des Umsatzwachstums',
+      revenueDescription: 'Märkte sättigen sich und traditionelle Geschäftsmodelle verlangsamen sich. Wir identifizieren neue Einnahmequellen und Wachstumsvektoren.',
+      digitalTransformation: 'Komplexität der digitalen Transformation',
+      digitalDescription: 'Viele Organisationen kämpfen mit der Umsetzung digitaler Initiativen im großen Maßstab. Wir entwickeln und implementieren Transformations-Roadmaps.',
+      aiInitiatives: 'KI-Initiativen, die nicht skalieren',
+      aiDescription: 'KI-Piloten liefern oft keinen Unternehmenswert. Wir entwickeln Governance-Frameworks und Operating Models, die skalierbar sind.',
+      marketEntry: 'Markteintritt in neue Regionen',
+      marketDescription: 'Der Eintritt in neue Märkte erfordert tiefes lokales Wissen und strategische Klarheit. Wir bieten beides.',
+    },
+
+    // Case Studies
+    caseStudiesSection: {
+      title: 'Ausgewählte Transformationsfälle',
+      viewAllCases: 'Alle Fälle anzeigen →',
+      readCaseStudy: 'Fallstudie lesen →',
+      whatCouldWeAchieve: 'Was könnten wir zusammen erreichen?',
+      everyTransformation: 'Jede Transformation beginnt mit einem Gespräch. Lassen Sie uns Ihre Herausforderung verstehen und Ihnen zeigen, was möglich ist.',
+    },
+
+    // How We Work
+    howWeWork: {
+      title: 'Wie wir arbeiten',
+      description: 'Eine bewährte Methodik, verfeinert über 40 Länder und zwei Jahrzehnte Transformationsleistung.',
+      diagnose: 'Diagnose',
+      diagnoseDescription: 'Tiefe Analyse der Marktposition, Wettbewerbslandschaft und organisatorischen Fähigkeiten.',
+      design: 'Design',
+      designDescription: 'Strategieentwicklung mit klaren Roadmaps, Business Cases und Transformationsarchitektur.',
+      execute: 'Umsetzen',
+      executeDescription: 'Praktische Umsetzungsunterstützung mit Programmmanagement und Changemanagement.',
+      scale: 'Skalieren',
+      scaleDescription: 'Systematische Skalierung erfolgreicher Initiativen organisationsweit und in neue Märkte.',
+    },
+
+    // Capabilities
+    capabilitiesSection: {
+      title: 'Kompetenzen',
+      description: 'Tiefe Expertise über den gesamten Transformations-Lebenszyklus, von der Strategie bis zur Umsetzung.',
+      transformationStrategy: 'Transformationsstrategie',
+      transformationDescription: 'Umfassende strategische Planung für digitale Transformation, organisatorischen Wandel und Geschäftsmodell-Innovation.',
+      growthAcceleration: 'Wachstumsbeschleunigung',
+      growthDescription: 'Umsatzwachstumsprogramme, die Vertriebstransformation, Marketingoptimierung und Kundenwertverwaltung umfassen.',
+      aiTransformation: 'KI-Transformation & Governance',
+      aiGovernanceDescription: 'Unternehmens-KI-Strategie, Governance-Frameworks, Operating Model Design und Adoptionsprogramme.',
+      marketEntry: 'Markteintritt & Expansion',
+      marketEntryDescription: 'Marktbewertung, Eintrittsstrategie, Partnschaftsentwicklung und operationales Setup für neue Geografien.',
+      investmentAdvisory: 'Investment & M&A Advisory',
+      investmentDescription: 'Due Diligence, Bewertungsunterstützung und Post-Merger Integration für Technologie- und Telekommunikationsinvestitionen.',
+      learnMore: 'Mehr erfahren →',
+      whatWeDeliver: 'Was wir bieten',
+    },
+
+    // Industries
+    industriesSection: {
+      title: 'Branchen',
+      description: 'Fokussierte Expertise in technologieintensiven Branchen, die sich grundlegend transformieren.',
+      sectorExpertise: 'Branchen-Expertise',
+      telecommunications: 'Telekommunikation',
+      telecomDescription: 'Wir helfen Mobilfunkbetreibern, Festnetzbetreibern, MVNOs und Convergence-Service-Providern bei der Navigation digitaler Transformation, Umsatzwachstum und dem Aufbau von Wettbewerbsvorteil.',
+      financialServices: 'Finanzdienstleistungen',
+      financialServicesDescription: 'Wir unterstützen Banken, Versicherer und Zahlungsanbieter in ihren digitalen Transformations-Reisen, von der Strategie bis zur Umsetzung.',
+      technologyAI: 'Technologie & KI',
+      technologyDescription: 'Wir beraten Softwareunternehmen, KI-Plattformen, Cloud-Anbieter und Enterprise-Technologiefirmen zu Wachstumsstrategie und Marktexpansion.',
+      digitalInfrastructure: 'Digitale Infrastruktur',
+      infrastructureDescription: 'Wir beraten Türme, Rechenzentren, Fasernetzwerke und Konnektivitätsanbieter zu Investitionsstrategie und Wertschöpfung.',
+      startupsScaleups: 'Startups & Scaleups',
+      startupsDescription: 'Wir bieten strategische Anleitung für schnell wachsende Technologieunternehmen, die Marktexpansion, Enterprise-Positionierung und Investitionsreife anstreben.',
+      discussIndustryChallenge: 'Diskutieren Sie Ihre Branchen-Herausforderung',
+      everyIndustry: 'Jede Branche hat einzigartige Transformationsdynamiken. Lassen Sie uns unsere tiefe Branchen-Expertise in Ihre spezifische Herausforderung einbringen.',
+      keyChallengements: 'Wichtigste Herausforderungen, die wir bewältigen',
+      explore: 'Erkunden →',
+    },
+
+    // Strategic Intelligence
+    strategicIntelligence: {
+      provenBestsellers: 'Bewährte Bestseller',
+      viewAllArticles: 'Alle Artikel anzeigen',
+    },
+
+    // Newsletter
+    newsletter: {
+      title: 'Bleiben Sie über digitale Transformation informiert',
+      description: 'Abonnieren Sie unseren Newsletter für Erkenntnisse zu KI, digitaler Transformation und Telekommunikationsstrategie.',
+      subscribe: 'Abonnieren',
+      firstName: 'Vorname',
+      lastName: 'Nachname',
+      companyOptional: 'Unternehmensname (optional)',
+      phoneOptional: 'Mobiltelefon (optional)',
+      emailPlaceholder: 'Geben Sie Ihre E-Mail-Adresse ein',
+      subscribing: 'Wird abonniert...',
+      successMessage: 'Willkommen! Sie erhalten bald Telcotank-Updates und Erkenntnisse.',
+      disclaimer: 'Kostenlose Updates. Kein Spam. Sie können sich jederzeit abmelden.',
+    },
+
+    // Footer
+    footer: {
+      tagline: 'Transformationsstrategie & Umsetzung für die digitale Wirtschaft. Seit 2004 beraten wir Telekommunikationsbetreiber, Finanzinstitutionen, Technologieunternehmen und Investoren.',
+      capabilities: 'Kompetenzen',
+      industries: 'Branchen',
+      company: 'Unternehmen',
+      allRightsReserved: 'Alle Rechte vorbehalten',
+      transformationStrategy: 'Transformationsstrategie',
+      growthAcceleration: 'Wachstumsbeschleunigung',
+      aiTransformation: 'KI-Transformation',
+      marketEntry: 'Markteintritt & Expansion',
+      investmentAdvisory: 'Investment & M&A Advisory',
+      telecommunications: 'Telekommunikation',
+      financialServices: 'Finanzdienstleistungen',
+      technologyAI: 'Technologie & KI',
+      digitalInfrastructure: 'Digitale Infrastruktur',
+      startupsScaleups: 'Startups & Scaleups',
+      aboutLink: 'Über uns',
+      caseStudiesLink: 'Fallstudien',
+      strategicIntelligenceLink: 'Strategische Intelligenz',
+      articlesLink: 'Artikel',
+      contactLink: 'Kontakt',
+    },
+
+    // Articles Page
+    articlesPage: {
+      heroLabel: 'Telcotank Artikel',
+      heroTitle: 'Strategische Erkenntnisse',
+      heroDescription: 'Tiefgehende Analyse der Kräfte, die Telekommunikation, künstliche Intelligenz, Quantencomputing und die globale digitale Wirtschaft transformieren.',
+      featured: 'Ausgewählt',
+      latestArticle: 'Letzter Artikel',
+      readFullArticle: 'Vollständigen Artikel lesen',
+      allArticles: 'Alle Artikel',
+      analysisCommentary: 'Analyse & Kommentare',
+      allArticlesDescription: 'Originalforschung und strategische Analysen zu Technologien, Geschäftsmodellen und Marktkräften, die globale Industrien transformieren.',
+      readArticle: 'Artikel lesen',
+      ctaTitle: 'Greifen Sie auf unsere strategischen Frameworks zu',
+      ctaDescription: 'Gehen Sie tiefer mit unseren umfassenden Strategie-Publikationen – detaillierte Analysen mit 50 bis 100 Seiten Originalforschung, Marktdaten und umsetzbaren Frameworks.',
+      viewPublications: 'Publikationen anzeigen',
+      contactUs: 'Kontaktieren Sie uns',
+      minRead: 'Min. Lesezeit',
+      themeAIQuantum: 'KI & Quantencomputing',
+      themeEmergingTech: 'Aufstrebende Technologie',
+      themeTelecom: 'Telekommunikations-Industriestrategie',
+    },
+
+    // Contact Form
+    contactForm: {
+      title: 'Strategiediskussion anfordern',
+      subtitle: 'Füllen Sie das folgende Formular aus und unser Team antwortet innerhalb von 24 Stunden.',
+      firstName: 'Vorname',
+      lastName: 'Nachname',
+      email: 'E-Mail',
+      company: 'Unternehmen',
+      topicOfInterest: 'Interessensgebiet',
+      selectTopic: 'Wählen Sie ein Thema',
+      topicTransformation: 'Transformationsstrategie',
+      topicGrowth: 'Wachstumsbeschleunigung',
+      topicAI: 'KI-Transformation & Governance',
+      topicMarketEntry: 'Markteintritt & Expansion',
+      topicInvestment: 'Investment & M&A Advisory',
+      topicOther: 'Sonstiges',
+      message: 'Nachricht',
+      messagePlaceholder: 'Erzählen Sie uns von Ihrer Herausforderung...',
+      sendMessage: 'Nachricht senden',
+      sending: 'Wird gesendet...',
+      messageSent: 'Nachricht gesendet',
+      thankYou: 'Vielen Dank, dass Sie sich an uns gewendet haben. Wir werden Sie innerhalb von 24 Stunden kontaktieren.',
+      confirmationEmail: 'Eine Bestätigungse-Mail wurde an Ihren Posteingang gesendet.',
+    },
+
+    // Strategic Intelligence Page
+    strategicIntelligencePage: {
+      heroLabel: 'Forschung & Frameworks',
+      heroTitle: 'Strategische Intelligenz',
+      heroDescription: 'McKinsey-ähnliche strategische Forschungs-Frameworks, verwendet von Telekommunikationsbetreibern, Infrastrukturinvestoren, Staatsfonds und Corporate Strategy Teams. Jedes Framework bietet Capital-Allocation-Grade-Analysen mit institutionellen Datenquellen und umsetzbaren Positionierungsempfehlungen.',
+      badgeFrameworks: '17 Frameworks',
+      badgePrice: '12.000 $ je Framework',
+      badgeHorizon: '2025–2030 Horizont',
+      provenBestsellers: 'Bewährte Bestseller',
+      featuredFrameworks: 'Ausgewählte Frameworks',
+      viewFramework: 'Framework anzeigen',
+      allStrategicFrameworks: 'Alle strategischen Frameworks',
+      view: 'Anzeigen',
+      ctaTitle: 'Benötigen Sie ein maßgeschneidertes strategisches Briefing?',
+      ctaDescription: 'Fordern Sie ein Executive Walkthrough eines beliebigen Frameworks für Ihr Führungsteam an, oder lassen Sie sich ein maßgeschneidertes Forschungs-Framework entwickeln, das auf Ihre strategischen Prioritäten zugeschnitten ist.',
+      browseAllFrameworks: 'Alle Frameworks durchsuchen',
+      requestExecutiveBriefing: 'Executive Briefing anfordern',
+    },
+
+    // About Page
+    about: {
+      title: 'Über Telcotank',
+      introduction: 'Telcotank wurde 2004 gegründet und ist eine Transformationsberatungsfirma, die Organisationen in der digitalen Wirtschaft hilft, komplexe strategische Herausforderungen zu bewältigen und messbare Ergebnisse zu erzielen.',
+      ourMission: 'Unsere Mission',
+      missionDescription1: 'Wir existieren, um Organisationen dabei zu helfen, Wachstum durch Transformation freizusetzen. Unsere Arbeit umfasst Strategieentwicklung, Umsetzungsunterstützung und strategische Intelligenz in Telekommunikation, Finanzdienstleistungen, Technologie und digitale Infrastruktur.',
+      missionDescription2: 'Mit Projekten in 40 Ländern bringen wir eine einzigartige Kombination aus globaler Perspektive und tiefgehender Branchen-Expertise in jeden Auftrag.',
+      founded: 'Gegründet',
+      countriesCount: 'Länder',
+      opportunitiesCreated: 'Geschaffene Chancen',
+      whatSetsUsApart: 'Das zeichnet uns aus',
+      executionFocus: 'Umsetzungsfokus',
+      executionDescription: 'Wir beraten nicht nur. Wir arbeiten mit Führungsteams zusammen, um messbare Transformationsergebnisse zu erzielen.',
+      deepIndustryExpertise: 'Tiefe Branchen-Expertise',
+      industryDescription: 'Zwei Jahrzehnte konzentrierte Erfahrung in Telekommunikation, Finanzdienstleistungen und Technologie geben uns unvergleichliche Branchen-Kenntnisse.',
+      aiFirstApproach: 'KI-First Ansatz',
+      aiApproachDescription: 'Wir nutzen KI, um jede Phase unserer Arbeit zu beschleunigen, von strategischer Analyse bis zur Transformationsumsetzung.',
+      globalPerspective: 'Globale Perspektive',
+      globalDescription: 'Projekte in 40 Ländern geben uns die Fähigkeit, globale Best Practices auf lokale Herausforderungen zu übertragen.',
+      ourJourney: 'Unsere Reise',
+      threePillars: 'Drei Säulen unserer Praxis',
+      transformationConsultingPillar: 'Transformationsberatung',
+      transformationPillarDescription: 'End-to-End-Strategie und Umsetzung für digitale Transformation, Wachstumsbeschleunigung und organisatorischen Wandel.',
+      strategicIntelligencePillar: 'Strategische Intelligenz',
+      intelligencePillarDescription: 'Proprietäre Frameworks und Analysen zu KI, Technologie und Wettbewerbsdynamiken, die die digitale Wirtschaft transformieren.',
+      aiTransformationPillar: 'KI-Transformation',
+      aiPillarDescription: 'Unternehmens-KI-Strategie, Governance, Operating Model Design und Adoptionsprogramme, die skalierbare Ergebnisse liefern.',
+      workWithUs: 'Mit uns arbeiten',
+      workWithUsDescription: 'Lassen Sie uns unsere zwei Jahrzehnte Transformations-Expertise in Ihre wichtigsten strategischen Herausforderungen einbringen.',
+    },
+
+    // Capabilities Page
+    capabilitiesPage: {
+      whatWeDo: 'Was wir tun',
+      capabilitiesTitle: 'Kompetenzen',
+      capabilitiesSubtitle: 'Tiefe Expertise über den gesamten Transformations-Lebenszyklus, von Strategieentwicklung über Umsetzung bis zur Skalierung.',
+      readyToTransform: 'Bereit zur Transformation?',
+      readyDescription: 'Lassen Sie uns Ihnen helfen, den richtigen Ansatz für Ihre Transformations-Herausforderung zu ermitteln.',
+      transformationStrategyTitle: 'Transformationsstrategie',
+      transformationStrategyDesc: 'Umfassende strategische Planung für digitale Transformation, organisatorischen Wandel und Geschäftsmodell-Innovation.',
+      growthAccelerationTitle: 'Wachstumsbeschleunigung',
+      growthAccelerationDesc: 'Umsatzwachstumsprogramme, die Vertriebstransformation, Marketingoptimierung und Kundenwertverwaltung umfassen.',
+      aiTransformationTitle: 'KI-Transformation & Governance',
+      aiTransformationDesc: 'Unternehmens-KI-Strategie, Governance-Frameworks, Operating Model Design und Adoptionsprogramme.',
+      marketEntryTitle: 'Markteintritt & Expansion',
+      marketEntryDesc: 'Marktbewertung, Eintrittsstrategie, Partnschaftsentwicklung und operationales Setup für neue Geografien.',
+      investmentAdvisoryTitle: 'Investment & M&A Advisory',
+      investmentAdvisoryDesc: 'Due Diligence, Bewertungsunterstützung und Post-Merger Integration für Technologie- und Telekommunikationsinvestitionen.',
+    },
+
+    // Industries Page
+    industriesPage: {
+      industriesTitle: 'Branchen',
+      industriesSubtitle: 'Fokussierte Expertise in technologieintensiven Branchen, die sich grundlegend transformieren.',
+    },
+
+    // Case Studies Page
+    caseStudiesPage: {
+      provenResults: 'Bewährte Ergebnisse',
+      caseStudiesTitle: 'Fallstudien',
+      caseStudiesSubtitle: 'Echte Transformations-Ergebnisse in Telekommunikation, Finanzdienstleistungen, Technologie und Schwellenländern – über 40 Länder und zwei Jahrzehnte Umsetzung.',
+    },
+  },
+
+  fr: {
+    // Navigation
+    nav: {
+      home: 'Accueil',
+      about: 'À propos',
+      industries: 'Secteurs',
+      capabilities: 'Capacités',
+      caseStudies: 'Études de cas',
+      articles: 'Articles',
+      contact: 'Contact',
+      strategicIntelligence: 'Intelligence stratégique',
+      getInTouch: 'Nous contacter',
+      requestStrategyDiscussion: 'Demander une discussion stratégique',
+    },
+
+    // Hero
+    hero: {
+      tagline: 'Stratégie et exécution de la transformation',
+      title: 'Là où la stratégie rencontre la transformation menée par l\'humain',
+      description: 'Nous partenaires avec les dirigeants d\'entreprise pour libérer la croissance grâce à un conseil alimenté par l\'IA – en mettant l\'humain au centre.',
+      exploreOurWork: 'Explorer notre travail →',
+      letsTalkStrategy: 'Parlons stratégie',
+    },
+
+    // Client Logos
+    clientLogos: {
+      tagline: 'Approuvé par les leaders mondiaux de la technologie et des télécommunications',
+    },
+
+    // Countries
+    countries: {
+      tagline: 'Pays où Telcotank et l\'équipe ont opéré',
+    },
+
+    // Impact Metrics
+    metrics: {
+      reach: 'Notre portée',
+      globalImpact: 'Impact mondial',
+      countries: 'Pays',
+      marketOpportunitiesCreated: 'Opportunités de marché créées',
+      enterpriseGrowthPotential: 'Potentiel de croissance d\'entreprise',
+      aiFirstConsultingMethodology: 'Méthodologie de conseil AI-First',
+    },
+
+    // Who We Help
+    whoWeHelp: {
+      title: 'Qui nous aidons',
+      description: 'Nous travaillons avec des organisations navigant dans des défis de transformation complexes dans les secteurs intensifs en technologie.',
+      telecomOperators: 'Opérateurs de télécommunications',
+      telecomDescription: 'Croissance des revenus, transformation numérique et excellence opérationnelle pilotée par l\'IA pour les opérateurs mobiles et filaires.',
+      financialInstitutions: 'Institutions financières',
+      financialDescription: 'Transformation bancaire numérique, stratégie fintech et croissance pilotée par la technologie pour les banques et les assureurs.',
+      technologyAICompanies: 'Entreprises technologiques & IA',
+      techDescription: 'Stratégie d\'accès au marché, accélération de la croissance d\'entreprise et expansion du marché pour les entreprises technologiques.',
+      infrastructureInvestors: 'Investisseurs en infrastructure',
+      investorsDescription: 'Diligence raisonnable, évaluation du marché et stratégies de création de valeur pour les investissements en infrastructure numérique.',
+      consultingFirms: 'Cabinets de conseil',
+      consultingDescription: 'Expertise spécialisée en télécommunications et technologie pour compléter les engagements stratégiques et de transformation.',
+    },
+
+    // AI-First Consulting
+    aiFirstConsulting: {
+      approach: 'Notre approche',
+      title: 'Conseil AI-First',
+      description1: 'Telcotank applique l\'IA à la recherche, à la modélisation et à l\'analyse pour accélérer les perspectives stratégiques et la livraison de transformation. Cela permet des cycles de décision plus rapides et des résultats mesurables meilleurs pour les clients.',
+      description2: 'Du dimensionnement du marché à l\'analyse concurrentielle aux feuilles de route de transformation, l\'IA amplifie chaque phase de notre processus de conseil – sans remplacer le jugement humain qui anime les décisions stratégiques.',
+      fasterAnalysis: 'Analyse stratégique plus rapide',
+      moreDataPoints: 'Plus de points de données traités',
+      fasterInsight: 'Temps d\'accès aux informations plus rapide',
+      aiPlusHuman: 'Jugement stratégique préservé',
+    },
+
+    // Challenges
+    challenges: {
+      title: 'Défis que nous résolvons',
+      revenueGrowth: 'Stagnation de la croissance des revenus',
+      revenueDescription: 'Les marchés se saturent et les modèles commerciaux traditionnels ralentissent. Nous identifions les nouveaux flux de revenus et les vecteurs de croissance.',
+      digitalTransformation: 'Complexité de la transformation numérique',
+      digitalDescription: 'De nombreuses organisations ont du mal à mettre en œuvre des initiatives numériques à grande échelle. Nous concevons et exécutons les feuilles de route de transformation.',
+      aiInitiatives: 'Initiatives IA qui ne s\'étendent pas',
+      aiDescription: 'Les pilotes IA échouent souvent à fournir une valeur d\'entreprise. Nous construisons des cadres de gouvernance et des modèles opérationnels qui s\'étendent.',
+      marketEntry: 'Entrée sur de nouveaux marchés régionaux',
+      marketDescription: 'L\'expansion vers de nouveaux marchés nécessite une connaissance locale approfondie et une clarté stratégique. Nous fournissons les deux.',
+    },
+
+    // Case Studies
+    caseStudiesSection: {
+      title: 'Cas de transformation en vedette',
+      viewAllCases: 'Voir tous les cas →',
+      readCaseStudy: 'Lire l\'étude de cas →',
+      whatCouldWeAchieve: 'Qu\'est-ce que nous pourrions réaliser ensemble ?',
+      everyTransformation: 'Chaque transformation commence par une conversation. Laissez-nous comprendre votre défi et vous montrer ce qui est possible.',
+    },
+
+    // How We Work
+    howWeWork: {
+      title: 'Comment nous travaillons',
+      description: 'Une méthodologie éprouvée affinée dans 40 pays et deux décennies de prestation de transformation.',
+      diagnose: 'Diagnostic',
+      diagnoseDescription: 'Analyse approfondie de la position de marché, du paysage concurrentiel et des capacités organisationnelles.',
+      design: 'Conception',
+      designDescription: 'Développement de la stratégie avec des feuilles de route claires, des cas métier et une architecture de transformation.',
+      execute: 'Exécution',
+      executeDescription: 'Support d\'implémentation pratique avec gestion de programme et gestion du changement.',
+      scale: 'Mise à l\'échelle',
+      scaleDescription: 'Mise à l\'échelle systématique des initiatives réussies dans l\'organisation et les nouveaux marchés.',
+    },
+
+    // Capabilities
+    capabilitiesSection: {
+      title: 'Capacités',
+      description: 'Expertise approfondie sur l\'ensemble du cycle de vie de la transformation, de la stratégie à l\'exécution.',
+      transformationStrategy: 'Stratégie de transformation',
+      transformationDescription: 'Planification stratégique complète pour la transformation numérique, le changement organisationnel et l\'innovation du modèle commercial.',
+      growthAcceleration: 'Accélération de la croissance',
+      growthDescription: 'Programmes de croissance des revenus englobant la transformation des ventes, l\'optimisation du marketing et la gestion de la valeur client.',
+      aiTransformation: 'Transformation et gouvernance IA',
+      aiGovernanceDescription: 'Stratégie IA d\'entreprise, cadres de gouvernance, conception de modèle opérationnel et programmes d\'adoption.',
+      marketEntry: 'Accès au marché et expansion',
+      marketEntryDescription: 'Évaluation du marché, stratégie d\'accès, développement de partenariats et configuration opérationnelle pour les nouvelles régions géographiques.',
+      investmentAdvisory: 'Conseil en investissement et fusions-acquisitions',
+      investmentDescription: 'Diligence raisonnable, support d\'évaluation et intégration post-fusion pour les investissements technologiques et télécom.',
+      learnMore: 'En savoir plus →',
+      whatWeDeliver: 'Ce que nous livrons',
+    },
+
+    // Industries
+    industriesSection: {
+      title: 'Secteurs',
+      description: 'Expertise ciblée dans les secteurs intensifs en technologie subissant une transformation fondamentale.',
+      sectorExpertise: 'Expertise sectorielle',
+      telecommunications: 'Télécommunications',
+      telecomDescription: 'Nous aidons les opérateurs mobiles, les fournisseurs de réseaux fixes, les MVNO et les fournisseurs de services convergents à naviguer la transformation numérique, à stimuler la croissance des revenus et à construire l\'avantage concurrentiel.',
+      financialServices: 'Services financiers',
+      financialServicesDescription: 'Nous supportons les banques, les assureurs et les prestataires de paiement dans leurs parcours de transformation numérique, de la stratégie à l\'exécution.',
+      technologyAI: 'Technologie & IA',
+      technologyDescription: 'Nous conseillons les entreprises de logiciels, les plateformes IA, les fournisseurs de cloud et les entreprises technologiques d\'entreprise sur la stratégie de croissance et l\'expansion du marché.',
+      digitalInfrastructure: 'Infrastructure numérique',
+      infrastructureDescription: 'Nous conseillons les entreprises de tours, les centres de données, les réseaux de fibres et les fournisseurs de connectivité sur la stratégie d\'investissement et la création de valeur.',
+      startupsScaleups: 'Startups et scaleups',
+      startupsDescription: 'Nous fournissons des conseils stratégiques aux entreprises technologiques en croissance rapide cherchant l\'expansion du marché, le positionnement d\'entreprise et la préparation à l\'investissement.',
+      discussIndustryChallenge: 'Discutez de votre défi industriel',
+      everyIndustry: 'Chaque secteur a une dynamique de transformation unique. Laissez-nous apporter notre expertise sectorielle approfondie à votre défi spécifique.',
+      keyChallengements: 'Défis clés que nous abordons',
+      explore: 'Explorer →',
+    },
+
+    // Strategic Intelligence
+    strategicIntelligence: {
+      provenBestsellers: 'Bestsellers éprouvés',
+      viewAllArticles: 'Voir tous les articles',
+    },
+
+    // Newsletter
+    newsletter: {
+      title: 'Restez à jour sur la transformation numérique',
+      description: 'Abonnez-vous à notre newsletter pour des perspectives sur l\'IA, la transformation numérique et la stratégie des télécommunications.',
+      subscribe: 'S\'abonner',
+      firstName: 'Prénom',
+      lastName: 'Nom de famille',
+      companyOptional: 'Nom de l\'entreprise (facultatif)',
+      phoneOptional: 'Téléphone mobile (facultatif)',
+      emailPlaceholder: 'Entrez votre adresse e-mail',
+      subscribing: 'S\'abonne...',
+      successMessage: 'Bienvenue ! Vous recevrez bientôt les mises à jour et perspectives de Telcotank.',
+      disclaimer: 'Mises à jour gratuites. Pas de spam. Désinscrivez-vous à tout moment.',
+    },
+
+    // Footer
+    footer: {
+      tagline: 'Stratégie de transformation et exécution pour l\'économie numérique. Conseillant les opérateurs de télécommunications, les institutions financières, les entreprises technologiques et les investisseurs depuis 2004.',
+      capabilities: 'Capacités',
+      industries: 'Secteurs',
+      company: 'Entreprise',
+      allRightsReserved: 'Tous droits réservés',
+      transformationStrategy: 'Stratégie de transformation',
+      growthAcceleration: 'Accélération de la croissance',
+      aiTransformation: 'Transformation IA',
+      marketEntry: 'Accès au marché et expansion',
+      investmentAdvisory: 'Conseil en investissement et fusions-acquisitions',
+      telecommunications: 'Télécommunications',
+      financialServices: 'Services financiers',
+      technologyAI: 'Technologie & IA',
+      digitalInfrastructure: 'Infrastructure numérique',
+      startupsScaleups: 'Startups et scaleups',
+      aboutLink: 'À propos',
+      caseStudiesLink: 'Études de cas',
+      strategicIntelligenceLink: 'Intelligence stratégique',
+      articlesLink: 'Articles',
+      contactLink: 'Contact',
+    },
+
+    // Articles Page
+    articlesPage: {
+      heroLabel: 'Articles Telcotank',
+      heroTitle: 'Perspectives stratégiques',
+      heroDescription: 'Analyse approfondie des forces remodelant les télécommunications, l\'intelligence artificielle, l\'informatique quantique et l\'économie numérique mondiale.',
+      featured: 'Vedette',
+      latestArticle: 'Dernier article',
+      readFullArticle: 'Lire l\'article complet',
+      allArticles: 'Tous les articles',
+      analysisCommentary: 'Analyse et commentaires',
+      allArticlesDescription: 'Recherche originale et analyse stratégique sur les technologies, les modèles commerciaux et les forces du marché transformant les industries mondiales.',
+      readArticle: 'Lire l\'article',
+      ctaTitle: 'Accédez à nos cadres stratégiques',
+      ctaDescription: 'Allez plus loin avec nos publications stratégiques complètes — analyses détaillées couvrant 50 à 100 pages de recherche originale, de données de marché et de cadres exploitables.',
+      viewPublications: 'Afficher les publications',
+      contactUs: 'Nous contacter',
+      minRead: 'min de lecture',
+      themeAIQuantum: 'IA & Informatique quantique',
+      themeEmergingTech: 'Technologie émergente',
+      themeTelecom: 'Stratégie de l\'industrie des télécommunications',
+    },
+
+    // Contact Form
+    contactForm: {
+      title: 'Demander une discussion stratégique',
+      subtitle: 'Remplissez le formulaire ci-dessous et notre équipe répondra dans les 24 heures.',
+      firstName: 'Prénom',
+      lastName: 'Nom de famille',
+      email: 'E-mail',
+      company: 'Entreprise',
+      topicOfInterest: 'Sujet d\'intérêt',
+      selectTopic: 'Sélectionnez un sujet',
+      topicTransformation: 'Stratégie de transformation',
+      topicGrowth: 'Accélération de la croissance',
+      topicAI: 'Transformation et gouvernance IA',
+      topicMarketEntry: 'Accès au marché et expansion',
+      topicInvestment: 'Conseil en investissement et fusions-acquisitions',
+      topicOther: 'Autre',
+      message: 'Message',
+      messagePlaceholder: 'Parlez-nous de votre défi...',
+      sendMessage: 'Envoyer le message',
+      sending: 'Envoi en cours...',
+      messageSent: 'Message envoyé',
+      thankYou: 'Merci de nous avoir contactés. Nous vous recontacterons dans les 24 heures.',
+      confirmationEmail: 'Un e-mail de confirmation a été envoyé à votre boîte de réception.',
+    },
+
+    // Strategic Intelligence Page
+    strategicIntelligencePage: {
+      heroLabel: 'Recherche et cadres',
+      heroTitle: 'Intelligence stratégique',
+      heroDescription: 'Cadres de recherche stratégique de style McKinsey utilisés par les opérateurs de télécommunications, les investisseurs en infrastructure, les fonds souverains et les équipes de stratégie d\'entreprise. Chaque cadre offre une analyse au niveau de l\'allocation de capital avec des sources de données institutionnelles et des recommandations de positionnement exploitables.',
+      badgeFrameworks: '17 cadres',
+      badgePrice: '12 000 $ chacun',
+      badgeHorizon: 'Horizon 2025–2030',
+      provenBestsellers: 'Bestsellers éprouvés',
+      featuredFrameworks: 'Cadres en vedette',
+      viewFramework: 'Afficher le cadre',
+      allStrategicFrameworks: 'Tous les cadres stratégiques',
+      view: 'Afficher',
+      ctaTitle: 'Besoin d\'un briefing stratégique personnalisé ?',
+      ctaDescription: 'Demandez une présentation exécutive de n\'importe quel cadre pour votre équipe de direction, ou commandez un cadre de recherche personnalisé adapté à vos priorités stratégiques.',
+      browseAllFrameworks: 'Parcourir tous les cadres',
+      requestExecutiveBriefing: 'Demander un briefing exécutif',
+    },
+
+    // About Page
+    about: {
+      title: 'À propos de Telcotank',
+      introduction: 'Fondée en 2004, Telcotank est une firme de conseil en transformation aidant les organisations de l\'économie numérique à naviguer les défis stratégiques complexes et à fournir des résultats mesurables.',
+      ourMission: 'Notre mission',
+      missionDescription1: 'Nous existons pour aider les organisations à libérer la croissance grâce à la transformation. Notre travail couvre le développement de la stratégie, le support d\'exécution et l\'intelligence stratégique dans les télécommunications, les services financiers, la technologie et l\'infrastructure numérique.',
+      missionDescription2: 'Avec des projets livrés dans 40 pays, nous apportons une combinaison unique de perspective mondiale et d\'expertise sectorielle approfondie à chaque engagement.',
+      founded: 'Fondée',
+      countriesCount: 'Pays',
+      opportunitiesCreated: 'Opportunités créées',
+      whatSetsUsApart: 'Ce qui nous distingue',
+      executionFocus: 'Accent sur l\'exécution',
+      executionDescription: 'Nous ne conseillons pas seulement. Nous travaillons aux côtés des équipes de direction pour livrer des résultats de transformation mesurables.',
+      deepIndustryExpertise: 'Expertise sectorielle approfondie',
+      industryDescription: 'Deux décennies d\'expérience concentrée en télécommunications, services financiers et technologie nous donnent une connaissance sectorielle inégalée.',
+      aiFirstApproach: 'Approche AI-First',
+      aiApproachDescription: 'Nous utilisons l\'IA pour accélérer chaque phase de notre travail, de l\'analyse stratégique à l\'exécution de la transformation.',
+      globalPerspective: 'Perspective mondiale',
+      globalDescription: 'Des projets dans 40 pays nous donnent la capacité d\'apporter les meilleures pratiques mondiales aux défis locaux.',
+      ourJourney: 'Notre parcours',
+      threePillars: 'Trois piliers de notre pratique',
+      transformationConsultingPillar: 'Conseil en transformation',
+      transformationPillarDescription: 'Stratégie et exécution complètes pour la transformation numérique, l\'accélération de la croissance et le changement organisationnel.',
+      strategicIntelligencePillar: 'Intelligence stratégique',
+      intelligencePillarDescription: 'Cadres propriétaires et analyses sur l\'IA, la technologie et les dynamiques concurrentielles remodelant l\'économie numérique.',
+      aiTransformationPillar: 'Transformation IA',
+      aiPillarDescription: 'Stratégie IA d\'entreprise, gouvernance, conception de modèle opérationnel et programmes d\'adoption qui fournissent des résultats évolutifs.',
+      workWithUs: 'Travailler avec nous',
+      workWithUsDescription: 'Laissez-nous apporter deux décennies d\'expertise en transformation à vos défis stratégiques les plus importants.',
+    },
+
+    // Capabilities Page
+    capabilitiesPage: {
+      whatWeDo: 'Ce que nous faisons',
+      capabilitiesTitle: 'Capacités',
+      capabilitiesSubtitle: 'Expertise approfondie sur l\'ensemble du cycle de vie de la transformation, du développement de la stratégie à l\'exécution et à la mise à l\'échelle.',
+      readyToTransform: 'Prêt à vous transformer ?',
+      readyDescription: 'Laissez-nous vous aider à identifier la bonne approche pour votre défi de transformation.',
+      transformationStrategyTitle: 'Stratégie de transformation',
+      transformationStrategyDesc: 'Planification stratégique complète pour la transformation numérique, le changement organisationnel et l\'innovation du modèle commercial.',
+      growthAccelerationTitle: 'Accélération de la croissance',
+      growthAccelerationDesc: 'Programmes de croissance des revenus englobant la transformation des ventes, l\'optimisation du marketing et la gestion de la valeur client.',
+      aiTransformationTitle: 'Transformation et gouvernance IA',
+      aiTransformationDesc: 'Stratégie IA d\'entreprise, cadres de gouvernance, conception de modèle opérationnel et programmes d\'adoption.',
+      marketEntryTitle: 'Accès au marché et expansion',
+      marketEntryDesc: 'Évaluation du marché, stratégie d\'accès, développement de partenariats et configuration opérationnelle pour les nouvelles régions géographiques.',
+      investmentAdvisoryTitle: 'Conseil en investissement et fusions-acquisitions',
+      investmentAdvisoryDesc: 'Diligence raisonnable, support d\'évaluation et intégration post-fusion pour les investissements technologiques et télécom.',
+    },
+
+    // Industries Page
+    industriesPage: {
+      industriesTitle: 'Secteurs',
+      industriesSubtitle: 'Expertise ciblée dans les secteurs intensifs en technologie subissant une transformation fondamentale.',
+    },
+
+    // Case Studies Page
+    caseStudiesPage: {
+      provenResults: 'Résultats éprouvés',
+      caseStudiesTitle: 'Études de cas',
+      caseStudiesSubtitle: 'Résultats de transformation réels dans les télécommunications, les services financiers, la technologie et les marchés émergents – couvrant 40 pays et deux décennies d\'exécution.',
+    },
+  },
 }

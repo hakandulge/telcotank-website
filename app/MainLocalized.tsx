@@ -4,7 +4,7 @@ import Link from '@/components/Link'
 import NewsletterSignup from '@/components/NewsletterSignup'
 import { translations } from '@/data/translations'
 
-type Language = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru'
+type Language = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru' | 'de' | 'fr'
 
 const V = '/static/images/visuals'
 
@@ -79,6 +79,26 @@ const countriesMap: Record<string, string[]> = {
     'Саудовская Аравия', 'Кувейт', 'Азербайджан', 'Объединённые Арабские Эмираты',
     'Узбекистан', 'Казахстан', 'Афганистан', 'Таджикистан', 'Кыргызстан',
     'Индия', 'Малайзия', 'Индонезия',
+  ],
+  de: [
+    'Kanada', 'USA', 'Portugal', 'Spanien', 'Vereinigtes Königreich', 'Burkina Faso',
+    'Niederlande', 'Schweiz', 'Nigeria', 'Slowenien', 'Libyen', 'Slowakei',
+    'Montenegro', 'Serbien', 'Nordmazedonien', 'Griechenland', 'Südafrika',
+    'Bulgarien', 'Rumänien', 'Moldawien', 'Ägypten', 'Ukraine', 'Nordzypern',
+    'Türkei', 'Libanon', 'Tansania', 'Kenia', 'Georgien', 'Irak',
+    'Saudi-Arabien', 'Kuwait', 'Aserbaidschan', 'Vereinigte Arabische Emirate',
+    'Usbekistan', 'Kasachstan', 'Afghanistan', 'Tadschikistan', 'Kirgisistan',
+    'Indien', 'Malaysia', 'Indonesien',
+  ],
+  fr: [
+    'Canada', 'États-Unis', 'Portugal', 'Espagne', 'Royaume-Uni', 'Burkina Faso',
+    'Pays-Bas', 'Suisse', 'Nigeria', 'Slovénie', 'Libye', 'Slovaquie',
+    'Monténégro', 'Serbie', 'Macédoine du Nord', 'Grèce', 'Afrique du Sud',
+    'Bulgarie', 'Roumanie', 'Moldavie', 'Égypte', 'Ukraine', 'Chypre du Nord',
+    'Turquie', 'Liban', 'Tanzanie', 'Kenya', 'Géorgie', 'Irak',
+    'Arabie saoudite', 'Koweït', 'Azerbaïdjan', 'Émirats arabes unis',
+    'Ouzbékistan', 'Kazakhstan', 'Afghanistan', 'Tadjikistan', 'Kirghizistan',
+    'Inde', 'Malaisie', 'Indonésie',
   ],
 }
 

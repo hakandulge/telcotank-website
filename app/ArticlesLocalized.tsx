@@ -4,9 +4,10 @@ import Link from '@/components/Link'
 import { articles } from '@/data/articles'
 import { articlesTR, articlesAR, articlesES } from '@/data/articlesTranslated'
 import { articlesPT, articlesRU } from '@/data/articlesTranslatedPtRu'
+import { articlesDE, articlesFR } from '@/data/articlesTranslatedDeFr'
 import { translations } from '@/data/translations'
 
-type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru'
+type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru' | 'de' | 'fr'
 
 function getArticles(lang: Lang) {
   switch (lang) {
@@ -15,6 +16,8 @@ function getArticles(lang: Lang) {
     case 'es': return articlesES
     case 'pt': return articlesPT
     case 'ru': return articlesRU
+    case 'de': return articlesDE
+    case 'fr': return articlesFR
     default: return articles
   }
 }

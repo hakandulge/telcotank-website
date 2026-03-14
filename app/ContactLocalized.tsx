@@ -3,7 +3,7 @@
 import ContactForm from '@/components/ContactForm'
 import { translations } from '@/data/translations'
 
-type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru'
+type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru' | 'de' | 'fr'
 
 interface ContactLocalizedProps {
   lang: Lang

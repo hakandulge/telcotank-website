@@ -13,6 +13,8 @@ export const metadata: Metadata = {
       'es': 'https://telcotank.com/es/contact/',
       'pt': 'https://telcotank.com/pt/contact/',
       'ru': 'https://telcotank.com/ru/contact/',
+      'de': 'https://telcotank.com/de/contact/',
+      'fr': 'https://telcotank.com/fr/contact/',
       'x-default': 'https://telcotank.com/contact/',
     },
   },

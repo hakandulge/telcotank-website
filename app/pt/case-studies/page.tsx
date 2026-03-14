@@ -13,6 +13,8 @@ export const metadata: Metadata = {
       'es': 'https://telcotank.com/es/case-studies/',
       'pt': 'https://telcotank.com/pt/case-studies/',
       'ru': 'https://telcotank.com/ru/case-studies/',
+      'de': 'https://telcotank.com/de/case-studies/',
+      'fr': 'https://telcotank.com/fr/case-studies/',
       'x-default': 'https://telcotank.com/case-studies/',
     },
   },

@@ -15,6 +15,8 @@ export const metadata = genPageMetadata({
         'es': 'https://telcotank.com/es/capabilities/',
         'pt': 'https://telcotank.com/pt/capabilities/',
         'ru': 'https://telcotank.com/ru/capabilities/',
+        'de': 'https://telcotank.com/de/capabilities/',
+        'fr': 'https://telcotank.com/fr/capabilities/',
         'x-default': 'https://telcotank.com/capabilities/',
       },
   },

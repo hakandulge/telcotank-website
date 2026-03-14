@@ -3,7 +3,7 @@
 import { useState, FormEvent } from 'react'
 import { translations } from '@/data/translations'
 
-type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru'
+type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru' | 'de' | 'fr'
 
 export default function ContactForm({ lang = 'en' as Lang }: { lang?: Lang }) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')

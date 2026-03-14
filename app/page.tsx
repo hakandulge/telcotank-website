@@ -28,6 +28,8 @@ export const metadata = genPageMetadata({
         'es': 'https://telcotank.com/es/',
         'pt': 'https://telcotank.com/pt/',
         'ru': 'https://telcotank.com/ru/',
+        'de': 'https://telcotank.com/de/',
+        'fr': 'https://telcotank.com/fr/',
         'x-default': 'https://telcotank.com/',
       },
   },

@@ -13,6 +13,8 @@ export const metadata: Metadata = {
       'es': 'https://telcotank.com/es/strategicintelligence/',
       'pt': 'https://telcotank.com/pt/strategicintelligence/',
       'ru': 'https://telcotank.com/ru/strategicintelligence/',
+      'de': 'https://telcotank.com/de/strategicintelligence/',
+      'fr': 'https://telcotank.com/fr/strategicintelligence/',
       'x-default': 'https://telcotank.com/strategicintelligence/',
     },
   },

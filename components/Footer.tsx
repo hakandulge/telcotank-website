@@ -5,11 +5,11 @@ import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import { translations } from '@/data/translations'
 
-type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru'
+type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru' | 'de' | 'fr'
 
 function getLang(pathname: string): Lang {
   const p = pathname.split('/')[1]
-  if (['tr', 'ar', 'es', 'pt', 'ru'].includes(p)) return p as Lang
+  if (['tr', 'ar', 'es', 'pt', 'ru', 'de', 'fr'].includes(p)) return p as Lang
   return 'en'
 }
 
