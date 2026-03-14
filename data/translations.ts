@@ -230,6 +230,25 @@ export const translations = {
       confirmationEmail: 'A confirmation email has been sent to your inbox.',
     },
 
+    // Strategic Intelligence Page
+    strategicIntelligencePage: {
+      heroLabel: 'Research & Frameworks',
+      heroTitle: 'Strategic Intelligence',
+      heroDescription: 'McKinsey-style strategic research frameworks used by telecom operators, infrastructure investors, sovereign wealth funds, and corporate strategy teams. Each framework delivers capital-allocation-grade analysis with institutional data sources and actionable positioning recommendations.',
+      badgeFrameworks: '17 Frameworks',
+      badgePrice: '$12,000 each',
+      badgeHorizon: '2025–2030 Horizon',
+      provenBestsellers: 'Proven Bestsellers',
+      featuredFrameworks: 'Featured Frameworks',
+      viewFramework: 'View framework',
+      allStrategicFrameworks: 'All Strategic Frameworks',
+      view: 'View',
+      ctaTitle: 'Need a Custom Strategic Briefing?',
+      ctaDescription: 'Request an executive walkthrough of any framework for your leadership team, or commission a custom research framework tailored to your strategic priorities.',
+      browseAllFrameworks: 'Browse All Frameworks',
+      requestExecutiveBriefing: 'Request Executive Briefing',
+    },
+
     // About Page
     about: {
       title: 'About Telcotank',
@@ -496,6 +515,25 @@ export const translations = {
       confirmationEmail: 'Gelen kutunuza bir onay e-postası gönderildi.',
     },
 
+    // Strategic Intelligence Page
+    strategicIntelligencePage: {
+      heroLabel: 'Araştırma & Çerçeveler',
+      heroTitle: 'Stratejik İstihbarat',
+      heroDescription: 'Telekomünikasyon operatörleri, altyapı yatırımcıları, egemenlik varlık fonları ve kurumsal strateji ekipleri tarafından kullanılan McKinsey tarzı stratejik araştırma çerçeveleri. Her çerçeve, kurumsal veri kaynakları ve uygulanabilir konumlandırma önerileri ile sermaye tahsis düzeyinde analiz sunar.',
+      badgeFrameworks: '17 Çerçeve',
+      badgePrice: 'Her biri $12.000',
+      badgeHorizon: '2025–2030 Ufku',
+      provenBestsellers: 'Kanıtlanmış En Çok Satanlar',
+      featuredFrameworks: 'Öne Çıkan Çerçeveler',
+      viewFramework: 'Çerçeveyi görüntüle',
+      allStrategicFrameworks: 'Tüm Stratejik Çerçeveler',
+      view: 'Görüntüle',
+      ctaTitle: 'Özel Bir Stratejik Brifing Mi Gerekiyor?',
+      ctaDescription: 'Liderlik ekibiniz için herhangi bir çerçevenin yönetici sunumunu isteyin veya stratejik önceliklerinize göre özelleştirilmiş bir araştırma çerçevesi sipariş edin.',
+      browseAllFrameworks: 'Tüm Çerçevelere Göz At',
+      requestExecutiveBriefing: 'Yönetici Brifing İsteyin',
+    },
+
     about: {
       title: 'Telcotank Hakkında',
       introduction: '2004 yılında kurulan Telcotank, dijital ekonomi alanında faaliyet gösteren kuruluşların karmaşık stratejik zorlukları aşmalarına ve ölçülebilir sonuçlar elde etmelerine yardımcı olan bir dönüşüm danışmanlık firmasıdır.',
@@ -753,6 +791,25 @@ export const translations = {
       messageSent: 'تم إرسال الرسالة',
       thankYou: 'شكراً لتواصلك معنا. سنعود إليك خلال 24 ساعة.',
       confirmationEmail: 'تم إرسال بريد إلكتروني للتأكيد إلى صندوق الوارد الخاص بك.',
+    },
+
+    // Strategic Intelligence Page
+    strategicIntelligencePage: {
+      heroLabel: 'البحث والأطر',
+      heroTitle: 'الاستخبارات الاستراتيجية',
+      heroDescription: 'أطر بحثية استراتيجية على غرار McKinsey يستخدمها مشغلو الاتصالات ومستثمرو البنية التحتية وصناديق الثروة السيادية وفرق الاستراتيجية المؤسسية. يقدم كل إطار تحليلاً بمستوى تخصيص رأس المال مع مصادر بيانات مؤسسية وتوصيات تموضع قابلة للتنفيذ.',
+      badgeFrameworks: '17 إطاراً',
+      badgePrice: '$12,000 لكل إطار',
+      badgeHorizon: 'أفق 2025–2030',
+      provenBestsellers: 'الأكثر مبيعاً',
+      featuredFrameworks: 'الأطر المميزة',
+      viewFramework: 'عرض الإطار',
+      allStrategicFrameworks: 'جميع الأطر الاستراتيجية',
+      view: 'عرض',
+      ctaTitle: 'هل تحتاج إلى إحاطة استراتيجية مخصصة؟',
+      ctaDescription: 'اطلب عرضاً تنفيذياً لأي إطار لفريق القيادة الخاص بك، أو اطلب إطار بحث مخصص يتناسب مع أولوياتك الاستراتيجية.',
+      browseAllFrameworks: 'تصفح جميع الأطر',
+      requestExecutiveBriefing: 'طلب إحاطة تنفيذية',
     },
 
     about: {
@@ -1014,6 +1071,25 @@ export const translations = {
       confirmationEmail: 'Se ha enviado un correo de confirmación a su bandeja de entrada.',
     },
 
+    // Strategic Intelligence Page
+    strategicIntelligencePage: {
+      heroLabel: 'Investigación y Marcos',
+      heroTitle: 'Inteligencia Estratégica',
+      heroDescription: 'Marcos de investigación estratégica estilo McKinsey utilizados por operadores de telecomunicaciones, inversores de infraestructura, fondos soberanos y equipos de estrategia corporativa. Cada marco ofrece análisis de nivel de asignación de capital con fuentes de datos institucionales y recomendaciones de posicionamiento accionables.',
+      badgeFrameworks: '17 Marcos',
+      badgePrice: '$12.000 cada uno',
+      badgeHorizon: 'Horizonte 2025–2030',
+      provenBestsellers: 'Best Sellers Comprobados',
+      featuredFrameworks: 'Marcos Destacados',
+      viewFramework: 'Ver marco',
+      allStrategicFrameworks: 'Todos los Marcos Estratégicos',
+      view: 'Ver',
+      ctaTitle: '¿Necesita un Informe Estratégico Personalizado?',
+      ctaDescription: 'Solicite una presentación ejecutiva de cualquier marco para su equipo de liderazgo, o encargue un marco de investigación personalizado adaptado a sus prioridades estratégicas.',
+      browseAllFrameworks: 'Explorar Todos los Marcos',
+      requestExecutiveBriefing: 'Solicitar Informe Ejecutivo',
+    },
+
     about: {
       title: 'Acerca de Telcotank',
       introduction: 'Fundada en 2004, Telcotank es una firma de consultoría de transformación que ayuda a las organizaciones en la economía digital a navegar desafíos estratégicos complejos y obtener resultados medibles.',
@@ -1273,6 +1349,25 @@ export const translations = {
       confirmationEmail: 'Um e-mail de confirmação foi enviado para sua caixa de entrada.',
     },
 
+    // Strategic Intelligence Page
+    strategicIntelligencePage: {
+      heroLabel: 'Pesquisa e Frameworks',
+      heroTitle: 'Inteligência Estratégica',
+      heroDescription: 'Frameworks de pesquisa estratégica no estilo McKinsey utilizados por operadoras de telecomunicações, investidores de infraestrutura, fundos soberanos e equipes de estratégia corporativa. Cada framework oferece análise de nível de alocação de capital com fontes de dados institucionais e recomendações de posicionamento acionáveis.',
+      badgeFrameworks: '17 Frameworks',
+      badgePrice: '$12.000 cada',
+      badgeHorizon: 'Horizonte 2025–2030',
+      provenBestsellers: 'Best Sellers Comprovados',
+      featuredFrameworks: 'Frameworks em Destaque',
+      viewFramework: 'Ver framework',
+      allStrategicFrameworks: 'Todos os Frameworks Estratégicos',
+      view: 'Ver',
+      ctaTitle: 'Precisa de um Briefing Estratégico Personalizado?',
+      ctaDescription: 'Solicite uma apresentação executiva de qualquer framework para sua equipe de liderança, ou encomende um framework de pesquisa personalizado adaptado às suas prioridades estratégicas.',
+      browseAllFrameworks: 'Explorar Todos os Frameworks',
+      requestExecutiveBriefing: 'Solicitar Briefing Executivo',
+    },
+
     about: {
       title: 'Sobre Telcotank',
       introduction: 'Fundada em 2004, Telcotank é uma empresa de consultoria de transformação que ajuda organizações na economia digital a navegar desafios estratégicos complexos e obter resultados mensuráveis.',
@@ -1530,6 +1625,25 @@ export const translations = {
       messageSent: 'Сообщение Отправлено',
       thankYou: 'Спасибо за обращение. Мы свяжемся с вами в течение 24 часов.',
       confirmationEmail: 'Письмо с подтверждением отправлено на ваш почтовый ящик.',
+    },
+
+    // Strategic Intelligence Page
+    strategicIntelligencePage: {
+      heroLabel: 'Исследования и Фреймворки',
+      heroTitle: 'Стратегическая Разведка',
+      heroDescription: 'Стратегические исследовательские фреймворки в стиле McKinsey, используемые операторами связи, инфраструктурными инвесторами, суверенными фондами и командами корпоративной стратегии. Каждый фреймворк предоставляет анализ инвестиционного уровня с институциональными источниками данных и практическими рекомендациями по позиционированию.',
+      badgeFrameworks: '17 Фреймворков',
+      badgePrice: '$12 000 каждый',
+      badgeHorizon: 'Горизонт 2025–2030',
+      provenBestsellers: 'Проверенные Бестселлеры',
+      featuredFrameworks: 'Избранные Фреймворки',
+      viewFramework: 'Просмотреть фреймворк',
+      allStrategicFrameworks: 'Все Стратегические Фреймворки',
+      view: 'Просмотр',
+      ctaTitle: 'Нужен Индивидуальный Стратегический Брифинг?',
+      ctaDescription: 'Запросите исполнительную презентацию любого фреймворка для вашей команды руководителей или закажите пользовательский исследовательский фреймворк, адаптированный к вашим стратегическим приоритетам.',
+      browseAllFrameworks: 'Просмотреть Все Фреймворки',
+      requestExecutiveBriefing: 'Запросить Исполнительный Брифинг',
     },
 
     about: {
