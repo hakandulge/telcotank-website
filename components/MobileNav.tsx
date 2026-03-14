@@ -90,29 +90,49 @@ const MobileNav = () => {
         </svg>
       </button>
 
-      {/* Full-screen overlay menu */}
+      {/* Full-screen overlay menu — 100% opaque solid background */}
       {navShow && (
         <div
-          style={{ position: 'fixed', inset: 0, zIndex: 9999 }}
-          className="bg-[#0A2540]"
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            zIndex: 9999,
+            backgroundColor: '#0A2540',
+          }}
         >
           {/* Header row: logo + globe + close */}
-          <div className="flex items-center justify-between px-6 h-[72px]">
+          <div
+            style={{ height: '72px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 24px' }}
+          >
             <Link href="/" onClick={closeNav}>
               <img
                 src="/static/images/telcotank-logo.png"
                 alt="Telcotank"
-                className="h-7 w-auto brightness-0 invert"
+                style={{ height: '28px', width: 'auto', filter: 'brightness(0) invert(1)' }}
               />
             </Link>
 
-            <div className="flex items-center gap-2">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               {/* Globe icon for language */}
               <button
                 type="button"
                 aria-label="Change Language"
                 onClick={() => setLangOpen(!langOpen)}
-                className="flex h-10 w-10 items-center justify-center rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+                style={{
+                  display: 'flex',
+                  height: '40px',
+                  width: '40px',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  borderRadius: '50%',
+                  color: 'rgba(255,255,255,0.8)',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +140,7 @@ const MobileNav = () => {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth={1.5}
-                  className="h-5 w-5"
+                  style={{ height: '22px', width: '22px' }}
                 >
                   <circle cx="12" cy="12" r="10" />
                   <path d="M2 12h20" />
@@ -129,14 +149,25 @@ const MobileNav = () => {
               </button>
 
               {/* Vertical divider */}
-              <div className="h-5 w-px bg-white/20" />
+              <div style={{ height: '20px', width: '1px', backgroundColor: 'rgba(255,255,255,0.2)' }} />
 
               {/* Close button (X) */}
               <button
                 type="button"
                 aria-label="Close Menu"
                 onClick={closeNav}
-                className="flex h-10 w-10 items-center justify-center rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+                style={{
+                  display: 'flex',
+                  height: '40px',
+                  width: '40px',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  borderRadius: '50%',
+                  color: 'rgba(255,255,255,0.8)',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -145,7 +176,7 @@ const MobileNav = () => {
                   stroke="currentColor"
                   strokeWidth={2}
                   strokeLinecap="round"
-                  className="h-6 w-6"
+                  style={{ height: '24px', width: '24px' }}
                 >
                   <line x1="18" y1="6" x2="6" y2="18" />
                   <line x1="6" y1="6" x2="18" y2="18" />
@@ -156,44 +187,63 @@ const MobileNav = () => {
 
           {/* Scrollable content area */}
           <div
-            className="overflow-y-auto px-6"
-            style={{ height: 'calc(100vh - 72px)' }}
+            style={{
+              height: 'calc(100vh - 72px)',
+              overflowY: 'auto',
+              padding: '0 24px',
+            }}
           >
             {/* Language selector panel — shows when globe is clicked */}
             {langOpen && (
-              <div className="mb-6 pb-6 border-b border-white/10">
+              <div style={{ marginBottom: '24px', paddingBottom: '24px', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
                 <div className="grid grid-cols-2 gap-2">
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
                       type="button"
                       onClick={() => handleLanguageChange(lang.code)}
-                      className={`flex items-center gap-3 rounded-xl px-4 py-3.5 text-left transition-colors ${
-                        currentLang === lang.code
-                          ? 'bg-[#2563EB] text-white'
-                          : 'bg-white/5 text-white/80 hover:bg-white/10 hover:text-white'
-                      }`}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '12px',
+                        borderRadius: '12px',
+                        padding: '14px 16px',
+                        textAlign: 'left',
+                        border: 'none',
+                        cursor: 'pointer',
+                        backgroundColor: currentLang === lang.code ? '#2563EB' : 'rgba(255,255,255,0.05)',
+                        color: currentLang === lang.code ? '#fff' : 'rgba(255,255,255,0.8)',
+                      }}
                     >
-                      <span className="text-lg">{lang.flag}</span>
-                      <span className="text-sm font-medium">{lang.name}</span>
+                      <span style={{ fontSize: '18px' }}>{lang.flag}</span>
+                      <span style={{ fontSize: '14px', fontWeight: 500 }}>{lang.name}</span>
                     </button>
                   ))}
                 </div>
               </div>
             )}
 
-            {/* Nav links — Slalom style: large, bold, with dividers */}
+            {/* Nav links — Slalom style */}
             <nav>
               {headerNavLinks.map((link, idx) => (
                 <div key={link.title}>
                   <Link
                     href={link.href}
-                    className="flex items-center justify-between py-5 text-xl font-semibold text-white"
                     onClick={closeNav}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      padding: '20px 0',
+                      fontSize: '20px',
+                      fontWeight: 600,
+                      color: '#ffffff',
+                      textDecoration: 'none',
+                    }}
                   >
                     <span>{link.title}</span>
                     <svg
-                      className="h-5 w-5 text-white/30"
+                      style={{ height: '20px', width: '20px', color: 'rgba(255,255,255,0.3)' }}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -203,18 +253,29 @@ const MobileNav = () => {
                     </svg>
                   </Link>
                   {idx < headerNavLinks.length - 1 && (
-                    <div className="h-px bg-white/10" />
+                    <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.1)' }} />
                   )}
                 </div>
               ))}
             </nav>
 
             {/* CTA button at bottom */}
-            <div className="pb-10 pt-8">
+            <div style={{ paddingTop: '32px', paddingBottom: '40px' }}>
               <Link
                 href="/contact"
                 onClick={closeNav}
-                className="block w-full rounded-full border-2 border-white/30 py-4 text-center text-sm font-semibold text-white"
+                style={{
+                  display: 'block',
+                  width: '100%',
+                  borderRadius: '9999px',
+                  border: '2px solid rgba(255,255,255,0.3)',
+                  padding: '16px 0',
+                  textAlign: 'center',
+                  fontSize: '14px',
+                  fontWeight: 600,
+                  color: '#ffffff',
+                  textDecoration: 'none',
+                }}
               >
                 Request Strategy Discussion
               </Link>
