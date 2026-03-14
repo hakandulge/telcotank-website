@@ -273,7 +273,7 @@ export default function ContactLocalized({ lang }: ContactLocalizedProps) {
             </div>
 
             {/* Right Column - Contact Form */}
-            <ContactForm />
+            <ContactForm lang={lang} />
           </div>
         </div>
       </section>

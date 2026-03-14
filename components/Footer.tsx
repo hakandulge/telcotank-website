@@ -1,31 +1,52 @@
+'use client'
+
+import { usePathname } from 'next/navigation'
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
+import { translations } from '@/data/translations'
 
-const footerLinks = {
-  Capabilities: [
-    { title: 'Transformation Strategy', href: '/capabilities#transformation-strategy' },
-    { title: 'Growth Acceleration', href: '/capabilities#growth-acceleration' },
-    { title: 'AI Transformation', href: '/capabilities#ai-transformation' },
-    { title: 'Market Entry & Expansion', href: '/capabilities#market-entry' },
-    { title: 'Investment & M&A Advisory', href: '/capabilities#investment-advisory' },
-  ],
-  Industries: [
-    { title: 'Telecommunications', href: '/industries#telecommunications' },
-    { title: 'Financial Services', href: '/industries#financial-services' },
-    { title: 'Technology & AI', href: '/industries#technology-ai' },
-    { title: 'Digital Infrastructure', href: '/industries#digital-infrastructure' },
-    { title: 'Startups & Scaleups', href: '/industries#startups-scaleups' },
-  ],
-  Company: [
-    { title: 'About', href: '/about' },
-    { title: 'Case Studies', href: '/case-studies' },
-    { title: 'Strategic Intelligence', href: '/strategicintelligence' },
-    { title: 'Articles', href: '/articles' },
-    { title: 'Contact', href: '/contact' },
-  ],
+type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru'
+
+function getLang(pathname: string): Lang {
+  const p = pathname.split('/')[1]
+  if (['tr', 'ar', 'es', 'pt', 'ru'].includes(p)) return p as Lang
+  return 'en'
+}
+
+function lhref(href: string, lang: Lang): string {
+  if (lang === 'en') return href
+  return `/${lang}${href}`
 }
 
 export default function Footer() {
+  const pathname = usePathname()
+  const lang = getLang(pathname)
+  const t = translations[lang].footer
+
+  const footerLinks = {
+    [t.capabilities]: [
+      { title: t.transformationStrategy, href: '/capabilities#transformation-strategy' },
+      { title: t.growthAcceleration, href: '/capabilities#growth-acceleration' },
+      { title: t.aiTransformation, href: '/capabilities#ai-transformation' },
+      { title: t.marketEntry, href: '/capabilities#market-entry' },
+      { title: t.investmentAdvisory, href: '/capabilities#investment-advisory' },
+    ],
+    [t.industries]: [
+      { title: t.telecommunications, href: '/industries#telecommunications' },
+      { title: t.financialServices, href: '/industries#financial-services' },
+      { title: t.technologyAI, href: '/industries#technology-ai' },
+      { title: t.digitalInfrastructure, href: '/industries#digital-infrastructure' },
+      { title: t.startupsScaleups, href: '/industries#startups-scaleups' },
+    ],
+    [t.company]: [
+      { title: t.aboutLink, href: '/about' },
+      { title: t.caseStudiesLink, href: '/case-studies' },
+      { title: t.strategicIntelligenceLink, href: '/strategicintelligence' },
+      { title: t.articlesLink, href: '/articles' },
+      { title: t.contactLink, href: '/contact' },
+    ],
+  }
+
   return (
     <footer className="bg-[#0A2540] text-white">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20">
@@ -37,10 +58,7 @@ export default function Footer() {
               alt="Telcotank"
               className="mb-6 h-8 w-auto brightness-0 invert"
             />
-            <p className="text-sm leading-6 text-gray-400">
-              Transformation Strategy & Execution for the Digital Economy. Advising telecom
-              operators, financial institutions, technology companies and investors since 2004.
-            </p>
+            <p className="text-sm leading-6 text-gray-400">{t.tagline}</p>
           </div>
 
           {/* Link Columns */}
@@ -53,7 +71,7 @@ export default function Footer() {
                 {links.map((link) => (
                   <li key={link.title}>
                     <Link
-                      href={link.href}
+                      href={lhref(link.href, lang)}
                       className="text-sm text-gray-300 transition-colors hover:text-white"
                     >
                       {link.title}
@@ -69,7 +87,7 @@ export default function Footer() {
         <div className="mt-16 border-t border-gray-700 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <p className="text-sm text-gray-400">
-              &copy; {new Date().getFullYear()} Telcotank. All rights reserved.
+              &copy; {new Date().getFullYear()} Telcotank. {t.allRightsReserved}.
             </p>
             <div className="flex items-center gap-6">
               {siteMetadata.linkedin && (
