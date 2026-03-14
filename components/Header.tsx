@@ -2,6 +2,7 @@ import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Link from './Link'
 import MobileNav from './MobileNav'
+import LanguageSwitcher from './LanguageSwitcher'
 
 const Header = () => {
   return (
@@ -33,6 +34,7 @@ const Header = () => {
           >
             Request Strategy Discussion
           </Link>
+          <LanguageSwitcher />
         </div>
 
         {/* Mobile Navigation */}
