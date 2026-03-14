@@ -37,7 +37,7 @@ const Header = () => {
           <LanguageSwitcher />
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation — visible below lg breakpoint */}
         <MobileNav />
       </nav>
     </header>
