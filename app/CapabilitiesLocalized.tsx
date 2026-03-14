@@ -19,67 +19,76 @@ interface CapabilityItem {
 export default function CapabilitiesLocalized({ lang }: CapabilitiesLocalizedProps) {
   const t = translations[lang]
 
+  const getDetail = (enText: string, trText: string, arText: string, esText: string, ptText: string, ruText: string, deText: string, frText: string): string => {
+    const detailMap: Record<Lang, string> = {
+      en: enText,
+      tr: trText,
+      ar: arText,
+      es: esText,
+      pt: ptText,
+      ru: ruText,
+      de: deText,
+      fr: frText,
+    }
+    return detailMap[lang] || enText
+  }
+
   const capabilities: CapabilityItem[] = [
     {
       id: 'transformation-strategy',
       title: t.capabilitiesPage.transformationStrategyTitle,
       description: t.capabilitiesPage.transformationStrategyDesc,
       details: [
-        lang === 'en'
-          ? 'Digital transformation roadmap development'
-          : lang === 'tr'
-            ? 'Dijital dönüşüm yol haritası geliştirme'
-            : lang === 'ar'
-              ? 'تطوير خريطة الطريق للتحول الرقمي'
-              : lang === 'es'
-                ? 'Desarrollo de hoja de ruta de transformación digital'
-                : lang === 'pt'
-                  ? 'Desenvolvimento de roteiro de transformação digital'
-                  : 'Разработка дорожной карты цифровой трансформации',
-        lang === 'en'
-          ? 'Business model innovation and design'
-          : lang === 'tr'
-            ? 'İş modeli yeniliği ve tasarımı'
-            : lang === 'ar'
-              ? 'ابتكار وتصميم نموذج الأعمال'
-              : lang === 'es'
-                ? 'Innovación y diseño de modelo de negocio'
-                : lang === 'pt'
-                  ? 'Inovação e design de modelo de negócios'
-                  : 'Инновации и проектирование бизнес-модели',
-        lang === 'en'
-          ? 'Organizational transformation architecture'
-          : lang === 'tr'
-            ? 'Kuruluş dönüşümü mimarisi'
-            : lang === 'ar'
-              ? 'عمارة تحويل المنظمة'
-              : lang === 'es'
-                ? 'Arquitectura de transformación organizacional'
-                : lang === 'pt'
-                  ? 'Arquitetura de transformação organizacional'
-                  : 'Архитектура трансформации организации',
-        lang === 'en'
-          ? 'Technology strategy and vendor assessment'
-          : lang === 'tr'
-            ? 'Teknoloji stratejisi ve satıcı değerlendirmesi'
-            : lang === 'ar'
-              ? 'استراتيجية التكنولوجيا وتقييم البائع'
-              : lang === 'es'
-                ? 'Estrategia tecnológica y evaluación de proveedores'
-                : lang === 'pt'
-                  ? 'Estratégia de tecnologia e avaliação de fornecedores'
-                  : 'Технологическая стратегия и оценка поставщиков',
-        lang === 'en'
-          ? 'Change management and governance frameworks'
-          : lang === 'tr'
-            ? 'Değişim yönetimi ve yönetişim çerçeveleri'
-            : lang === 'ar'
-              ? 'أطر إدارة التغيير والحوكمة'
-              : lang === 'es'
-                ? 'Marcos de gestión del cambio y gobernanza'
-                : lang === 'pt'
-                  ? 'Estruturas de gestão de mudanças e governança'
-                  : 'Структуры управления изменениями и управления',
+        getDetail(
+          'Digital transformation roadmap development',
+          'Dijital dönüşüm yol haritası geliştirme',
+          'تطوير خريطة الطريق للتحول الرقمي',
+          'Desarrollo de hoja de ruta de transformación digital',
+          'Desenvolvimento de roteiro de transformação digital',
+          'Разработка дорожной карты цифровой трансформации',
+          'Entwicklung einer digitalen Transformationsroadmap',
+          'Développement d\'une feuille de route de transformation numérique'
+        ),
+        getDetail(
+          'Business model innovation and design',
+          'İş modeli yeniliği ve tasarımı',
+          'ابتكار وتصميم نموذج الأعمال',
+          'Innovación y diseño de modelo de negocio',
+          'Inovação e design de modelo de negócios',
+          'Инновации и проектирование бизнес-модели',
+          'Geschäftsmodellinnovation und -design',
+          'Innovation et conception du modèle commercial'
+        ),
+        getDetail(
+          'Organizational transformation architecture',
+          'Kuruluş dönüşümü mimarisi',
+          'عمارة تحويل المنظمة',
+          'Arquitectura de transformación organizacional',
+          'Arquitetura de transformação organizacional',
+          'Архитектура трансформации организации',
+          'Architektur der Organisationstransformation',
+          'Architecture de transformation organisationnelle'
+        ),
+        getDetail(
+          'Technology strategy and vendor assessment',
+          'Teknoloji stratejisi ve satıcı değerlendirmesi',
+          'استراتيجية التكنولوجيا وتقييم البائع',
+          'Estrategia tecnológica y evaluación de proveedores',
+          'Estratégia de tecnologia e avaliação de fornecedores',
+          'Технологическая стратегия и оценка поставщиков',
+          'Technologiestrategie und Anbieterbeurteilung',
+          'Stratégie technologique et évaluation des fournisseurs'
+        ),
+        getDetail(
+          'Change management and governance frameworks',
+          'Değişim yönetimi ve yönetişim çerçeveleri',
+          'أطر إدارة التغيير والحوكمة',
+          'Marcos de gestión del cambio y gobernanza',
+          'Estruturas de gestão de mudanças e governança',
+          'Структуры управления изменениями и управления',
+          'Änderungsmanagement und Governance-Frameworks',
+          'Cadres de gestion du changement et de gouvernance'
+        ),
       ],
     },
     {
@@ -87,61 +96,56 @@ export default function CapabilitiesLocalized({ lang }: CapabilitiesLocalizedPro
       title: t.capabilitiesPage.growthAccelerationTitle,
       description: t.capabilitiesPage.growthAccelerationDesc,
       details: [
-        lang === 'en'
-          ? 'Sales channel transformation and optimization'
-          : lang === 'tr'
-            ? 'Satış kanalı dönüşümü ve optimizasyonu'
-            : lang === 'ar'
-              ? 'تحويل وتحسين قنوات المبيعات'
-              : lang === 'es'
-                ? 'Transformación y optimización de canales de ventas'
-                : lang === 'pt'
-                  ? 'Transformação e otimização de canais de vendas'
-                  : 'Трансформация и оптимизация каналов продаж',
-        lang === 'en'
-          ? 'Customer acquisition and retention strategy'
-          : lang === 'tr'
-            ? 'Müşteri kazanım ve elde tutma stratejisi'
-            : lang === 'ar'
-              ? 'استراتيجية اكتساب والاحتفاظ بالعملاء'
-              : lang === 'es'
-                ? 'Estrategia de adquisición y retención de clientes'
-                : lang === 'pt'
-                  ? 'Estratégia de aquisição e retenção de clientes'
-                  : 'Стратегия привлечения и удержания клиентов',
-        lang === 'en'
-          ? 'Pricing and commercial model redesign'
-          : lang === 'tr'
-            ? 'Fiyatlandırma ve ticari model yeniden tasarımı'
-            : lang === 'ar'
-              ? 'إعادة تصميم نموذج التسعير والتجاري'
-              : lang === 'es'
-                ? 'Rediseño de modelo de fijación de precios y comercial'
-                : lang === 'pt'
-                  ? 'Redesenho de modelo de preço e comercial'
-                  : 'Переоформление модели ценообразования и коммерческой',
-        lang === 'en'
-          ? 'Marketing transformation and analytics'
-          : lang === 'tr'
-            ? 'Pazarlama dönüşümü ve analitikleri'
-            : lang === 'ar'
-              ? 'تحويل التسويق والتحليلات'
-              : lang === 'es'
-                ? 'Transformación de marketing y análisis'
-                : lang === 'pt'
-                  ? 'Transformação de marketing e análise'
-                  : 'Маркетинговая трансформация и аналитика',
-        lang === 'en'
-          ? 'Partnership and ecosystem development'
-          : lang === 'tr'
-            ? 'Ortaklık ve ekosistem geliştirme'
-            : lang === 'ar'
-              ? 'تطوير الشراكة والنظم البيئية'
-              : lang === 'es'
-                ? 'Desarrollo de asociaciones y ecosistemas'
-                : lang === 'pt'
-                  ? 'Desenvolvimento de parcerias e ecossistemas'
-                  : 'Развитие партнерства и экосистемы',
+        getDetail(
+          'Sales channel transformation and optimization',
+          'Satış kanalı dönüşümü ve optimizasyonu',
+          'تحويل وتحسين قنوات المبيعات',
+          'Transformación y optimización de canales de ventas',
+          'Transformação e otimização de canais de vendas',
+          'Трансформация и оптимизация каналов продаж',
+          'Transformation und Optimierung von Vertriebskanälen',
+          'Transformation et optimisation des canaux de vente'
+        ),
+        getDetail(
+          'Customer acquisition and retention strategy',
+          'Müşteri kazanım ve elde tutma stratejisi',
+          'استراتيجية اكتساب والاحتفاظ بالعملاء',
+          'Estrategia de adquisición y retención de clientes',
+          'Estratégia de aquisição e retenção de clientes',
+          'Стратегия привлечения и удержания клиентов',
+          'Kundenakquisitions- und Bindungsstrategie',
+          'Stratégie d\'acquisition et de rétention de clients'
+        ),
+        getDetail(
+          'Pricing and commercial model redesign',
+          'Fiyatlandırma ve ticari model yeniden tasarımı',
+          'إعادة تصميم نموذج التسعير والتجاري',
+          'Rediseño de modelo de fijación de precios y comercial',
+          'Redesenho de modelo de preço e comercial',
+          'Переоформление модели ценообразования и коммерческой',
+          'Preisgestaltung und Neugestaltung des Geschäftsmodells',
+          'Reprise de conception du modèle de tarification et commercial'
+        ),
+        getDetail(
+          'Marketing transformation and analytics',
+          'Pazarlama dönüşümü ve analitikleri',
+          'تحويل التسويق والتحليلات',
+          'Transformación de marketing y análisis',
+          'Transformação de marketing e análise',
+          'Маркетинговая трансформация и аналитика',
+          'Markettransformation und Analytik',
+          'Transformation du marketing et analytique'
+        ),
+        getDetail(
+          'Partnership and ecosystem development',
+          'Ortaklık ve ekosistem geliştirme',
+          'تطوير الشراكة والنظم البيئية',
+          'Desarrollo de asociaciones y ecosistemas',
+          'Desenvolvimento de parcerias e ecossistemas',
+          'Развитие партнерства и экосистемы',
+          'Partnerschaften und Ökosystementwicklung',
+          'Développement de partenariats et d\'écosystèmes'
+        ),
       ],
     },
     {
@@ -149,61 +153,56 @@ export default function CapabilitiesLocalized({ lang }: CapabilitiesLocalizedPro
       title: t.capabilitiesPage.aiTransformationTitle,
       description: t.capabilitiesPage.aiTransformationDesc,
       details: [
-        lang === 'en'
-          ? 'AI strategy and roadmap development'
-          : lang === 'tr'
-            ? 'AI stratejisi ve yol haritası geliştirme'
-            : lang === 'ar'
-              ? 'تطوير استراتيجية الذكاء الاصطناعي والخريطة الطريق'
-              : lang === 'es'
-                ? 'Desarrollo de estrategia y hoja de ruta de IA'
-                : lang === 'pt'
-                  ? 'Desenvolvimento de estratégia e roteiro de IA'
-                  : 'Разработка стратегии и дорожной карты ИИ',
-        lang === 'en'
-          ? 'AI governance and ethics frameworks'
-          : lang === 'tr'
-            ? 'AI yönetimi ve etik çerçeveleri'
-            : lang === 'ar'
-              ? 'أطر حوكمة الذكاء الاصطناعي والأخلاق'
-              : lang === 'es'
-                ? 'Marcos de gobernanza y ética de IA'
-                : lang === 'pt'
-                  ? 'Estruturas de governança e ética de IA'
-                  : 'Структуры управления ИИ и этики',
-        lang === 'en'
-          ? 'AI operating model design'
-          : lang === 'tr'
-            ? 'AI işletim modeli tasarımı'
-            : lang === 'ar'
-              ? 'تصميم نموذج التشغيل للذكاء الاصطناعي'
-              : lang === 'es'
-                ? 'Diseño del modelo operativo de IA'
-                : lang === 'pt'
-                  ? 'Design do modelo operacional de IA'
-                  : 'Проектирование операционной модели ИИ',
-        lang === 'en'
-          ? 'AI Control Tower implementation'
-          : lang === 'tr'
-            ? 'AI Control Tower uygulaması'
-            : lang === 'ar'
-              ? 'تطبيق برج التحكم بالذكاء الاصطناعي'
-              : lang === 'es'
-                ? 'Implementación de la Torre de Control de IA'
-                : lang === 'pt'
-                  ? 'Implementação da Torre de Controle de IA'
-                  : 'Реализация центра управления ИИ',
-        lang === 'en'
-          ? 'Enterprise AI adoption and culture programs'
-          : lang === 'tr'
-            ? 'Kurumsal AI benimseme ve kültür programları'
-            : lang === 'ar'
-              ? 'برامج الاعتماد والثقافة للذكاء الاصطناعي في المؤسسات'
-              : lang === 'es'
-                ? 'Programas de adopción y cultura de IA empresarial'
-                : lang === 'pt'
-                  ? 'Programas de adoção e cultura de IA corporativa'
-                  : 'Программы корпоративного принятия и культуры ИИ',
+        getDetail(
+          'AI strategy and roadmap development',
+          'AI stratejisi ve yol haritası geliştirme',
+          'تطوير استراتيجية الذكاء الاصطناعي والخريطة الطريق',
+          'Desarrollo de estrategia y hoja de ruta de IA',
+          'Desenvolvimento de estratégia e roteiro de IA',
+          'Разработка стратегии и дорожной карты ИИ',
+          'Entwicklung von KI-Strategie und Roadmap',
+          'Développement de la stratégie et de la feuille de route de l\'IA'
+        ),
+        getDetail(
+          'AI governance and ethics frameworks',
+          'AI yönetimi ve etik çerçeveleri',
+          'أطر حوكمة الذكاء الاصطناعي والأخلاق',
+          'Marcos de gobernanza y ética de IA',
+          'Estruturas de governança e ética de IA',
+          'Структуры управления ИИ и этики',
+          'KI-Governance und Ethik-Frameworks',
+          'Cadres de gouvernance et d\'éthique de l\'IA'
+        ),
+        getDetail(
+          'AI operating model design',
+          'AI işletim modeli tasarımı',
+          'تصميم نموذج التشغيل للذكاء الاصطناعي',
+          'Diseño del modelo operativo de IA',
+          'Design do modelo operacional de IA',
+          'Проектирование операционной модели ИИ',
+          'KI-Betriebsmodelldesign',
+          'Conception du modèle opérationnel de l\'IA'
+        ),
+        getDetail(
+          'AI Control Tower implementation',
+          'AI Control Tower uygulaması',
+          'تطبيق برج التحكم بالذكاء الاصطناعي',
+          'Implementación de la Torre de Control de IA',
+          'Implementação da Torre de Controle de IA',
+          'Реализация центра управления ИИ',
+          'Implementierung des KI Control Tower',
+          'Implémentation de la Tour de Contrôle de l\'IA'
+        ),
+        getDetail(
+          'Enterprise AI adoption and culture programs',
+          'Kurumsal AI benimseme ve kültür programları',
+          'برامج الاعتماد والثقافة للذكاء الاصطناعي في المؤسسات',
+          'Programas de adopción y cultura de IA empresarial',
+          'Programas de adoção e cultura de IA corporativa',
+          'Программы корпоративного принятия и культуры ИИ',
+          'Enterprise-KI-Adoptions- und Kulturprogramme',
+          'Programmes d\'adoption et de culture de l\'IA entreprise'
+        ),
       ],
     },
     {
@@ -211,61 +210,56 @@ export default function CapabilitiesLocalized({ lang }: CapabilitiesLocalizedPro
       title: t.capabilitiesPage.marketEntryTitle,
       description: t.capabilitiesPage.marketEntryDesc,
       details: [
-        lang === 'en'
-          ? 'Market opportunity assessment and sizing'
-          : lang === 'tr'
-            ? 'Pazar fırsatı değerlendirmesi ve boyutlandırması'
-            : lang === 'ar'
-              ? 'تقييم فرص السوق والحجم'
-              : lang === 'es'
-                ? 'Evaluación del tamaño de las oportunidades de mercado'
-                : lang === 'pt'
-                  ? 'Avaliação e dimensionamento de oportunidades de mercado'
-                  : 'Оценка и определение размера рыночных возможностей',
-        lang === 'en'
-          ? 'Entry strategy and business case development'
-          : lang === 'tr'
-            ? 'Giriş stratejisi ve iş durumu geliştirme'
-            : lang === 'ar'
-              ? 'استراتيجية الدخول وتطوير حالة الأعمال'
-              : lang === 'es'
-                ? 'Estrategia de entrada y desarrollo del caso de negocio'
-                : lang === 'pt'
-                  ? 'Estratégia de entrada e desenvolvimento de caso de negócio'
-                  : 'Стратегия входа и разработка обоснования',
-        lang === 'en'
-          ? 'Regulatory and licensing analysis'
-          : lang === 'tr'
-            ? 'Düzenleyici ve lisanslama analizi'
-            : lang === 'ar'
-              ? 'تحليل التنظيم والترخيص'
-              : lang === 'es'
-                ? 'Análisis regulatorio y de licencias'
-                : lang === 'pt'
-                  ? 'Análise regulatória e de licenças'
-                  : 'Нормативный анализ и анализ лицензирования',
-        lang === 'en'
-          ? 'Local partnership identification and structuring'
-          : lang === 'tr'
-            ? 'Yerel ortaklık tanımlama ve yapılandırma'
-            : lang === 'ar'
-              ? 'تحديد وتنظيم الشراكات المحلية'
-              : lang === 'es'
-                ? 'Identificación y estructuración de asociaciones locales'
-                : lang === 'pt'
-                  ? 'Identificação e estruturação de parcerias locais'
-                  : 'Выявление и структурирование локальных партнерств',
-        lang === 'en'
-          ? 'Operational setup and launch management'
-          : lang === 'tr'
-            ? 'Operasyonel kurulum ve başlatma yönetimi'
-            : lang === 'ar'
-              ? 'إعداد التشغيل وإدارة الإطلاق'
-              : lang === 'es'
-                ? 'Configuración operativa y gestión del lanzamiento'
-                : lang === 'pt'
-                  ? 'Configuração operacional e gerenciamento de lançamento'
-                  : 'Операционная настройка и управление запуском',
+        getDetail(
+          'Market opportunity assessment and sizing',
+          'Pazar fırsatı değerlendirmesi ve boyutlandırması',
+          'تقييم فرص السوق والحجم',
+          'Evaluación del tamaño de las oportunidades de mercado',
+          'Avaliação e dimensionamento de oportunidades de mercado',
+          'Оценка и определение размера рыночных возможностей',
+          'Bewertung und Dimensionierung von Marktchancen',
+          'Évaluation et dimensionnement des opportunités de marché'
+        ),
+        getDetail(
+          'Entry strategy and business case development',
+          'Giriş stratejisi ve iş durumu geliştirme',
+          'استراتيجية الدخول وتطوير حالة الأعمال',
+          'Estrategia de entrada y desarrollo del caso de negocio',
+          'Estratégia de entrada e desenvolvimento de caso de negócio',
+          'Стратегия входа и разработка обоснования',
+          'Eintrittstrategie und Geschäftsfallentwicklung',
+          'Stratégie d\'entrée et développement du cas commercial'
+        ),
+        getDetail(
+          'Regulatory and licensing analysis',
+          'Düzenleyici ve lisanslama analizi',
+          'تحليل التنظيم والترخيص',
+          'Análisis regulatorio y de licencias',
+          'Análise regulatória e de licenças',
+          'Нормативный анализ и анализ лицензирования',
+          'Regulatorische und Lizenzierungsanalyse',
+          'Analyse réglementaire et des licences'
+        ),
+        getDetail(
+          'Local partnership identification and structuring',
+          'Yerel ortaklık tanımlama ve yapılandırma',
+          'تحديد وتنظيم الشراكات المحلية',
+          'Identificación y estructuración de asociaciones locales',
+          'Identificação e estruturação de parcerias locais',
+          'Выявление и структурирование локальных партнерств',
+          'Identifizierung und Strukturierung lokaler Partnerschaften',
+          'Identification et structuration des partenariats locaux'
+        ),
+        getDetail(
+          'Operational setup and launch management',
+          'Operasyonel kurulum ve başlatma yönetimi',
+          'إعداد التشغيل وإدارة الإطلاق',
+          'Configuración operativa y gestión del lanzamiento',
+          'Configuração operacional e gerenciamento de lançamento',
+          'Операционная настройка и управление запуском',
+          'Operatives Setup und Startmanagement',
+          'Configuration opérationnelle et gestion du lancement'
+        ),
       ],
     },
     {
@@ -273,61 +267,56 @@ export default function CapabilitiesLocalized({ lang }: CapabilitiesLocalizedPro
       title: t.capabilitiesPage.investmentAdvisoryTitle,
       description: t.capabilitiesPage.investmentAdvisoryDesc,
       details: [
-        lang === 'en'
-          ? 'Commercial and strategic due diligence'
-          : lang === 'tr'
-            ? 'Ticari ve stratejik durum tespiti'
-            : lang === 'ar'
-              ? 'العناية الواجبة التجارية والإستراتيجية'
-              : lang === 'es'
-                ? 'Debida diligencia comercial y estratégica'
-                : lang === 'pt'
-                  ? 'Due diligence comercial e estratégica'
-                  : 'Коммерческая и стратегическая проверка',
-        lang === 'en'
-          ? 'Market and competitive analysis'
-          : lang === 'tr'
-            ? 'Pazar ve rekabet analizi'
-            : lang === 'ar'
-              ? 'تحليل السوق والمنافسة'
-              : lang === 'es'
-                ? 'Análisis de mercado y competencia'
-                : lang === 'pt'
-                  ? 'Análise de mercado e concorrência'
-                  : 'Анализ рынка и конкуренции',
-        lang === 'en'
-          ? 'Technology and operational assessment'
-          : lang === 'tr'
-            ? 'Teknoloji ve operasyonel değerlendirme'
-            : lang === 'ar'
-              ? 'تقييم التكنولوجيا والتشغيل'
-              : lang === 'es'
-                ? 'Evaluación tecnológica y operativa'
-                : lang === 'pt'
-                  ? 'Avaliação tecnológica e operacional'
-                  : 'Оценка технологии и операций',
-        lang === 'en'
-          ? 'Synergy identification and value creation planning'
-          : lang === 'tr'
-            ? 'Sinerji tanımı ve değer yaratma planlaması'
-            : lang === 'ar'
-              ? 'تحديد التآزر وتخطيط خلق القيمة'
-              : lang === 'es'
-                ? 'Identificación de sinergias y planificación de creación de valor'
-                : lang === 'pt'
-                  ? 'Identificação de sinergias e planejamento de criação de valor'
-                  : 'Выявление синергии и планирование создания стоимости',
-        lang === 'en'
-          ? 'Post-merger integration support'
-          : lang === 'tr'
-            ? 'Birleşme sonrası entegrasyon desteği'
-            : lang === 'ar'
-              ? 'دعم التكامل بعد الاندماج'
-              : lang === 'es'
-                ? 'Soporte de integración posterior a la fusión'
-                : lang === 'pt'
-                  ? 'Suporte de integração pós-fusão'
-                  : 'Поддержка интеграции после слияния',
+        getDetail(
+          'Commercial and strategic due diligence',
+          'Ticari ve stratejik durum tespiti',
+          'العناية الواجبة التجارية والإستراتيجية',
+          'Debida diligencia comercial y estratégica',
+          'Due diligence comercial e estratégica',
+          'Коммерческая и стратегическая проверка',
+          'Kommerzielle und strategische Due Diligence',
+          'Diligence raisonnable commerciale et stratégique'
+        ),
+        getDetail(
+          'Market and competitive analysis',
+          'Pazar ve rekabet analizi',
+          'تحليل السوق والمنافسة',
+          'Análisis de mercado y competencia',
+          'Análise de mercado e concorrência',
+          'Анализ рынка и конкуренции',
+          'Markt- und Wettbewerbsanalyse',
+          'Analyse du marché et de la concurrence'
+        ),
+        getDetail(
+          'Technology and operational assessment',
+          'Teknoloji ve operasyonel değerlendirme',
+          'تقييم التكنولوجيا والتشغيل',
+          'Evaluación tecnológica y operativa',
+          'Avaliação tecnológica e operacional',
+          'Оценка технологии и операций',
+          'Technologie- und Betriebsbewertung',
+          'Évaluation technologique et opérationnelle'
+        ),
+        getDetail(
+          'Synergy identification and value creation planning',
+          'Sinerji tanımı ve değer yaratma planlaması',
+          'تحديد التآزر وتخطيط خلق القيمة',
+          'Identificación de sinergias y planificación de creación de valor',
+          'Identificação de sinergias e planejamento de criação de valor',
+          'Выявление синергии и планирование создания стоимости',
+          'Synergieidentifizierung und Wertschöpfungsplanung',
+          'Identification des synergies et planification de la création de valeur'
+        ),
+        getDetail(
+          'Post-merger integration support',
+          'Birleşme sonrası entegrasyon desteği',
+          'دعم التكامل بعد الاندماج',
+          'Soporte de integración posterior a la fusión',
+          'Suporte de integração pós-fusão',
+          'Поддержка интеграции после слияния',
+          'Unterstützung nach der Fusionsintegration',
+          'Support d\'intégration post-fusion'
+        ),
       ],
     },
   ]

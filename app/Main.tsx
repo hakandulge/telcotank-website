@@ -237,9 +237,9 @@ export default function Home({ posts }: { posts: any[] }) {
       {/* ═══ HERO — Cinematic photo background ═══ */}
       <section className="relative min-h-[60vh] md:min-h-[85vh] overflow-hidden bg-[#0A1628]">
         <picture>
-          <source media="(max-width: 768px)" srcSet={`${V}/home-hero-transformation-team_small.png`} />
+          <source media="(max-width: 768px)" srcSet={`${V}/home-hero-transformation-team_new_small.png`} />
           <img
-            src={`${V}/home-hero-transformation-team.png`}
+            src={`${V}/home-hero-transformation-team_new.png`}
             alt="Telcotank consulting team collaborating on transformation strategy"
             className="absolute inset-0 h-full w-full object-cover object-center"
             loading="eager"

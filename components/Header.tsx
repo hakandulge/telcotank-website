@@ -10,14 +10,14 @@ import { translations } from '@/data/translations'
 type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru' | 'de' | 'fr'
 
 const languages = [
-  { code: 'en', name: 'English', flag: '🇬🇧' },
-  { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
-  { code: 'ar', name: 'العربية', flag: '🇸🇦' },
-  { code: 'es', name: 'Español', flag: '🇪🇸' },
-  { code: 'pt', name: 'Português', flag: '🇧🇷' },
-  { code: 'ru', name: 'Русский', flag: '🇷🇺' },
-  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-  { code: 'fr', name: 'Français', flag: '🇫🇷' },
+  { code: 'en', name: 'English' },
+  { code: 'tr', name: 'Türkçe' },
+  { code: 'ar', name: 'العربية' },
+  { code: 'es', name: 'Español' },
+  { code: 'pt', name: 'Português' },
+  { code: 'ru', name: 'Русский' },
+  { code: 'de', name: 'Deutsch' },
+  { code: 'fr', name: 'Français' },
 ]
 
 function getLang(pathname: string): Lang {
@@ -84,7 +84,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center gap-x-8 lg:flex">
+        <div className="hidden items-center gap-x-5 lg:flex lg:ml-10 xl:gap-x-7">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -137,7 +137,6 @@ const Header = () => {
                       color: lang === l.code ? '#2563EB' : '#374151',
                       fontWeight: lang === l.code ? 600 : 400,
                     }}>
-                    <span style={{ fontSize: '16px' }}>{l.flag}</span>
                     <span style={{ flex: 1 }}>{l.name}</span>
                     {lang === l.code && (
                       <svg style={{ height: '16px', width: '16px', color: '#2563EB' }} fill="currentColor" viewBox="0 0 20 20">

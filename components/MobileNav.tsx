@@ -9,14 +9,14 @@ import { translations } from '@/data/translations'
 type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru' | 'de' | 'fr'
 
 const languages = [
-  { code: 'en', name: 'English', short: 'EN', flag: '🇬🇧' },
-  { code: 'tr', name: 'Türkçe', short: 'TR', flag: '🇹🇷' },
-  { code: 'ar', name: 'العربية', short: 'AR', flag: '🇸🇦' },
-  { code: 'es', name: 'Español', short: 'ES', flag: '🇪🇸' },
-  { code: 'pt', name: 'Português', short: 'PT', flag: '🇧🇷' },
-  { code: 'ru', name: 'Русский', short: 'RU', flag: '🇷🇺' },
-  { code: 'de', name: 'Deutsch', short: 'DE', flag: '🇩🇪' },
-  { code: 'fr', name: 'Français', short: 'FR', flag: '🇫🇷' },
+  { code: 'en', name: 'English', short: 'EN' },
+  { code: 'tr', name: 'Türkçe', short: 'TR' },
+  { code: 'ar', name: 'العربية', short: 'AR' },
+  { code: 'es', name: 'Español', short: 'ES' },
+  { code: 'pt', name: 'Português', short: 'PT' },
+  { code: 'ru', name: 'Русский', short: 'RU' },
+  { code: 'de', name: 'Deutsch', short: 'DE' },
+  { code: 'fr', name: 'Français', short: 'FR' },
 ]
 
 const MobileNav = () => {
@@ -146,7 +146,6 @@ const MobileNav = () => {
                     background: currentLang === lang.code ? '#2563EB' : '#0F3460',
                     color: '#ffffff', fontFamily: 'inherit',
                   }}>
-                  <span style={{ fontSize: '18px' }}>{lang.flag}</span>
                   <span style={{ fontSize: '14px', fontWeight: 500 }}>{lang.name}</span>
                 </button>
               ))}

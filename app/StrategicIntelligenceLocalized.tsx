@@ -2,6 +2,7 @@
 
 import Link from '@/components/Link'
 import { translations } from '@/data/translations'
+import { getLocalizedPublications } from '@/data/publicationTranslations'
 
 type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru' | 'de' | 'fr'
 
@@ -157,8 +158,9 @@ export default function StrategicIntelligenceLocalized({ lang }: { lang: Lang })
   const isRTL = lang === 'ar'
   const lhref = (href: string) => lang === 'en' ? href : `/${lang}${href}`
 
-  const featuredPubs = publications.filter((p) => p.featured)
-  const allPubs = publications
+  const localizedPublications = getLocalizedPublications(publications, lang)
+  const featuredPubs = localizedPublications.filter((p) => p.featured)
+  const allPubs = localizedPublications
 
   return (
     <div dir={isRTL ? 'rtl' : 'ltr'}>

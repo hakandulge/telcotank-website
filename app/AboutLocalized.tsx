@@ -27,96 +27,97 @@ interface Pillar {
 export default function AboutLocalized({ lang }: AboutLocalizedProps) {
   const t = translations[lang]
 
+  const milestoneEvents: Record<Lang, string[]> = {
+    en: [
+      'Telcotank founded with telecom strategy focus',
+      'Expanded to financial services advisory',
+      'Reached 15+ country presence across EMEA',
+      'Launched digital transformation practice',
+      'AI Transformation & Governance capability added',
+      'AI-First consulting methodology deployed',
+    ],
+    tr: [
+      'Telcotank telekomünikasyon stratejisi odağıyla kuruldu',
+      'Finansal hizmetler danışmanlığına genişledi',
+      'EMEA\'da 15+ ülke varlığına ulaştı',
+      'Dijital dönüşüm uygulamasını başlattı',
+      'AI Dönüşümü & Yönetim yeteneği eklendi',
+      'AI-First danışmanlık metodolojisi dağıtıldı',
+    ],
+    ar: [
+      'تأسيس تيلكوتانك مع التركيز على استراتيجية الاتصالات',
+      'توسعت إلى استشارات الخدمات المالية',
+      'وصلت إلى حضور أكثر من 15 دولة عبر منطقة الشرق الأوسط وشمال أفريقيا',
+      'أطلقت ممارسة التحول الرقمي',
+      'تمت إضافة قدرة التحول والحوكمة بالذكاء الاصطناعي',
+      'تم نشر منهجية الاستشارات التي تضع الذكاء الاصطناعي في المقدمة',
+    ],
+    es: [
+      'Telcotank fundada con enfoque en estrategia de telecomunicaciones',
+      'Expandido a asesoramiento de servicios financieros',
+      'Alcanzó presencia en 15+ países en EMEA',
+      'Lanzó práctica de transformación digital',
+      'Se agregó capacidad de Transformación y Gobernanza de IA',
+      'Metodología de consultoría AI-First desplegada',
+    ],
+    pt: [
+      'Telcotank fundada com foco em estratégia de telecomunicações',
+      'Expandido para consultoria de serviços financeiros',
+      'Alcançou presença em 15+ países na EMEA',
+      'Lançou prática de transformação digital',
+      'Capacidade de Transformação e Governança de IA adicionada',
+      'Metodologia de consultoria AI-First implantada',
+    ],
+    ru: [
+      'Telcotank основана с акцентом на стратегию телекоммуникаций',
+      'Расширена консультация по финансовым услугам',
+      'Достигла присутствия в 15+ странах в регионе EMEA',
+      'Запущена практика цифровой трансформации',
+      'Добавлена возможность преобразования и управления ИИ',
+      'Развернута методология консультирования, ориентированная на ИИ',
+    ],
+    de: [
+      'Telcotank gegründet mit Fokus auf Telekommunikationsstrategie',
+      'Erweitert um Finanzdienstleistungsberatung',
+      'Erreichte Präsenz in 15+ Ländern in der EMEA-Region',
+      'Digitale Transformationspraxis gestartet',
+      'KI-Transformations- und Governance-Fähigkeit hinzugefügt',
+      'KI-First-Beratungsmethodik implementiert',
+    ],
+    fr: [
+      'Telcotank fondée avec un accent sur la stratégie des télécommunications',
+      'Expansion vers le conseil en services financiers',
+      'Présence établie dans 15+ pays dans la région EMEA',
+      'Lancement de la pratique de transformation numérique',
+      'Capacité de transformation et de gouvernance de l\'IA ajoutée',
+      'Méthodologie de conseil IA-First déployée',
+    ],
+  }
+
   const milestones: Milestone[] = [
     {
       year: '2004',
-      event:
-        lang === 'en'
-          ? 'Telcotank founded with telecom strategy focus'
-          : lang === 'tr'
-            ? 'Telcotank telekomünikasyon stratejisi odağıyla kuruldu'
-            : lang === 'ar'
-              ? 'تأسيس تيلكوتانك مع التركيز على استراتيجية الاتصالات'
-              : lang === 'es'
-                ? 'Telcotank fundada con enfoque en estrategia de telecomunicaciones'
-                : lang === 'pt'
-                  ? 'Telcotank fundada com foco em estratégia de telecomunicações'
-                  : 'Telcotank основана с акцентом на стратегию телекоммуникаций',
+      event: milestoneEvents[lang]?.[0] || milestoneEvents.en[0],
     },
     {
       year: '2008',
-      event:
-        lang === 'en'
-          ? 'Expanded to financial services advisory'
-          : lang === 'tr'
-            ? 'Finansal hizmetler danışmanlığına genişledi'
-            : lang === 'ar'
-              ? 'توسعت إلى استشارات الخدمات المالية'
-              : lang === 'es'
-                ? 'Expandido a asesoramiento de servicios financieros'
-                : lang === 'pt'
-                  ? 'Expandido para consultoria de serviços financeiros'
-                  : 'Расширена консультация по финансовым услугам',
+      event: milestoneEvents[lang]?.[1] || milestoneEvents.en[1],
     },
     {
       year: '2012',
-      event:
-        lang === 'en'
-          ? 'Reached 15+ country presence across EMEA'
-          : lang === 'tr'
-            ? 'EMEA\'da 15+ ülke varlığına ulaştı'
-            : lang === 'ar'
-              ? 'وصلت إلى حضور أكثر من 15 دولة عبر منطقة الشرق الأوسط وشمال أفريقيا'
-              : lang === 'es'
-                ? 'Alcanzó presencia en 15+ países en EMEA'
-                : lang === 'pt'
-                  ? 'Alcançou presença em 15+ países na EMEA'
-                  : 'Достигла присутствия в 15+ странах в регионе EMEA',
+      event: milestoneEvents[lang]?.[2] || milestoneEvents.en[2],
     },
     {
       year: '2016',
-      event:
-        lang === 'en'
-          ? 'Launched digital transformation practice'
-          : lang === 'tr'
-            ? 'Dijital dönüşüm uygulamasını başlattı'
-            : lang === 'ar'
-              ? 'أطلقت ممارسة التحول الرقمي'
-              : lang === 'es'
-                ? 'Lanzó práctica de transformación digital'
-                : lang === 'pt'
-                  ? 'Lançou prática de transformação digital'
-                  : 'Запущена практика цифровой трансформации',
+      event: milestoneEvents[lang]?.[3] || milestoneEvents.en[3],
     },
     {
       year: '2020',
-      event:
-        lang === 'en'
-          ? 'AI Transformation & Governance capability added'
-          : lang === 'tr'
-            ? 'AI Dönüşümü & Yönetim yeteneği eklendi'
-            : lang === 'ar'
-              ? 'تمت إضافة قدرة التحول والحوكمة بالذكاء الاصطناعي'
-              : lang === 'es'
-                ? 'Se agregó capacidad de Transformación y Gobernanza de IA'
-                : lang === 'pt'
-                  ? 'Capacidade de Transformação e Governança de IA adicionada'
-                  : 'Добавлена возможность преобразования и управления ИИ',
+      event: milestoneEvents[lang]?.[4] || milestoneEvents.en[4],
     },
     {
       year: '2024',
-      event:
-        lang === 'en'
-          ? 'AI-First consulting methodology deployed'
-          : lang === 'tr'
-            ? 'AI-First danışmanlık metodolojisi dağıtıldı'
-            : lang === 'ar'
-              ? 'تم نشر منهجية الاستشارات التي تضع الذكاء الاصطناعي في المقدمة'
-              : lang === 'es'
-                ? 'Metodología de consultoría AI-First desplegada'
-                : lang === 'pt'
-                  ? 'Metodologia de consultoria AI-First implantada'
-                  : 'Развернута методология консультирования, ориентированная на ИИ',
+      event: milestoneEvents[lang]?.[5] || milestoneEvents.en[5],
     },
   ]
 
