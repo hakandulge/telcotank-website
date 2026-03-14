@@ -236,13 +236,16 @@ export default function Home({ posts }: { posts: any[] }) {
     <>
       {/* ═══ HERO — Cinematic photo background ═══ */}
       <section className="relative min-h-[60vh] md:min-h-[85vh] overflow-hidden bg-[#0A1628]">
-        <img
-          src={`${V}/home-hero-transformation-team.png`}
-          alt="Telcotank consulting team collaborating on transformation strategy"
-          className="absolute inset-0 h-full w-full object-cover object-center"
-          loading="eager"
-          fetchPriority="high"
-        />
+        <picture>
+          <source media="(max-width: 768px)" srcSet={`${V}/home-hero-transformation-team_small.png`} />
+          <img
+            src={`${V}/home-hero-transformation-team.png`}
+            alt="Telcotank consulting team collaborating on transformation strategy"
+            className="absolute inset-0 h-full w-full object-cover object-center"
+            loading="eager"
+            fetchPriority="high"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-r from-[#0A1628]/95 via-[#0A1628]/70 to-[#0A1628]/30" />
         {/* Decorative gradient orbs */}
         <div className="pointer-events-none absolute -left-32 top-1/4 h-96 w-96 rounded-full bg-[#2563EB]/10 blur-[100px] animate-pulse-soft" />
@@ -366,14 +369,17 @@ export default function Home({ posts }: { posts: any[] }) {
       {/* ═══ WHO WE HELP — image top, text below ═══ */}
       <section className="bg-white py-28 md:py-36">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Image at top — responsive with aspect ratio */}
-          <div className="mb-12 aspect-[21/9] md:aspect-auto overflow-hidden rounded-2xl shadow-2xl shadow-[#0A2540]/10">
-            <img
-              src={`${V}/home-who-we-help-people.png`}
-              alt="Enterprise leaders collaborating on transformation strategy"
-              className="h-full w-full object-cover object-top md:h-auto md:w-full md:object-contain"
-              loading="lazy"
-            />
+          {/* Image at top — responsive: small on mobile, full on desktop */}
+          <div className="mb-12 overflow-hidden rounded-2xl shadow-2xl shadow-[#0A2540]/10">
+            <picture>
+              <source media="(max-width: 768px)" srcSet={`${V}/home-who-we-help-people_small.png`} />
+              <img
+                src={`${V}/home-who-we-help-people.png`}
+                alt="Enterprise leaders collaborating on transformation strategy"
+                className="w-full"
+                loading="lazy"
+              />
+            </picture>
           </div>
           {/* Title */}
           <div className="mb-10">
@@ -422,14 +428,17 @@ export default function Home({ posts }: { posts: any[] }) {
               measurably better outcomes for clients.
             </p>
           </div>
-          {/* Image between paragraphs — responsive */}
-          <div className="my-10 aspect-[21/9] md:aspect-auto overflow-hidden rounded-2xl shadow-2xl shadow-black/20">
-            <img
-              src={`${V}/capabilities-ai-first-human-tech.png`}
-              alt="AI-first consulting methodology combining human expertise with technology"
-              className="h-full w-full object-cover object-top md:h-auto md:w-full md:object-contain"
-              loading="lazy"
-            />
+          {/* Image between paragraphs — small on mobile, full on desktop */}
+          <div className="my-10 overflow-hidden rounded-2xl shadow-2xl shadow-black/20">
+            <picture>
+              <source media="(max-width: 768px)" srcSet={`${V}/capabilities-ai-first-human-tech_small.png`} />
+              <img
+                src={`${V}/capabilities-ai-first-human-tech.png`}
+                alt="AI-first consulting methodology combining human expertise with technology"
+                className="w-full"
+                loading="lazy"
+              />
+            </picture>
           </div>
           <div className="max-w-3xl">
             <p className="text-lg leading-relaxed text-gray-300/90">
@@ -501,13 +510,16 @@ export default function Home({ posts }: { posts: any[] }) {
             </Link>
           </div>
           {/* Featured case study image — links to case studies */}
-          <Link href="/case-studies" className="group mb-8 block aspect-[21/9] md:aspect-auto overflow-hidden rounded-2xl shadow-xl shadow-[#0A2540]/10">
-            <img
-              src={`${V}/casestudies-featured-stories.png`}
-              alt="Telcotank transformation case studies and client success stories"
-              className="h-full w-full object-cover object-top md:h-auto md:w-full md:object-contain"
-              loading="lazy"
-            />
+          <Link href="/case-studies" className="group mb-8 block overflow-hidden rounded-2xl shadow-xl shadow-[#0A2540]/10">
+            <picture>
+              <source media="(max-width: 768px)" srcSet={`${V}/casestudies-featured-stories_small.png`} />
+              <img
+                src={`${V}/casestudies-featured-stories.png`}
+                alt="Telcotank transformation case studies and client success stories"
+                className="w-full"
+                loading="lazy"
+              />
+            </picture>
           </Link>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {caseStudies.slice(1).map((item) => (
@@ -555,14 +567,17 @@ export default function Home({ posts }: { posts: any[] }) {
               A proven methodology honed across 40 countries and two decades of transformation delivery.
             </p>
           </div>
-          {/* Image — responsive with aspect ratio on mobile */}
-          <div className="mb-12 aspect-[21/9] md:aspect-auto overflow-hidden rounded-2xl shadow-lg shadow-[#0A2540]/10">
-            <img
-              src={`${V}/home-our-process-human.png`}
-              alt="Telcotank consulting process — diagnose, design, execute, scale"
-              className="h-full w-full object-cover object-top md:h-auto md:w-full md:object-contain"
-              loading="lazy"
-            />
+          {/* Image — small on mobile, full on desktop */}
+          <div className="mb-12 overflow-hidden rounded-2xl shadow-lg shadow-[#0A2540]/10">
+            <picture>
+              <source media="(max-width: 768px)" srcSet={`${V}/home-our-process-human_small.png`} />
+              <img
+                src={`${V}/home-our-process-human.png`}
+                alt="Telcotank consulting process — diagnose, design, execute, scale"
+                className="w-full"
+                loading="lazy"
+              />
+            </picture>
           </div>
           {/* 4-box grid */}
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -593,14 +608,17 @@ export default function Home({ posts }: { posts: any[] }) {
               Deep expertise across the full transformation lifecycle, from strategy through execution.
             </p>
           </div>
-          {/* Image — responsive with aspect ratio on mobile */}
-          <div className="mb-12 aspect-[21/9] md:aspect-auto overflow-hidden rounded-2xl shadow-xl shadow-[#0A2540]/10">
-            <img
-              src={`${V}/capabilities-services-with-people.png`}
-              alt="Telcotank consulting team delivering transformation services"
-              className="h-full w-full object-cover object-top md:h-auto md:w-full md:object-contain"
-              loading="lazy"
-            />
+          {/* Image — small on mobile, full on desktop */}
+          <div className="mb-12 overflow-hidden rounded-2xl shadow-xl shadow-[#0A2540]/10">
+            <picture>
+              <source media="(max-width: 768px)" srcSet={`${V}/capabilities-services-with-people_small.png`} />
+              <img
+                src={`${V}/capabilities-services-with-people.png`}
+                alt="Telcotank consulting team delivering transformation services"
+                className="w-full"
+                loading="lazy"
+              />
+            </picture>
           </div>
           {/* Capability cards */}
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -639,14 +657,17 @@ export default function Home({ posts }: { posts: any[] }) {
               Focused expertise in technology-intensive industries undergoing fundamental transformation.
             </p>
           </div>
-          {/* Image — responsive with aspect ratio on mobile */}
-          <div className="mb-12 aspect-[21/9] md:aspect-auto overflow-hidden rounded-2xl shadow-lg shadow-[#0A2540]/10">
-            <img
-              src={`${V}/industries-hero-global-reach.png`}
-              alt="Telcotank industry sectors — telecom, financial services, technology, infrastructure"
-              className="h-full w-full object-cover object-top md:h-auto md:w-full md:object-contain"
-              loading="lazy"
-            />
+          {/* Image — small on mobile, full on desktop */}
+          <div className="mb-12 overflow-hidden rounded-2xl shadow-lg shadow-[#0A2540]/10">
+            <picture>
+              <source media="(max-width: 768px)" srcSet={`${V}/industries-hero-global-reach_small.png`} />
+              <img
+                src={`${V}/industries-hero-global-reach.png`}
+                alt="Telcotank industry sectors — telecom, financial services, technology, infrastructure"
+                className="w-full"
+                loading="lazy"
+              />
+            </picture>
           </div>
           {/* Industry cards */}
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

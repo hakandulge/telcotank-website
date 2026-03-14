@@ -246,13 +246,16 @@ export default function CaseStudiesPage() {
       {/* Full-width image — white background, not cropped */}
       <section className="bg-white py-12 md:py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="aspect-[21/9] md:aspect-auto overflow-hidden rounded-2xl shadow-xl shadow-[#0A2540]/10">
-            <img
-              src="/static/images/visuals/industries-sector-showcase.png"
-              alt="Telcotank case studies — transformation results across industries"
-              className="h-full w-full object-cover object-top md:h-auto md:w-full md:object-contain"
-              loading="lazy"
-            />
+          <div className="overflow-hidden rounded-2xl shadow-xl shadow-[#0A2540]/10">
+            <picture>
+              <source media="(max-width: 768px)" srcSet="/static/images/visuals/industries-sector-showcase_small.png" />
+              <img
+                src="/static/images/visuals/industries-sector-showcase.png"
+                alt="Telcotank case studies — transformation results across industries"
+                className="w-full"
+                loading="lazy"
+              />
+            </picture>
           </div>
         </div>
       </section>
