@@ -1,10 +1,23 @@
 'use client';
 
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { translations } from '@/data/translations';
 
 const SUBSCRIBE_URL = 'https://airbridge.telcotank.com/api/subscribe';
 
+type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru'
+
+function getLang(pathname: string): Lang {
+  const p = pathname.split('/')[1]
+  if (['tr', 'ar', 'es', 'pt', 'ru'].includes(p)) return p as Lang
+  return 'en'
+}
+
 export default function NewsletterSignup() {
+  const pathname = usePathname()
+  const lang = getLang(pathname)
+  const t = translations[lang].newsletter
   const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -79,13 +92,12 @@ export default function NewsletterSignup() {
 
         {/* Heading */}
         <h2 className="font-serif text-3xl font-semibold text-white md:text-4xl">
-          Stay Updated with Telcotank
+          {t.title}
         </h2>
 
         {/* Subtitle */}
         <p className="mx-auto mb-10 mt-4 max-w-2xl text-lg text-gray-300">
-          Sign up for strategic insights, industry analysis, and updates from Telcotank
-          — delivered straight to your inbox.
+          {t.description}
         </p>
 
         {/* Form */}
@@ -105,7 +117,7 @@ export default function NewsletterSignup() {
                   d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <span className="font-medium">{message}</span>
+              <span className="font-medium">{t.successMessage}</span>
             </div>
           </div>
         ) : (
@@ -116,14 +128,14 @@ export default function NewsletterSignup() {
                 type="text"
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
-                placeholder="First name"
+                placeholder={t.firstName}
                 className={inputClass}
               />
               <input
                 type="text"
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
-                placeholder="Last name"
+                placeholder={t.lastName}
                 className={inputClass}
               />
             </div>
@@ -134,14 +146,14 @@ export default function NewsletterSignup() {
                 type="text"
                 value={company}
                 onChange={(e) => setCompany(e.target.value)}
-                placeholder="Company name (optional)"
+                placeholder={t.companyOptional}
                 className={inputClass}
               />
               <input
                 type="tel"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                placeholder="Mobile phone (optional)"
+                placeholder={t.phoneOptional}
                 className={inputClass}
               />
             </div>
@@ -152,7 +164,7 @@ export default function NewsletterSignup() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email address"
+                placeholder={t.emailPlaceholder}
                 required
                 className={`flex-1 ${inputClass}`}
               />
@@ -161,7 +173,7 @@ export default function NewsletterSignup() {
                 disabled={status === 'loading'}
                 className="whitespace-nowrap rounded-lg bg-blue-600 px-8 py-3 font-semibold text-white transition-colors hover:bg-blue-700 disabled:bg-blue-600/50"
               >
-                {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
+                {status === 'loading' ? t.subscribing : t.subscribe}
               </button>
             </div>
 
@@ -170,7 +182,7 @@ export default function NewsletterSignup() {
             )}
 
             <p className="mt-4 text-xs text-gray-500">
-              Free updates. No spam. Unsubscribe at any time.
+              {t.disclaimer}
             </p>
           </form>
         )}

@@ -2,9 +2,22 @@
 
 import Link from '@/components/Link'
 import { articles } from '@/data/articles'
+import { articlesTR, articlesAR, articlesES } from '@/data/articlesTranslated'
+import { articlesPT, articlesRU } from '@/data/articlesTranslatedPtRu'
 import { translations } from '@/data/translations'
 
 type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru'
+
+function getArticles(lang: Lang) {
+  switch (lang) {
+    case 'tr': return articlesTR
+    case 'ar': return articlesAR
+    case 'es': return articlesES
+    case 'pt': return articlesPT
+    case 'ru': return articlesRU
+    default: return articles
+  }
+}
 
 function ThemeTag({ theme, lang }: { theme: string; lang: Lang }) {
   const t = translations[lang].articlesPage
@@ -30,8 +43,9 @@ export default function ArticlesLocalized({ lang }: { lang: Lang }) {
   const isRTL = lang === 'ar'
   const lhref = (href: string) => lang === 'en' ? href : `/${lang}${href}`
 
-  const featuredArticle = articles[0]
-  const remainingArticles = articles.slice(1)
+  const localArticles = getArticles(lang)
+  const featuredArticle = localArticles[0]
+  const remainingArticles = localArticles.slice(1)
 
   // Translate read time, e.g. "8 min read" -> "8 dk okuma"
   const translateReadTime = (readTime: string) => {
