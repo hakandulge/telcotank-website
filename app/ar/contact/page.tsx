@@ -1,6 +1,11 @@
-import ContactPage from '../../contact/page'
-export { metadata } from '../../contact/page'
+import { Metadata } from 'next'
+import ContactLocalized from '../../ContactLocalized'
+
+export const metadata: Metadata = {
+  title: 'Telcotank — اتصل بنا',
+  description: 'تواصل مع تيلكوتانك ودعنا نساعدك في تحديك الاستراتيجي.',
+}
 
 export default function Page() {
-  return <div dir="rtl"><ContactPage /></div>
+  return <ContactLocalized lang="ar" />
 }

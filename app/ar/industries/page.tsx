@@ -1,6 +1,11 @@
-import IndustriesPage from '../../industries/page'
-export { metadata } from '../../industries/page'
+import { Metadata } from 'next'
+import IndustriesLocalized from '../../IndustriesLocalized'
+
+export const metadata: Metadata = {
+  title: 'Telcotank — القطاعات',
+  description: 'يقدم تيلكوتانك خدمات استشارات التحول في قطاعات الاتصالات والخدمات المالية والتكنولوجيا والبنية التحتية الرقمية.',
+}
 
 export default function Page() {
-  return <div dir="rtl"><IndustriesPage /></div>
+  return <IndustriesLocalized lang="ar" />
 }

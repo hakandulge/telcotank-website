@@ -3,7 +3,9 @@
 import { useState, useEffect } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import Link from './Link'
-import headerNavLinks from '@/data/headerNavLinks'
+import { translations } from '@/data/translations'
+
+type Lang = 'en' | 'tr' | 'ar' | 'es' | 'pt' | 'ru'
 
 const languages = [
   { code: 'en', name: 'English', short: 'EN', flag: '🇬🇧' },
@@ -20,9 +22,9 @@ const MobileNav = () => {
   const router = useRouter()
   const pathname = usePathname()
 
-  const getCurrentLang = () => {
+  const getCurrentLang = (): Lang => {
     const secondPart = pathname.split('/')[1]
-    if (['en', 'tr', 'ar', 'es', 'pt', 'ru'].includes(secondPart)) return secondPart
+    if (['tr', 'ar', 'es', 'pt', 'ru'].includes(secondPart)) return secondPart as Lang
     return 'en'
   }
 
@@ -65,6 +67,20 @@ const MobileNav = () => {
   }, [])
 
   const currentLang = getCurrentLang()
+  const t = translations[currentLang]
+
+  const lhref = (href: string) => currentLang === 'en' ? href : `/${currentLang}${href}`
+
+  const navLinks = [
+    { href: '/', title: t.nav.home },
+    { href: '/capabilities', title: t.nav.capabilities },
+    { href: '/industries', title: t.nav.industries },
+    { href: '/case-studies', title: t.nav.caseStudies },
+    { href: '/strategicintelligence', title: t.nav.strategicIntelligence },
+    { href: '/articles', title: t.nav.articles },
+    { href: '/about', title: t.nav.about },
+    { href: '/contact', title: t.nav.contact },
+  ]
 
   return (
     <>
@@ -107,7 +123,7 @@ const MobileNav = () => {
           <div
             style={{ height: '72px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 24px' }}
           >
-            <Link href="/" onClick={closeNav}>
+            <Link href={lhref('/')} onClick={closeNav}>
               <img
                 src="/static/images/telcotank-logo.png"
                 alt="Telcotank"
@@ -223,12 +239,12 @@ const MobileNav = () => {
               </div>
             )}
 
-            {/* Nav links — Slalom style */}
+            {/* Nav links — Slalom style, translated */}
             <nav>
-              {headerNavLinks.map((link, idx) => (
-                <div key={link.title}>
+              {navLinks.map((link, idx) => (
+                <div key={link.href}>
                   <Link
-                    href={link.href}
+                    href={lhref(link.href)}
                     onClick={closeNav}
                     style={{
                       display: 'flex',
@@ -252,17 +268,17 @@ const MobileNav = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                     </svg>
                   </Link>
-                  {idx < headerNavLinks.length - 1 && (
+                  {idx < navLinks.length - 1 && (
                     <div style={{ height: '1px', backgroundColor: 'rgba(255,255,255,0.1)' }} />
                   )}
                 </div>
               ))}
             </nav>
 
-            {/* CTA button at bottom */}
+            {/* CTA button at bottom — translated */}
             <div style={{ paddingTop: '32px', paddingBottom: '40px' }}>
               <Link
-                href="/contact"
+                href={lhref('/contact')}
                 onClick={closeNav}
                 style={{
                   display: 'block',
@@ -277,7 +293,7 @@ const MobileNav = () => {
                   textDecoration: 'none',
                 }}
               >
-                Request Strategy Discussion
+                {t.nav.requestStrategyDiscussion}
               </Link>
             </div>
           </div>
