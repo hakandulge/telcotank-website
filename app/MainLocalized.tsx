@@ -19,16 +19,68 @@ const clientLogos = [
   { name: 'Slalom', alt: 'Slalom Consulting — technology consulting partner', src: '/static/images/logos/slalom.png', maxW: 120 },
 ]
 
-const countries = [
-  'Canada', 'USA', 'Portugal', 'Spain', 'United Kingdom', 'Burkina Faso',
-  'Netherlands', 'Switzerland', 'Nigeria', 'Slovenia', 'Libya', 'Slovakia',
-  'Montenegro', 'Serbia', 'North Macedonia', 'Greece', 'South Africa',
-  'Bulgaria', 'Romania', 'Moldova', 'Egypt', 'Ukraine', 'Northern Cyprus',
-  'Turkey', 'Lebanon', 'Tanzania', 'Kenya', 'Georgia', 'Iraq',
-  'Saudi Arabia', 'Kuwait', 'Azerbaijan', 'United Arab Emirates',
-  'Uzbekistan', 'Kazakhstan', 'Afghanistan', 'Tajikistan', 'Kyrgyzstan',
-  'India', 'Malaysia', 'Indonesia',
-]
+const countriesMap: Record<string, string[]> = {
+  en: [
+    'Canada', 'USA', 'Portugal', 'Spain', 'United Kingdom', 'Burkina Faso',
+    'Netherlands', 'Switzerland', 'Nigeria', 'Slovenia', 'Libya', 'Slovakia',
+    'Montenegro', 'Serbia', 'North Macedonia', 'Greece', 'South Africa',
+    'Bulgaria', 'Romania', 'Moldova', 'Egypt', 'Ukraine', 'Northern Cyprus',
+    'Turkey', 'Lebanon', 'Tanzania', 'Kenya', 'Georgia', 'Iraq',
+    'Saudi Arabia', 'Kuwait', 'Azerbaijan', 'United Arab Emirates',
+    'Uzbekistan', 'Kazakhstan', 'Afghanistan', 'Tajikistan', 'Kyrgyzstan',
+    'India', 'Malaysia', 'Indonesia',
+  ],
+  tr: [
+    'Kanada', 'ABD', 'Portekiz', 'İspanya', 'Birleşik Krallık', 'Burkina Faso',
+    'Hollanda', 'İsviçre', 'Nijerya', 'Slovenya', 'Libya', 'Slovakya',
+    'Karadağ', 'Sırbistan', 'Kuzey Makedonya', 'Yunanistan', 'Güney Afrika',
+    'Bulgaristan', 'Romanya', 'Moldova', 'Mısır', 'Ukrayna', 'Kuzey Kıbrıs',
+    'Türkiye', 'Lübnan', 'Tanzanya', 'Kenya', 'Gürcistan', 'Irak',
+    'Suudi Arabistan', 'Kuveyt', 'Azerbaycan', 'Birleşik Arap Emirlikleri',
+    'Özbekistan', 'Kazakistan', 'Afganistan', 'Tacikistan', 'Kırgızistan',
+    'Hindistan', 'Malezya', 'Endonezya',
+  ],
+  ar: [
+    'كندا', 'الولايات المتحدة', 'البرتغال', 'إسبانيا', 'المملكة المتحدة', 'بوركينا فاسو',
+    'هولندا', 'سويسرا', 'نيجيريا', 'سلوفينيا', 'ليبيا', 'سلوفاكيا',
+    'الجبل الأسود', 'صربيا', 'مقدونيا الشمالية', 'اليونان', 'جنوب أفريقيا',
+    'بلغاريا', 'رومانيا', 'مولدوفا', 'مصر', 'أوكرانيا', 'قبرص الشمالية',
+    'تركيا', 'لبنان', 'تنزانيا', 'كينيا', 'جورجيا', 'العراق',
+    'المملكة العربية السعودية', 'الكويت', 'أذربيجان', 'الإمارات العربية المتحدة',
+    'أوزبكستان', 'كازاخستان', 'أفغانستان', 'طاجيكستان', 'قيرغيزستان',
+    'الهند', 'ماليزيا', 'إندونيسيا',
+  ],
+  es: [
+    'Canadá', 'EE.UU.', 'Portugal', 'España', 'Reino Unido', 'Burkina Faso',
+    'Países Bajos', 'Suiza', 'Nigeria', 'Eslovenia', 'Libia', 'Eslovaquia',
+    'Montenegro', 'Serbia', 'Macedonia del Norte', 'Grecia', 'Sudáfrica',
+    'Bulgaria', 'Rumanía', 'Moldavia', 'Egipto', 'Ucrania', 'Chipre del Norte',
+    'Turquía', 'Líbano', 'Tanzania', 'Kenia', 'Georgia', 'Irak',
+    'Arabia Saudita', 'Kuwait', 'Azerbaiyán', 'Emiratos Árabes Unidos',
+    'Uzbekistán', 'Kazajistán', 'Afganistán', 'Tayikistán', 'Kirguistán',
+    'India', 'Malasia', 'Indonesia',
+  ],
+  pt: [
+    'Canadá', 'EUA', 'Portugal', 'Espanha', 'Reino Unido', 'Burkina Faso',
+    'Países Baixos', 'Suíça', 'Nigéria', 'Eslovênia', 'Líbia', 'Eslováquia',
+    'Montenegro', 'Sérvia', 'Macedônia do Norte', 'Grécia', 'África do Sul',
+    'Bulgária', 'Romênia', 'Moldávia', 'Egito', 'Ucrânia', 'Chipre do Norte',
+    'Turquia', 'Líbano', 'Tanzânia', 'Quênia', 'Geórgia', 'Iraque',
+    'Arábia Saudita', 'Kuwait', 'Azerbaijão', 'Emirados Árabes Unidos',
+    'Uzbequistão', 'Cazaquistão', 'Afeganistão', 'Tajiquistão', 'Quirguistão',
+    'Índia', 'Malásia', 'Indonésia',
+  ],
+  ru: [
+    'Канада', 'США', 'Португалия', 'Испания', 'Великобритания', 'Буркина-Фасо',
+    'Нидерланды', 'Швейцария', 'Нигерия', 'Словения', 'Ливия', 'Словакия',
+    'Черногория', 'Сербия', 'Северная Македония', 'Греция', 'Южная Африка',
+    'Болгария', 'Румыния', 'Молдова', 'Египет', 'Украина', 'Северный Кипр',
+    'Турция', 'Ливан', 'Танзания', 'Кения', 'Грузия', 'Ирак',
+    'Саудовская Аравия', 'Кувейт', 'Азербайджан', 'Объединённые Арабские Эмираты',
+    'Узбекистан', 'Казахстан', 'Афганистан', 'Таджикистан', 'Кыргызстан',
+    'Индия', 'Малайзия', 'Индонезия',
+  ],
+}
 
 const STORE_URL = 'https://strategic-frameworks.telcotank.com'
 
@@ -227,7 +279,7 @@ export default function MainLocalized({ lang }: { lang: Language }) {
             {t.countries.tagline}
           </p>
           <p className="mx-auto max-w-5xl text-center text-sm leading-relaxed text-gray-500">
-            {countries.join(' · ')}
+            {(countriesMap[lang] || countriesMap.en).join(' · ')}
           </p>
         </div>
       </section>
